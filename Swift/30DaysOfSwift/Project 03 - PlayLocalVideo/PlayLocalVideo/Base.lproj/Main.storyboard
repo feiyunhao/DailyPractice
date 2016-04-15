@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SYh-jE-CqL">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="jnX-D6-If6">
+            <objects>
+                <navigationController id="r5g-yh-Jui" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UwP-4N-2r1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wD2-3g-1jM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-806" y="404"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hob-aG-N1p">
+            <objects>
+                <viewController id="SYh-jE-CqL" customClass="ViewController" customModule="PlayLocalVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NEs-wJ-mFV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jy3-uz-ySe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qi5-Ab-Lpm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u95-cy-2rP">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="220" id="axj-m0-hNf" customClass="VideoCell" customModule="PlayLocalVideo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="axj-m0-hNf" id="aZy-z4-yvy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="219.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoScreenshot01" translatesAutoresizingMaskIntoConstraints="NO" id="md0-0d-l7g">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="218.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Arial Rounded MT Bold " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaE-ny-WdL">
+                                                    <rect key="frame" x="8" y="172.5" width="398" height="21"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Arial Hebrew" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWY-dZ-Tg4">
+                                                    <rect key="frame" x="8" y="197.5" width="398" height="21"/>
+                                                    <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xD-G5-p5t">
+                                                    <rect key="frame" x="177" y="80" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="Ay6-PO-UXc"/>
+                                                        <constraint firstAttribute="width" constant="200" id="asK-gB-Zyg"/>
+                                                    </constraints>
+                                                    <state key="normal" image="playBtn"/>
+                                                    <connections>
+                                                        <action selector="palyVideoBtnTouch:" destination="SYh-jE-CqL" eventType="touchUpInside" id="vgx-VF-YPP"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="md0-0d-l7g" secondAttribute="bottom" id="7Qm-d4-Gjo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DWY-dZ-Tg4" secondAttribute="trailing" id="7ZX-nE-a1U"/>
+                                                <constraint firstItem="1xD-G5-p5t" firstAttribute="centerX" secondItem="md0-0d-l7g" secondAttribute="centerX" id="8VE-dY-6x7"/>
+                                                <constraint firstItem="DWY-dZ-Tg4" firstAttribute="top" secondItem="xaE-ny-WdL" secondAttribute="bottom" constant="4" id="AoJ-MQ-qgo"/>
+                                                <constraint firstAttribute="trailing" secondItem="md0-0d-l7g" secondAttribute="trailing" id="DsN-MQ-G28"/>
+                                                <constraint firstItem="xaE-ny-WdL" firstAttribute="leading" secondItem="aZy-z4-yvy" secondAttribute="leadingMargin" id="IXE-ag-ixd"/>
+                                                <constraint firstItem="md0-0d-l7g" firstAttribute="top" secondItem="aZy-z4-yvy" secondAttribute="top" id="IYN-tp-Cxd"/>
+                                                <constraint firstItem="1xD-G5-p5t" firstAttribute="centerY" secondItem="md0-0d-l7g" secondAttribute="centerY" id="L3Y-W5-Ees"/>
+                                                <constraint firstItem="xaE-ny-WdL" firstAttribute="top" secondItem="1xD-G5-p5t" secondAttribute="bottom" constant="13" id="OOA-ks-7Bp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xaE-ny-WdL" secondAttribute="trailing" id="RN8-4v-eIu"/>
+                                                <constraint firstItem="DWY-dZ-Tg4" firstAttribute="leading" secondItem="aZy-z4-yvy" secondAttribute="leadingMargin" id="TpY-cr-7yC"/>
+                                                <constraint firstItem="md0-0d-l7g" firstAttribute="leading" secondItem="aZy-z4-yvy" secondAttribute="leading" id="dh5-CN-yKq"/>
+                                                <constraint firstAttribute="bottom" secondItem="md0-0d-l7g" secondAttribute="bottom" constant="1" id="zWL-dp-Hh6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoScreenShot" destination="md0-0d-l7g" id="ntG-VX-C6g"/>
+                                            <outlet property="videoSourceLabel" destination="DWY-dZ-Tg4" id="oEJ-hv-yVF"/>
+                                            <outlet property="videoTitleLabel" destination="xaE-ny-WdL" id="Ghk-3I-kzL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="SYh-jE-CqL" id="kk7-TR-hPh"/>
+                                    <outlet property="delegate" destination="SYh-jE-CqL" id="Wq6-mF-DIt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u95-cy-2rP" firstAttribute="top" secondItem="NEs-wJ-mFV" secondAttribute="bottom" id="47D-aT-hSy"/>
+                            <constraint firstItem="u95-cy-2rP" firstAttribute="leading" secondItem="Qi5-Ab-Lpm" secondAttribute="leading" id="JtZ-6D-ydi"/>
+                            <constraint firstItem="Jy3-uz-ySe" firstAttribute="top" secondItem="u95-cy-2rP" secondAttribute="bottom" id="Xnw-gF-hvc"/>
+                            <constraint firstAttribute="trailing" secondItem="u95-cy-2rP" secondAttribute="trailing" id="g3g-E3-ZHU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z9f-wi-9aX"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CA9-55-fgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-393" y="404"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="playBtn" width="60" height="60"/>
+        <image name="videoScreenshot01" width="375" height="220"/>
+    </resources>
+</document>
