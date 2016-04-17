@@ -41,6 +41,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         self.presentViewController(playViewController, animated: true) {
             self.playViewController.player?.play()//mayisi
+            
         }
         
     }
