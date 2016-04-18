@@ -43,6 +43,9 @@ extension ViewController :UICollectionViewDataSource {
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(StoryBoard.CellIdentifier, forIndexPath: indexPath) as!InterestCell
+        /**
+         *  as操作符用来把某个实例转型为另外的类型，由于实例转型可能失败，因此Swift为as操作符提供了两种形式：选项形式as?和强制形式as
+         */
         cell.interest = self.interests[indexPath.item]
         return cell
         
