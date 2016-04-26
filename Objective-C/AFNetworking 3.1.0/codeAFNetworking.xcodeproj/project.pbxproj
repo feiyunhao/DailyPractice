@@ -12,10 +12,15 @@
 		F21B0B431CCD091C00B79CFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21B0B391CCD091C00B79CFD /* Assets.xcassets */; };
 		F21B0B441CCD091C00B79CFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21B0B3A1CCD091C00B79CFD /* LaunchScreen.storyboard */; };
 		F21B0B451CCD091C00B79CFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21B0B3C1CCD091C00B79CFD /* Main.storyboard */; };
-		F21B0B461CCD091C00B79CFD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F21B0B3E1CCD091C00B79CFD /* Info.plist */; };
 		F21B0B471CCD091C00B79CFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F21B0B3F1CCD091C00B79CFD /* main.m */; };
 		F21B0B481CCD091C00B79CFD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21B0B411CCD091C00B79CFD /* ViewController.m */; };
 		F21B0B541CCD10C100B79CFD /* SYURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F21B0B531CCD10C100B79CFD /* SYURLSessionManager.m */; };
+		F2FFF9531CCE61C800DED976 /* SYNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FFF9521CCE61C800DED976 /* SYNetworkReachabilityManager.m */; };
+		F2FFF9561CCE61F300DED976 /* SYSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FFF9551CCE61F300DED976 /* SYSecurityPolicy.m */; };
+		F2FFF9591CCE623600DED976 /* SYHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FFF9581CCE623600DED976 /* SYHTTPSessionManager.m */; };
+		F2FFF95C1CCE626E00DED976 /* SYURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FFF95B1CCE626E00DED976 /* SYURLRequestSerialization.m */; };
+		F2FFF95F1CCE629100DED976 /* SYURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FFF95E1CCE629100DED976 /* SYURLResponseSerialization.m */; };
+		F2FFF9631CCE62EE00DED976 /* SYNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FFF9601CCE62EE00DED976 /* SYNetworking-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,19 @@
 		F21B0B511CCD0A2E00B79CFD /* SYNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworking.h; sourceTree = "<group>"; };
 		F21B0B521CCD10C100B79CFD /* SYURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYURLSessionManager.h; sourceTree = "<group>"; };
 		F21B0B531CCD10C100B79CFD /* SYURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYURLSessionManager.m; sourceTree = "<group>"; };
+		F2FFF9511CCE61C800DED976 /* SYNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		F2FFF9521CCE61C800DED976 /* SYNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		F2FFF9541CCE61F300DED976 /* SYSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSecurityPolicy.h; sourceTree = "<group>"; };
+		F2FFF9551CCE61F300DED976 /* SYSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYSecurityPolicy.m; sourceTree = "<group>"; };
+		F2FFF9571CCE623600DED976 /* SYHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYHTTPSessionManager.h; sourceTree = "<group>"; };
+		F2FFF9581CCE623600DED976 /* SYHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYHTTPSessionManager.m; sourceTree = "<group>"; };
+		F2FFF95A1CCE626E00DED976 /* SYURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYURLRequestSerialization.h; sourceTree = "<group>"; };
+		F2FFF95B1CCE626E00DED976 /* SYURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYURLRequestSerialization.m; sourceTree = "<group>"; };
+		F2FFF95D1CCE629100DED976 /* SYURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYURLResponseSerialization.h; sourceTree = "<group>"; };
+		F2FFF95E1CCE629100DED976 /* SYURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYURLResponseSerialization.m; sourceTree = "<group>"; };
+		F2FFF9601CCE62EE00DED976 /* SYNetworking-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SYNetworking-dummy.m"; sourceTree = "<group>"; };
+		F2FFF9611CCE62EE00DED976 /* SYNetworking-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SYNetworking-prefix.pch"; sourceTree = "<group>"; };
+		F2FFF9621CCE62EE00DED976 /* SYNetworking.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SYNetworking.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +138,8 @@
 			children = (
 				F21B0B521CCD10C100B79CFD /* SYURLSessionManager.h */,
 				F21B0B531CCD10C100B79CFD /* SYURLSessionManager.m */,
+				F2FFF9571CCE623600DED976 /* SYHTTPSessionManager.h */,
+				F2FFF9581CCE623600DED976 /* SYHTTPSessionManager.m */,
 			);
 			path = NSURLSession;
 			sourceTree = "<group>";
@@ -127,6 +147,8 @@
 		F21B0B4B1CCD09F800B79CFD /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
+				F2FFF9511CCE61C800DED976 /* SYNetworkReachabilityManager.h */,
+				F2FFF9521CCE61C800DED976 /* SYNetworkReachabilityManager.m */,
 			);
 			path = Reachability;
 			sourceTree = "<group>";
@@ -134,6 +156,8 @@
 		F21B0B4C1CCD09F800B79CFD /* Security */ = {
 			isa = PBXGroup;
 			children = (
+				F2FFF9541CCE61F300DED976 /* SYSecurityPolicy.h */,
+				F2FFF9551CCE61F300DED976 /* SYSecurityPolicy.m */,
 			);
 			path = Security;
 			sourceTree = "<group>";
@@ -141,6 +165,10 @@
 		F21B0B4D1CCD09F800B79CFD /* Serialization */ = {
 			isa = PBXGroup;
 			children = (
+				F2FFF95A1CCE626E00DED976 /* SYURLRequestSerialization.h */,
+				F2FFF95B1CCE626E00DED976 /* SYURLRequestSerialization.m */,
+				F2FFF95D1CCE629100DED976 /* SYURLResponseSerialization.h */,
+				F2FFF95E1CCE629100DED976 /* SYURLResponseSerialization.m */,
 			);
 			path = Serialization;
 			sourceTree = "<group>";
@@ -148,6 +176,9 @@
 		F21B0B4E1CCD09F800B79CFD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				F2FFF9601CCE62EE00DED976 /* SYNetworking-dummy.m */,
+				F2FFF9611CCE62EE00DED976 /* SYNetworking-prefix.pch */,
+				F2FFF9621CCE62EE00DED976 /* SYNetworking.xcconfig */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -220,7 +251,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F21B0B461CCD091C00B79CFD /* Info.plist in Resources */,
 				F21B0B451CCD091C00B79CFD /* Main.storyboard in Resources */,
 				F21B0B431CCD091C00B79CFD /* Assets.xcassets in Resources */,
 				F21B0B441CCD091C00B79CFD /* LaunchScreen.storyboard in Resources */,
@@ -285,7 +315,13 @@
 				F21B0B481CCD091C00B79CFD /* ViewController.m in Sources */,
 				F21B0B471CCD091C00B79CFD /* main.m in Sources */,
 				F21B0B541CCD10C100B79CFD /* SYURLSessionManager.m in Sources */,
+				F2FFF9631CCE62EE00DED976 /* SYNetworking-dummy.m in Sources */,
+				F2FFF9561CCE61F300DED976 /* SYSecurityPolicy.m in Sources */,
+				F2FFF95C1CCE626E00DED976 /* SYURLRequestSerialization.m in Sources */,
+				F2FFF95F1CCE629100DED976 /* SYURLResponseSerialization.m in Sources */,
+				F2FFF9531CCE61C800DED976 /* SYNetworkReachabilityManager.m in Sources */,
 				F21B0B421CCD091C00B79CFD /* AppDelegate.m in Sources */,
+				F2FFF9591CCE623600DED976 /* SYHTTPSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
