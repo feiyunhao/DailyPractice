@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpotifyVideoBackground" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKr-jm-5J9">
+                                <rect key="frame" x="28" y="602" width="319" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="15q-co-IPJ"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.086274509799999996" green="0.63921568630000003" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03B-el-lmL">
+                                <rect key="frame" x="28" y="537" width="319" height="45"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.63921568630000003" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="3Bi-TP-U9Q"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-secondary-logo" translatesAutoresizingMaskIntoConstraints="NO" id="wqm-hI-Adc">
+                                <rect key="frame" x="78" y="60" width="218" height="66"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OKr-jm-5J9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="28" id="I6v-Lj-jgL"/>
+                            <constraint firstItem="wqm-hI-Adc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="JMD-wv-xn4"/>
+                            <constraint firstItem="03B-el-lmL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="28" id="M8N-UR-cyf"/>
+                            <constraint firstItem="OKr-jm-5J9" firstAttribute="top" secondItem="03B-el-lmL" secondAttribute="bottom" constant="20" id="PLh-BA-UTb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OKr-jm-5J9" secondAttribute="bottom" constant="20" id="Sbw-ip-t4s"/>
+                            <constraint firstAttribute="trailing" secondItem="03B-el-lmL" secondAttribute="trailing" constant="28" id="f0K-F8-3aC"/>
+                            <constraint firstAttribute="trailing" secondItem="OKr-jm-5J9" secondAttribute="trailing" constant="28" id="tDP-sV-PN6"/>
+                            <constraint firstItem="wqm-hI-Adc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wkL-QZ-Qdw"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380.5" y="304.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login-secondary-logo" width="218" height="66"/>
+    </resources>
+</document>
