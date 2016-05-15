@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lTe-ba-RTD">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="DWO-ot-pEc">
+            <objects>
+                <viewController id="lTe-ba-RTD" customClass="ViewController" customModule="EmojiMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rDn-nR-8sC"/>
+                        <viewControllerLayoutGuide type="bottom" id="NzF-Go-x74"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hst-Wd-V3m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2C19E93D-F024-4494-AC5A-7D75B1CACD68" translatesAutoresizingMaskIntoConstraints="NO" id="CSd-sx-73B">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2S-tj-VIO">
+                                <rect key="frame" x="27" y="458" width="320" height="45"/>
+                                <color key="backgroundColor" red="0.71489375830000002" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Irw-Gd-qwW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="GO"/>
+                                <connections>
+                                    <action selector="goButtoDidTouch:" destination="lTe-ba-RTD" eventType="touchUpInside" id="23c-6f-5pB"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v58-Fe-U59">
+                                <rect key="frame" x="-3" y="201" width="383" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bingo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtL-gk-QpH">
+                                <rect key="frame" x="-20" y="582" width="375" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="7Wl-Rm-HJ6"/>
+                                    <constraint firstAttribute="width" constant="375" id="a3o-hg-I9I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.99990576509999995" green="1" blue="0.99987310169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="a3o-hg-I9I"/>
+                                        <exclude reference="7Wl-Rm-HJ6"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RtL-gk-QpH" secondAttribute="trailing" id="5kr-7X-VnU"/>
+                            <constraint firstItem="CSd-sx-73B" firstAttribute="centerX" secondItem="hst-Wd-V3m" secondAttribute="centerX" id="8WP-2y-7qn"/>
+                            <constraint firstItem="D2S-tj-VIO" firstAttribute="top" secondItem="v58-Fe-U59" secondAttribute="bottom" constant="41" id="9Ge-DF-ovw"/>
+                            <constraint firstItem="CSd-sx-73B" firstAttribute="leading" secondItem="hst-Wd-V3m" secondAttribute="leading" id="APC-Ri-tPz"/>
+                            <constraint firstAttribute="bottom" secondItem="D2S-tj-VIO" secondAttribute="bottom" constant="197" id="BSy-EX-ZfV"/>
+                            <constraint firstItem="D2S-tj-VIO" firstAttribute="centerX" secondItem="CSd-sx-73B" secondAttribute="centerX" id="BUg-SU-lIv"/>
+                            <constraint firstItem="RtL-gk-QpH" firstAttribute="centerX" secondItem="hst-Wd-V3m" secondAttribute="centerX" id="DBs-bP-FWc"/>
+                            <constraint firstItem="v58-Fe-U59" firstAttribute="centerX" secondItem="RtL-gk-QpH" secondAttribute="centerX" id="Dbn-Wn-cip"/>
+                            <constraint firstItem="v58-Fe-U59" firstAttribute="leading" secondItem="hst-Wd-V3m" secondAttribute="leadingMargin" constant="-19" id="ENY-ht-LWF"/>
+                            <constraint firstAttribute="trailing" secondItem="CSd-sx-73B" secondAttribute="trailing" id="EQS-1F-fb0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v58-Fe-U59" secondAttribute="trailing" constant="-17" id="FJc-XD-IMF"/>
+                            <constraint firstItem="v58-Fe-U59" firstAttribute="top" secondItem="rDn-nR-8sC" secondAttribute="bottom" constant="181" id="HYf-TQ-iKx"/>
+                            <constraint firstItem="RtL-gk-QpH" firstAttribute="top" secondItem="D2S-tj-VIO" secondAttribute="bottom" constant="83" id="L7r-mz-Q2b"/>
+                            <constraint firstItem="D2S-tj-VIO" firstAttribute="leading" secondItem="hst-Wd-V3m" secondAttribute="leadingMargin" constant="11" id="O0y-EI-SYM"/>
+                            <constraint firstItem="v58-Fe-U59" firstAttribute="leading" secondItem="hst-Wd-V3m" secondAttribute="leadingMargin" constant="-15" id="amB-VH-R7Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v58-Fe-U59" secondAttribute="trailing" constant="-21" id="cC5-dj-vbj"/>
+                            <constraint firstItem="RtL-gk-QpH" firstAttribute="top" secondItem="D2S-tj-VIO" secondAttribute="bottom" constant="82" id="cTk-Ed-18J"/>
+                            <constraint firstItem="RtL-gk-QpH" firstAttribute="centerX" secondItem="v58-Fe-U59" secondAttribute="centerX" constant="-1" id="czc-D8-0T7"/>
+                            <constraint firstItem="CSd-sx-73B" firstAttribute="centerY" secondItem="hst-Wd-V3m" secondAttribute="centerY" id="eui-2B-f19"/>
+                            <constraint firstItem="RtL-gk-QpH" firstAttribute="leading" secondItem="hst-Wd-V3m" secondAttribute="leading" id="pU9-gn-Rpl"/>
+                            <constraint firstAttribute="bottom" secondItem="CSd-sx-73B" secondAttribute="bottom" id="puJ-nJ-SNo"/>
+                            <constraint firstItem="NzF-Go-x74" firstAttribute="top" secondItem="RtL-gk-QpH" secondAttribute="bottom" constant="54" id="rUa-2G-X0J"/>
+                            <constraint firstItem="CSd-sx-73B" firstAttribute="top" secondItem="hst-Wd-V3m" secondAttribute="top" id="sA9-U7-IIC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FJc-XD-IMF"/>
+                                <exclude reference="Dbn-Wn-cip"/>
+                                <exclude reference="amB-VH-R7Y"/>
+                                <exclude reference="BSy-EX-ZfV"/>
+                                <exclude reference="cTk-Ed-18J"/>
+                                <exclude reference="DBs-bP-FWc"/>
+                                <exclude reference="rUa-2G-X0J"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emojiPickerView" destination="v58-Fe-U59" id="z98-Aa-nU0"/>
+                        <outlet property="goButton" destination="D2S-tj-VIO" id="GVY-0x-ROd"/>
+                        <outlet property="resultLabel" destination="RtL-gk-QpH" id="EGZ-4X-Fyb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npb-bH-tAm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252.5" y="332.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2C19E93D-F024-4494-AC5A-7D75B1CACD68" width="621" height="1104">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKW3s2MjEsIDExMDR90hUKFhhaTlMub2JqZWN0c6EXgASACdIVChoY
+ohscgAWABoAJEAXTIAohIiMkV05TLmJhc2VbTlMucmVsYXRpdmWAAIAIgAdfEHxmaWxlOi8vL0FwcGxp
+Y2F0aW9ucy9YY29kZS5hcHAvQ29udGVudHMvUGx1Z0lucy9JREVJbnRlcmZhY2VCdWlsZGVyS2l0Lmlk
+ZXBsdWdpbi9Db250ZW50cy9SZXNvdXJjZXMvSUJNaXNzaW5nSW1hZ2VHbHlwaC50aWZm0icoKSpaJGNs
+YXNzbmFtZVgkY2xhc3Nlc1VOU1VSTKIpK1hOU09iamVjdNInKC0uV05TQXJyYXmiLSvTMDEKMjM0V05T
+V2hpdGVcTlNDb2xvclNwYWNlRDAgMAAQA4AL0icoNjdXTlNDb2xvcqI2K9InKDk6V05TSW1hZ2WiOStf
+EA9OU0tleWVkQXJjaGl2ZXLRPT5Ucm9vdIABAAgAEQAaACMALQAyADcARQBLAFYAXQBkAHEAeACAAIIA
+hACJAIsAjQCZAJ4AqQCrAK0ArwC0ALcAuQC7AL0AvwDGAM4A2gDcAN4A4AFfAWQBbwF4AX4BgQGKAY8B
+lwGaAaEBqQG2AbsBvQG/AcQBzAHPAdQB3AHfAfEB9AH5AAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAA
+AAAAAfs
+</mutableData>
+        </image>
+    </resources>
+</document>
