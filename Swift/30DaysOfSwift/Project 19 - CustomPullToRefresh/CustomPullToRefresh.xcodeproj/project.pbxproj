@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F200B9171CEDFEF200841265 /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = F200B9161CEDFEF200841265 /* RefreshContents.xib */; };
 		F2BE70241CE879BC004DD3FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE70231CE879BC004DD3FC /* AppDelegate.swift */; };
 		F2BE70261CE879BC004DD3FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE70251CE879BC004DD3FC /* ViewController.swift */; };
 		F2BE70291CE879BC004DD3FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2BE70271CE879BC004DD3FC /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F200B9161CEDFEF200841265 /* RefreshContents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshContents.xib; sourceTree = "<group>"; };
 		F2BE70201CE879BC004DD3FC /* CustomPullToRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomPullToRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2BE70231CE879BC004DD3FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2BE70251CE879BC004DD3FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				F2BE70231CE879BC004DD3FC /* AppDelegate.swift */,
 				F2BE70251CE879BC004DD3FC /* ViewController.swift */,
 				F2BE70271CE879BC004DD3FC /* Main.storyboard */,
+				F200B9161CEDFEF200841265 /* RefreshContents.xib */,
 				F2BE702A1CE879BC004DD3FC /* Assets.xcassets */,
 				F2BE702C1CE879BC004DD3FC /* LaunchScreen.storyboard */,
 				F2BE702F1CE879BC004DD3FC /* Info.plist */,
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2BE702E1CE879BC004DD3FC /* LaunchScreen.storyboard in Resources */,
+				F200B9171CEDFEF200841265 /* RefreshContents.xib in Resources */,
 				F2BE702B1CE879BC004DD3FC /* Assets.xcassets in Resources */,
 				F2BE70291CE879BC004DD3FC /* Main.storyboard in Resources */,
 			);
@@ -289,6 +293,7 @@
 				F2BE70341CE879BC004DD3FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
