@@ -12,6 +12,8 @@
 		F2BE70471CE879CF004DD3FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2BE70451CE879CF004DD3FC /* Main.storyboard */; };
 		F2BE70491CE879CF004DD3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2BE70481CE879CF004DD3FC /* Assets.xcassets */; };
 		F2BE704C1CE879CF004DD3FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2BE704A1CE879CF004DD3FC /* LaunchScreen.storyboard */; };
+		F2D0C8331CEF373900BE7623 /* AnimationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D0C8321CEF373900BE7623 /* AnimationCollectionViewCell.swift */; };
+		F2D0C8351CEF375E00BE7623 /* AnimationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D0C8341CEF375E00BE7623 /* AnimationCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F2BE70481CE879CF004DD3FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2BE704B1CE879CF004DD3FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2BE704D1CE879CF004DD3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D0C8321CEF373900BE7623 /* AnimationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationCollectionViewCell.swift; sourceTree = "<group>"; };
+		F2D0C8341CEF375E00BE7623 /* AnimationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				F2BE70411CE879CF004DD3FC /* AppDelegate.swift */,
 				F2BE70431CE879CF004DD3FC /* ViewController.swift */,
+				F2D0C8321CEF373900BE7623 /* AnimationCollectionViewCell.swift */,
+				F2D0C8341CEF375E00BE7623 /* AnimationCollectionViewCell.xib */,
 				F2BE70451CE879CF004DD3FC /* Main.storyboard */,
 				F2BE70481CE879CF004DD3FC /* Assets.xcassets */,
 				F2BE704A1CE879CF004DD3FC /* LaunchScreen.storyboard */,
@@ -126,6 +132,7 @@
 				F2BE704C1CE879CF004DD3FC /* LaunchScreen.storyboard in Resources */,
 				F2BE70491CE879CF004DD3FC /* Assets.xcassets in Resources */,
 				F2BE70471CE879CF004DD3FC /* Main.storyboard in Resources */,
+				F2D0C8351CEF375E00BE7623 /* AnimationCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +145,7 @@
 			files = (
 				F2BE70441CE879CF004DD3FC /* ViewController.swift in Sources */,
 				F2BE70421CE879CF004DD3FC /* AppDelegate.swift in Sources */,
+				F2D0C8331CEF373900BE7623 /* AnimationCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +297,7 @@
 				F2BE70521CE879CF004DD3FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnimationCollectionViewCell" id="Ave-hW-d99" customClass="AnimationCollectionViewCell" customModule="CollectionViewAnimation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="309" height="232"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="309" height="232"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhk-8P-JV0">
+                        <rect key="frame" x="0.0" y="140" width="309" height="92"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YVf-oO-Bp7">
+                        <rect key="frame" x="0.0" y="0.0" width="309" height="140"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="046-97-TN6"/>
+                            <constraint firstAttribute="height" constant="140" id="0vh-41-8lB"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIi-ph-WDK">
+                        <rect key="frame" x="8" y="16" width="46" height="30"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="LfD-qp-dht"/>
+                            <constraint firstAttribute="height" constant="24" id="xbZ-ni-6sj"/>
+                        </constraints>
+                        <state key="normal" title="&lt;"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="Lhk-8P-JV0" firstAttribute="leading" secondItem="Ave-hW-d99" secondAttribute="leading" id="3fX-mR-UTt"/>
+                <constraint firstAttribute="trailing" secondItem="Lhk-8P-JV0" secondAttribute="trailing" id="504-ee-ckc"/>
+                <constraint firstAttribute="trailing" secondItem="YVf-oO-Bp7" secondAttribute="trailing" id="KKt-m2-Rib"/>
+                <constraint firstItem="vIi-ph-WDK" firstAttribute="leading" secondItem="Ave-hW-d99" secondAttribute="leading" constant="8" id="PiY-Kp-vLr"/>
+                <constraint firstItem="vIi-ph-WDK" firstAttribute="top" secondItem="Ave-hW-d99" secondAttribute="top" constant="12" id="T8i-qN-FGJ"/>
+                <constraint firstItem="Lhk-8P-JV0" firstAttribute="top" secondItem="YVf-oO-Bp7" secondAttribute="bottom" id="TES-xW-bin"/>
+                <constraint firstAttribute="bottom" secondItem="Lhk-8P-JV0" secondAttribute="bottom" id="WEr-r3-RRn"/>
+                <constraint firstItem="Lhk-8P-JV0" firstAttribute="top" secondItem="YVf-oO-Bp7" secondAttribute="bottom" id="arU-PH-RPm"/>
+                <constraint firstItem="YVf-oO-Bp7" firstAttribute="leading" secondItem="Ave-hW-d99" secondAttribute="leading" id="gfh-Lw-d5q"/>
+                <constraint firstItem="YVf-oO-Bp7" firstAttribute="top" secondItem="Ave-hW-d99" secondAttribute="top" id="zL4-c7-2ZG"/>
+            </constraints>
+            <size key="customSize" width="309" height="232"/>
+            <connections>
+                <outlet property="animationImageView" destination="YVf-oO-Bp7" id="Jos-DA-FCf"/>
+                <outlet property="animationTextView" destination="Lhk-8P-JV0" id="C05-Sf-gTa"/>
+                <outlet property="backButton" destination="vIi-ph-WDK" id="L2F-l2-MyY"/>
+            </connections>
+            <point key="canvasLocation" x="273.5" y="293"/>
+        </collectionViewCell>
+    </objects>
+</document>
