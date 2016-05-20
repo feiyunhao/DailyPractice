@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bNt-0L-Wyi">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="meY-9n-t4p">
+            <objects>
+                <tableViewController id="NWv-Bw-qJW" customClass="ViewController" customModule="SwipeableCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="156" sectionHeaderHeight="28" sectionFooterHeight="28" id="NDo-Cs-WR6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PatternCell" rowHeight="156" id="78t-KR-UGP" customClass="PatternCell" customModule="SwipeableCell" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="156"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="78t-KR-UGP" id="QSE-8Q-13u">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="155.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hkm-P9-H7f">
+                                            <rect key="frame" x="5" y="5" width="120" height="145.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="TMo-9V-Akl"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qks-aZ-Kbf">
+                                            <rect key="frame" x="135" y="5" width="180" height="145.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Hkm-P9-H7f" firstAttribute="top" secondItem="QSE-8Q-13u" secondAttribute="top" constant="5" id="N1m-js-JEZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="Hkm-P9-H7f" secondAttribute="bottom" constant="5" id="TSr-Jn-5CC"/>
+                                        <constraint firstItem="Qks-aZ-Kbf" firstAttribute="top" secondItem="QSE-8Q-13u" secondAttribute="top" constant="5" id="UOD-aD-Bce"/>
+                                        <constraint firstItem="Qks-aZ-Kbf" firstAttribute="leading" secondItem="Hkm-P9-H7f" secondAttribute="trailing" constant="10" id="gtb-Rw-8ph"/>
+                                        <constraint firstItem="Hkm-P9-H7f" firstAttribute="leading" secondItem="QSE-8Q-13u" secondAttribute="leading" constant="5" id="iqp-tu-rkZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="Qks-aZ-Kbf" secondAttribute="bottom" constant="5" id="jli-kS-BC7"/>
+                                        <constraint firstAttribute="trailing" secondItem="Qks-aZ-Kbf" secondAttribute="trailing" constant="5" id="pHN-LW-1FJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="patternImageView" destination="Hkm-P9-H7f" id="yZd-Rf-wty"/>
+                                    <outlet property="patternNameLabel" destination="Qks-aZ-Kbf" id="h6Z-Yb-4oj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NWv-Bw-qJW" id="Ab5-Cb-DVr"/>
+                            <outlet property="delegate" destination="NWv-Bw-qJW" id="86e-nQ-L1D"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="ygg-1a-L8F"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Mt-JK-PZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ney-Hh-B0K">
+            <objects>
+                <navigationController id="bNt-0L-Wyi" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2xv-1p-A73">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NWv-Bw-qJW" kind="relationship" relationship="rootViewController" id="NSV-6w-aa7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VRJ-77-5hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-716" y="324"/>
+        </scene>
+    </scenes>
+</document>
