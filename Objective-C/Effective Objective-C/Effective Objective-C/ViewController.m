@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //test
     EOCPersion *eocPersionOne = [[EOCPersion alloc] init];
 //    EOCSmithPersion *eocSmithpersion = [[EOCSmithPersion alloc] init];
     EOCPersion *eocPersionTwo = [[EOCPersion alloc]init];
