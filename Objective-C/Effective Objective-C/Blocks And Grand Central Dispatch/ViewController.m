@@ -17,9 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    <#returnType#>(^<#blockName#>)(<#parameterTypes#>) = ^(<#parameters#>) {
-        <#statements#>
-    };
+//    <#returnType#>(^<#blockName#>)(<#parameterTypes#>) = ^(<#parameters#>) {
+//        <#statements#>
+//    };
 }
 
 - (void)didReceiveMemoryWarning {
