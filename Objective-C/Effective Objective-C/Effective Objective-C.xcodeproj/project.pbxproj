@@ -30,6 +30,22 @@
 		F26EF8901CF1DA11006B49F0 /* EOCDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F26EF88F1CF1DA11006B49F0 /* EOCDataModel.m */; };
 		F26EF8931CF1DA24006B49F0 /* EOCNetWorkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F26EF8921CF1DA24006B49F0 /* EOCNetWorkFetcher.m */; };
 		F26EF8981CF1E1F9006B49F0 /* EOCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = F26EF8971CF1E1F9006B49F0 /* EOCPerson.m */; };
+		F2A3C34E1CF32722005187C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C34D1CF32722005187C6 /* main.m */; };
+		F2A3C3511CF32722005187C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C3501CF32722005187C6 /* AppDelegate.m */; };
+		F2A3C3541CF32722005187C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C3531CF32722005187C6 /* ViewController.m */; };
+		F2A3C3571CF32722005187C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C3551CF32722005187C6 /* Main.storyboard */; };
+		F2A3C3591CF32722005187C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C3581CF32722005187C6 /* Assets.xcassets */; };
+		F2A3C35C1CF32722005187C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C35A1CF32722005187C6 /* LaunchScreen.storyboard */; };
+		F2A3C3631CF340EB005187C6 /* EOCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C3621CF340EB005187C6 /* EOCClass.m */; };
+		F2A3C3661CF34117005187C6 /* EOCClassSun.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C3651CF34117005187C6 /* EOCClassSun.m */; };
+		F2A3C3691CF3415B005187C6 /* EOCClassSun+Brother.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C3681CF3415B005187C6 /* EOCClassSun+Brother.m */; };
+		F2A3C36C1CF34743005187C6 /* NSTimer+EOCBlocksSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C36B1CF34743005187C6 /* NSTimer+EOCBlocksSupport.m */; };
+		F2A3C3751CF34ACB005187C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C3741CF34ACB005187C6 /* main.m */; };
+		F2A3C3781CF34ACB005187C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C3771CF34ACB005187C6 /* AppDelegate.m */; };
+		F2A3C37B1CF34ACB005187C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A3C37A1CF34ACB005187C6 /* ViewController.m */; };
+		F2A3C37E1CF34ACB005187C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C37C1CF34ACB005187C6 /* Main.storyboard */; };
+		F2A3C3801CF34ACB005187C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C37F1CF34ACB005187C6 /* Assets.xcassets */; };
+		F2A3C3831CF34ACB005187C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A3C3811CF34ACB005187C6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +91,34 @@
 		F26EF8921CF1DA24006B49F0 /* EOCNetWorkFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCNetWorkFetcher.m; sourceTree = "<group>"; };
 		F26EF8961CF1E1F9006B49F0 /* EOCPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCPerson.h; sourceTree = "<group>"; };
 		F26EF8971CF1E1F9006B49F0 /* EOCPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCPerson.m; sourceTree = "<group>"; };
+		F2A3C34A1CF32721005187C6 /* 系统框架.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "系统框架.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2A3C34D1CF32722005187C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2A3C34F1CF32722005187C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F2A3C3501CF32722005187C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F2A3C3521CF32722005187C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F2A3C3531CF32722005187C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F2A3C3561CF32722005187C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2A3C3581CF32722005187C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2A3C35B1CF32722005187C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2A3C35D1CF32722005187C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2A3C3611CF340EB005187C6 /* EOCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCClass.h; sourceTree = "<group>"; };
+		F2A3C3621CF340EB005187C6 /* EOCClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCClass.m; sourceTree = "<group>"; };
+		F2A3C3641CF34117005187C6 /* EOCClassSun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EOCClassSun.h; sourceTree = "<group>"; };
+		F2A3C3651CF34117005187C6 /* EOCClassSun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EOCClassSun.m; sourceTree = "<group>"; };
+		F2A3C3671CF3415B005187C6 /* EOCClassSun+Brother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EOCClassSun+Brother.h"; sourceTree = "<group>"; };
+		F2A3C3681CF3415B005187C6 /* EOCClassSun+Brother.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EOCClassSun+Brother.m"; sourceTree = "<group>"; };
+		F2A3C36A1CF34743005187C6 /* NSTimer+EOCBlocksSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+EOCBlocksSupport.h"; sourceTree = "<group>"; };
+		F2A3C36B1CF34743005187C6 /* NSTimer+EOCBlocksSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+EOCBlocksSupport.m"; sourceTree = "<group>"; };
+		F2A3C3711CF34ACB005187C6 /* Blocks And Grand Central Dispatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blocks And Grand Central Dispatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2A3C3741CF34ACB005187C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2A3C3761CF34ACB005187C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F2A3C3771CF34ACB005187C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F2A3C3791CF34ACB005187C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F2A3C37A1CF34ACB005187C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F2A3C37D1CF34ACB005187C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2A3C37F1CF34ACB005187C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2A3C3821CF34ACB005187C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2A3C3841CF34ACB005187C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +136,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2A3C3471CF32721005187C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2A3C36E1CF34ACB005187C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,6 +158,8 @@
 			children = (
 				F26EF81F1CF15043006B49F0 /* Effective Objective-C */,
 				F26EF8771CF1D96E006B49F0 /* 协议与分类、内存 */,
+				F2A3C34B1CF32722005187C6 /* 系统框架 */,
+				F2A3C3721CF34ACB005187C6 /* Blocks And Grand Central Dispatch */,
 				F26EF81E1CF15043006B49F0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +169,8 @@
 			children = (
 				F26EF81D1CF15043006B49F0 /* Effective Objective-C.app */,
 				F26EF8761CF1D96E006B49F0 /* 协议与分类.app */,
+				F2A3C34A1CF32721005187C6 /* 系统框架.app */,
+				F2A3C3711CF34ACB005187C6 /* Blocks And Grand Central Dispatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +294,62 @@
 			name = "分类";
 			sourceTree = "<group>";
 		};
+		F2A3C34B1CF32722005187C6 /* 系统框架 */ = {
+			isa = PBXGroup;
+			children = (
+				F2A3C34F1CF32722005187C6 /* AppDelegate.h */,
+				F2A3C3501CF32722005187C6 /* AppDelegate.m */,
+				F2A3C3521CF32722005187C6 /* ViewController.h */,
+				F2A3C3531CF32722005187C6 /* ViewController.m */,
+				F2A3C3611CF340EB005187C6 /* EOCClass.h */,
+				F2A3C3621CF340EB005187C6 /* EOCClass.m */,
+				F2A3C3641CF34117005187C6 /* EOCClassSun.h */,
+				F2A3C3651CF34117005187C6 /* EOCClassSun.m */,
+				F2A3C3671CF3415B005187C6 /* EOCClassSun+Brother.h */,
+				F2A3C3681CF3415B005187C6 /* EOCClassSun+Brother.m */,
+				F2A3C36A1CF34743005187C6 /* NSTimer+EOCBlocksSupport.h */,
+				F2A3C36B1CF34743005187C6 /* NSTimer+EOCBlocksSupport.m */,
+				F2A3C3551CF32722005187C6 /* Main.storyboard */,
+				F2A3C3581CF32722005187C6 /* Assets.xcassets */,
+				F2A3C35A1CF32722005187C6 /* LaunchScreen.storyboard */,
+				F2A3C35D1CF32722005187C6 /* Info.plist */,
+				F2A3C34C1CF32722005187C6 /* Supporting Files */,
+			);
+			path = "系统框架";
+			sourceTree = "<group>";
+		};
+		F2A3C34C1CF32722005187C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2A3C34D1CF32722005187C6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2A3C3721CF34ACB005187C6 /* Blocks And Grand Central Dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				F2A3C3761CF34ACB005187C6 /* AppDelegate.h */,
+				F2A3C3771CF34ACB005187C6 /* AppDelegate.m */,
+				F2A3C3791CF34ACB005187C6 /* ViewController.h */,
+				F2A3C37A1CF34ACB005187C6 /* ViewController.m */,
+				F2A3C37C1CF34ACB005187C6 /* Main.storyboard */,
+				F2A3C37F1CF34ACB005187C6 /* Assets.xcassets */,
+				F2A3C3811CF34ACB005187C6 /* LaunchScreen.storyboard */,
+				F2A3C3841CF34ACB005187C6 /* Info.plist */,
+				F2A3C3731CF34ACB005187C6 /* Supporting Files */,
+			);
+			path = "Blocks And Grand Central Dispatch";
+			sourceTree = "<group>";
+		};
+		F2A3C3731CF34ACB005187C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2A3C3741CF34ACB005187C6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,6 +387,40 @@
 			productReference = F26EF8761CF1D96E006B49F0 /* 协议与分类.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F2A3C3491CF32721005187C6 /* 系统框架 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2A3C3601CF32722005187C6 /* Build configuration list for PBXNativeTarget "系统框架" */;
+			buildPhases = (
+				F2A3C3461CF32721005187C6 /* Sources */,
+				F2A3C3471CF32721005187C6 /* Frameworks */,
+				F2A3C3481CF32721005187C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "系统框架";
+			productName = "系统框架";
+			productReference = F2A3C34A1CF32721005187C6 /* 系统框架.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2A3C3701CF34ACB005187C6 /* Blocks And Grand Central Dispatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2A3C3851CF34ACB005187C6 /* Build configuration list for PBXNativeTarget "Blocks And Grand Central Dispatch" */;
+			buildPhases = (
+				F2A3C36D1CF34ACB005187C6 /* Sources */,
+				F2A3C36E1CF34ACB005187C6 /* Frameworks */,
+				F2A3C36F1CF34ACB005187C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Blocks And Grand Central Dispatch";
+			productName = "Blocks And Grand Central Dispatch";
+			productReference = F2A3C3711CF34ACB005187C6 /* Blocks And Grand Central Dispatch.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -283,6 +435,14 @@
 						DevelopmentTeam = VCY363WARL;
 					};
 					F26EF8751CF1D96E006B49F0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = VCY363WARL;
+					};
+					F2A3C3491CF32721005187C6 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = VCY363WARL;
+					};
+					F2A3C3701CF34ACB005187C6 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = VCY363WARL;
 					};
@@ -303,6 +463,8 @@
 			targets = (
 				F26EF81C1CF15043006B49F0 /* Effective Objective-C */,
 				F26EF8751CF1D96E006B49F0 /* 协议与分类 */,
+				F2A3C3491CF32721005187C6 /* 系统框架 */,
+				F2A3C3701CF34ACB005187C6 /* Blocks And Grand Central Dispatch */,
 			);
 		};
 /* End PBXProject section */
@@ -325,6 +487,26 @@
 				F26EF8881CF1D96E006B49F0 /* LaunchScreen.storyboard in Resources */,
 				F26EF8851CF1D96E006B49F0 /* Assets.xcassets in Resources */,
 				F26EF8831CF1D96E006B49F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2A3C3481CF32721005187C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2A3C35C1CF32722005187C6 /* LaunchScreen.storyboard in Resources */,
+				F2A3C3591CF32722005187C6 /* Assets.xcassets in Resources */,
+				F2A3C3571CF32722005187C6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2A3C36F1CF34ACB005187C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2A3C3831CF34ACB005187C6 /* LaunchScreen.storyboard in Resources */,
+				F2A3C3801CF34ACB005187C6 /* Assets.xcassets in Resources */,
+				F2A3C37E1CF34ACB005187C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +544,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2A3C3461CF32721005187C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2A3C36C1CF34743005187C6 /* NSTimer+EOCBlocksSupport.m in Sources */,
+				F2A3C3541CF32722005187C6 /* ViewController.m in Sources */,
+				F2A3C3511CF32722005187C6 /* AppDelegate.m in Sources */,
+				F2A3C3631CF340EB005187C6 /* EOCClass.m in Sources */,
+				F2A3C34E1CF32722005187C6 /* main.m in Sources */,
+				F2A3C3691CF3415B005187C6 /* EOCClassSun+Brother.m in Sources */,
+				F2A3C3661CF34117005187C6 /* EOCClassSun.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2A3C36D1CF34ACB005187C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2A3C37B1CF34ACB005187C6 /* ViewController.m in Sources */,
+				F2A3C3781CF34ACB005187C6 /* AppDelegate.m in Sources */,
+				F2A3C3751CF34ACB005187C6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -393,6 +599,38 @@
 			isa = PBXVariantGroup;
 			children = (
 				F26EF8871CF1D96E006B49F0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F2A3C3551CF32722005187C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2A3C3561CF32722005187C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2A3C35A1CF32722005187C6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2A3C35B1CF32722005187C6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F2A3C37C1CF34ACB005187C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2A3C37D1CF34ACB005187C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2A3C3811CF34ACB005187C6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2A3C3821CF34ACB005187C6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -530,6 +768,54 @@
 			};
 			name = Release;
 		};
+		F2A3C35E1CF32722005187C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "系统框架/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feiyun.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F2A3C35F1CF32722005187C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "系统框架/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feiyun.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F2A3C3861CF34ACB005187C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Blocks And Grand Central Dispatch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feiyun.Blocks-And-Grand-Central-Dispatch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F2A3C3871CF34ACB005187C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Blocks And Grand Central Dispatch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feiyun.Blocks-And-Grand-Central-Dispatch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -549,12 +835,30 @@
 				F26EF8361CF15043006B49F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F26EF88A1CF1D96E006B49F0 /* Build configuration list for PBXNativeTarget "协议与分类" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F26EF88B1CF1D96E006B49F0 /* Debug */,
 				F26EF88C1CF1D96E006B49F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2A3C3601CF32722005187C6 /* Build configuration list for PBXNativeTarget "系统框架" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2A3C35E1CF32722005187C6 /* Debug */,
+				F2A3C35F1CF32722005187C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F2A3C3851CF34ACB005187C6 /* Build configuration list for PBXNativeTarget "Blocks And Grand Central Dispatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2A3C3861CF34ACB005187C6 /* Debug */,
+				F2A3C3871CF34ACB005187C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
