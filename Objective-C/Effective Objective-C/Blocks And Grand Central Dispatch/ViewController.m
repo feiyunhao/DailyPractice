@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong)NSLock *lock;
 @end
 
 @implementation ViewController
@@ -20,8 +20,21 @@
 //    <#returnType#>(^<#blockName#>)(<#parameterTypes#>) = ^(<#parameters#>) {
 //        <#statements#>
 //    };
+    
+     _lock = [[NSLock alloc] init];
+    
+    //Already learned form  "狮子"！，therefor no coding;
 }
-
+-(void)synchronizedMethod{
+    @synchronized (self) {
+        //Safe
+    }
+    
+    [_lock lock];
+    
+    [_lock unlock];
+   
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
