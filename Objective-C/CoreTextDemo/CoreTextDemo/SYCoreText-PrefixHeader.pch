@@ -1,0 +1,20 @@
+//
+//  SYCoreText-PrefixHeader.pch
+//  CoreTextDemo
+//
+//  Created by feiyun on 16/5/26.
+//  Copyright © 2016年 feiyun. All rights reserved.
+//
+
+#ifndef SYCoreText_PrefixHeader_pch
+#define SYCoreText_PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIView+frameAdjust.h"
+#import <Foundation/Foundation.h>
+#import "CoreText/CoreText.h"
+
+#define RGB(A, B, C)    [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:1.0]
+
+#endif

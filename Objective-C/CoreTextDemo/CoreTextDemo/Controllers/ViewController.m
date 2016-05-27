@@ -2,23 +2,25 @@
 //  ViewController.m
 //  CoreTextDemo
 //
-//  Created by feiyun on 16/5/24.
+//  Created by feiyun on 16/5/26.
 //  Copyright © 2016年 feiyun. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "SYCTDisplayView.h"
-#import "SYCTFrameParserConfig.h"
+
 #import "SYCTFrameParser.h"
-#import "SYCTImageData.h"
+#import "SYCTFrameParserConfig.h"
 #import "SYCTData.h"
+#import "SYCTDisPlayView.h"
+#import "SYCTImageData.h"
 #import "SYCTLinkData.h"
 #import "ImageViewController.h"
 #import "WebContentViewController.h"
 
+
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet SYCTDisplayView *ctView;
+@property (weak, nonatomic) IBOutlet SYCTDisplayView *disPlayView;
 
 @end
 
@@ -28,17 +30,17 @@
     [super viewDidLoad];
     [self setupNotifications];
     
-    NSLog(@"%s",__func__);
-    SYCTFrameParserConfig *config = [[SYCTFrameParserConfig alloc] init];
-    config.width = self.ctView.width;
-
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"contentWithImage" ofType:@"json"];
-    SYCTData *data = [SYCTFrameParser  parseTemplateFile:path config:config];
-    self.ctView.data = data;
-    self.ctView.height = data.height;
-    self.ctView.backgroundColor = [UIColor cyanColor];
+    NSArray *dataArray = [self getDataArrFromSomeWhere];
+    SYCTFrameParserConfig  *config= [[SYCTFrameParserConfig alloc] init];
+    SYCTData *ctData = [SYCTFrameParser parseTempateArray:dataArray config:config];
+    
+    self.disPlayView.ctData = ctData;
+    
+    
     
 }
+
+#pragma mark - 处理点击事件
 
 - (void)setupNotifications {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imagePressed:)
@@ -67,6 +69,14 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 
+
+- (NSArray*)getDataArrFromSomeWhere {
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"contentWithImage" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSArray *dataArr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    return dataArr;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -2,7 +2,7 @@
 //  SYCTFrameParser.m
 //  CoreTextDemo
 //
-//  Created by feiyun on 16/5/25.
+//  Created by feiyun on 16/5/26.
 //  Copyright © 2016年 feiyun. All rights reserved.
 //
 
@@ -24,72 +24,126 @@ static CGFloat widthCallback(void* ref){
     return [(NSNumber*)[(__bridge NSDictionary*)ref objectForKey:@"width"] floatValue];
 }
 
-#pragma mark - 生成SYCTData
-
-+ (SYCTData*)parseContent:(NSString *)content config:(SYCTFrameParserConfig *)config {
++(SYCTData *)parseTempateArray:(NSArray *)tempateArr config:(SYCTFrameParserConfig *)config {
     
+    NSMutableAttributedString *result = [[NSMutableAttributedString alloc] init];
+    NSMutableArray *imageDataArr = [NSMutableArray array];
+    NSMutableArray *linkDataArr = [NSMutableArray array];
+    
+    if (tempateArr) {
+        for (NSDictionary *dict in tempateArr) {
+            
+            NSString *type = dict[@"type"];
+            
+            if ([type isEqualToString:@"txt"]) {
+                //根据 单个字典数据（格式一致的一段文字）生成AttributedString
+                NSAttributedString *as =[self parseAttributedContentFromNSDictionary: dict config:config];
+                //添加到总的NSAttributedString中
+                [result appendAttributedString:as];
+            }
+            else if ([type isEqualToString:@"link"]) {
+                
+                NSUInteger startPos = result.length;
+                NSAttributedString *as =[self parseAttributedContentFromNSDictionary: dict config:config];
+                //添加到总的NSAttributedString中
+                [result appendAttributedString:as];
+                
+                // 创建 CoreTextLinkData
+                NSUInteger length = result.length - startPos;
+                NSRange linkRange = NSMakeRange(startPos, length);
+                SYCTLinkData *linkData = [[SYCTLinkData alloc] init];
+                linkData.title = dict[@"content"];
+                linkData.urlStr = dict[@"url"];
+                linkData.range = linkRange;
+                [linkDataArr addObject:linkData];
+                
+            }
+            else if ([type isEqualToString:@"img"]) {
+                
+                SYCTImageData *imageData = [[SYCTImageData alloc] init];
+                imageData.name = dict[@"name"];
+                imageData.position = [result length];
+                [imageDataArr addObject:imageData];
+                
+                // 创建空白占位符，并且设置它的CTRunDelegate信息(主要通过设置占位的大小，来适应图片大小)
+                NSAttributedString *as = [self parseImageDataFromDictionary:dict config:config];
+                [result appendAttributedString:as];
+                
+                
+            }
+        }
+    }
+    
+    //根据NSAttributedString 和 config生成 SYCTData
+    SYCTData *data = [self parseAttributedContent:result config:config];
+    data.imageDataArray = imageDataArr;
+    data.linkDataArray = linkDataArr;
+    return data;
+}
+
++ (NSAttributedString*)parseImageDataFromDictionary:(NSDictionary*)dict
+                                             config:(SYCTFrameParserConfig*)config {
+    
+    //CTRunDelegateCallBacks:用于保存指针的结构体，由CTRun delegate进行回调
+    CTRunDelegateCallbacks callBacks;
+    
+    //将指向的内存的前n个字节置为0
+    memset(&callBacks, 0, sizeof(CTRunDelegateCallbacks));
+    
+    callBacks.version = kCTRunDelegateVersion1;
+    
+    //占位符高度
+    callBacks.getAscent = ascentCallback;
+    callBacks.getDescent = descentCallback;
+    //占位符宽度
+    callBacks.getWidth = widthCallback;
+    
+    
+    CTRunDelegateRef delegate = CTRunDelegateCreate(&callBacks, (__bridge void *)(dict));
+    
+    unichar objcetReplacementChar = ' ';
+    NSString *content = [NSString stringWithCharacters:&objcetReplacementChar length:1];
     NSDictionary *attributes = [self attributesWithConfig:config];
-    NSAttributedString *contentString = [[NSAttributedString alloc]initWithString:content attributes:attributes];
+    NSAttributedString *space = [[NSMutableAttributedString alloc]initWithString:content attributes:attributes];
     
-    return [self parseAttributedContent:contentString
-                                 config:config];
+    //针对图片的占位字符 设置 CTRunDelegate
+    CFAttributedStringSetAttribute((CFMutableAttributedStringRef)space, CFRangeMake(0, 1),kCTRunDelegateAttributeName, delegate);
+    
+    CFRelease(delegate);
+    return space;
 }
 
-+ (NSDictionary *)attributesWithConfig:(SYCTFrameParserConfig*)config {
+//根据NSAttributedString 和 config生成 SYCTData
++ (SYCTData*)parseAttributedContent:(NSAttributedString*)content
+                             config:(SYCTFrameParserConfig*)config {
     
-    UIColor * textColor = config.textColor;
+    // 生成的ctframe 将context绘制到上边
     
-    CGFloat fontSize = config.fontSize;
-    CTFontRef fontRef = CTFontCreateWithName((CFStringRef)@"ArialMT", fontSize, NULL);
+    CTFramesetterRef frameSetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef) content);
     
-    CGFloat lineSpacing = config.lineSpace;
-    const CFIndex kNumberOfSettings = 3;
-    CTParagraphStyleSetting theSettings [kNumberOfSettings] = {
-        {kCTParagraphStyleSpecifierLineSpacingAdjustment, sizeof(CGFloat), &lineSpacing},
-        {kCTParagraphStyleSpecifierMaximumLineSpacing, sizeof(CGFloat), &lineSpacing},
-        {kCTParagraphStyleSpecifierMinimumLineSpacing, sizeof(CGFloat), &lineSpacing},
-    };
-    CTParagraphStyleRef theParagraphRef = CTParagraphStyleCreate(theSettings, kNumberOfSettings);
+    //高度
+    CGSize constraintSize = CGSizeMake(config.width, CGFLOAT_MAX);
+    CGSize coreTextSize = CTFramesetterSuggestFrameSizeWithConstraints(frameSetter, CFRangeMake(0, 0), nil, constraintSize, nil);
+    CGFloat coreTextHeigt = coreTextSize.height;
     
-    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
-    dict[(id)kCTForegroundColorAttributeName] = (id)textColor.CGColor;
-    dict[(id)kCTFontAttributeName] = (__bridge id)fontRef;
-    dict[(id)kCTParagraphStyleAttributeName] = (__bridge id)theParagraphRef;
-    
-    CFRelease(theParagraphRef);
-    CFRelease(fontRef);
-    return dict;
-}
-
-+ (SYCTData*) parseAttributedContent:(NSAttributedString *)content
-                              config:(SYCTFrameParserConfig*)config {
-    
-    // 创建CTFramesetterRef实例
-    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)content);
-    
-    // 获得要缓制的区域的高度
-    CGSize restrictSize = CGSizeMake(config.width, CGFLOAT_MAX);
-    CGSize coreTextSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0,0), nil, restrictSize, nil);
-    CGFloat textHeight = coreTextSize.height;
-    
-    // 生成CTFrameRef实例
-    CTFrameRef frame = [self createFrameWithFramesetter:framesetter
+    //生成CTFrame
+    CTFrameRef ctFrame = [self createFrameWithFramesetter:frameSetter
                                                  config:config
-                                                 height:textHeight];
-    
-    // 将生成好的CTFrameRef实例和计算好的缓制高度保存到CoreTextData实例中，最后返回CoreTextData实例
+                                                 height:coreTextHeigt];
     SYCTData *data = [[SYCTData alloc] init];
-    data.ctFrame = frame;
-    data.height = textHeight;
+    //
+    data.ctFrame = ctFrame;
+    data.height = coreTextHeigt;
     data.content = content;
     
-    // 释放内存
-    CFRelease(frame);
-    CFRelease(framesetter);
+    CFRelease(ctFrame);
+    CFRelease(frameSetter);
+    
+    
     return data;
-
 }
 
+//生成CTFrame
 + (CTFrameRef)createFrameWithFramesetter:(CTFramesetterRef)framesetter
                                   config:(SYCTFrameParserConfig *)config
                                   height:(CGFloat)height {
@@ -97,85 +151,26 @@ static CGFloat widthCallback(void* ref){
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathAddRect(path, NULL, CGRectMake(0, 0, config.width, height));
     
+    // 生成的ctframe 将context绘制到上边
     CTFrameRef frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, NULL);
     CFRelease(path);
     return frame;
 }
 
-+ (SYCTData *)parseTemplateFile:(NSString *)path
-                         config:(SYCTFrameParserConfig*)config{
-    
-    NSMutableArray *imageArray = [NSMutableArray array];
-    NSMutableArray *linkArray = [NSMutableArray array];
-    NSAttributedString *content = [self loadTemplateFile:path config:config
-                                              imageArray:imageArray linkArray:linkArray];
-    SYCTData *data = [self parseAttributedContent:content config:config];
-    data.imageArray = imageArray;
-    data.linkArray = linkArray;
-    return data;
-}
 
-+ (NSAttributedString *)loadTemplateFile:(NSString *)path
-                                  config:(SYCTFrameParserConfig*)config
-                              imageArray:(NSMutableArray *)imageArray
-                               linkArray:(NSMutableArray *)linkArray {
-    
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    NSMutableAttributedString *result = [[NSMutableAttributedString alloc] init];
-    if (data) {
-        NSArray *array = [NSJSONSerialization JSONObjectWithData:data
-                                                         options:NSJSONReadingAllowFragments
-                                                           error:nil];
-        if ([array isKindOfClass:[NSArray class]]) {
-            
-            for (NSDictionary *dict in array) {
-                
-                NSString *type = dict[@"type"];
-                
-                if ([type isEqualToString:@"txt"]) {
-                    NSAttributedString *as = [self parseAttributedContentFromNSDictionary:dict
-                                                                                   config:config];
-                    [result appendAttributedString:as];
-                }
-                else if ([type isEqualToString:@"img"]) {
-                    // 创建 CoreTextImageData
-                    SYCTImageData *imageData = [[SYCTImageData alloc] init];
-                    imageData.name = dict[@"name"];
-                    imageData.position = [result length];
-                    [imageArray addObject:imageData];
-                    // 创建空白占位符，并且设置它的CTRunDelegate信息
-                    NSAttributedString *as = [self parseImageDataFromNSDictionary:dict config:config];
-                    [result appendAttributedString:as];
-                }
-                else if ([type isEqualToString:@"link"]) {
-                    NSUInteger startPos = result.length;
-                    NSAttributedString *as = [self parseAttributedContentFromNSDictionary:dict
-                                                                                   config:config];
-                    [result appendAttributedString:as];
-                    // 创建 CoreTextLinkData
-                    NSUInteger length = result.length - startPos;
-                    NSRange linkRange = NSMakeRange(startPos, length);
-                    SYCTLinkData *linkData = [[SYCTLinkData alloc] init];
-                    linkData.title = dict[@"content"];
-                    linkData.urlStr = dict[@"url"];
-                    linkData.range = linkRange;
-                    [linkArray addObject:linkData];
-                }
-            }
-        }
-    }
-    return result;
-}
-
+//根据 单个字典数据（格式一致的一段文字）生成AttributedString
 + (NSAttributedString *)parseAttributedContentFromNSDictionary:(NSDictionary *)dict
                                                         config:(SYCTFrameParserConfig*)config {
-    NSMutableDictionary *attributes = [self attributesWithConfig:config];
-    // set color
+    //生成配置AttributedString 的字典(默认设置)
+    NSMutableDictionary *attributes = [self attributesWithConfig:config].mutableCopy;
+    
+    //如果配置了颜色属性，就覆盖默认颜色
     UIColor *color = [self colorFromTemplate:dict[@"color"]];
     if (color) {
         attributes[(id)kCTForegroundColorAttributeName] = (id)color.CGColor;
     }
-    // set font size
+
+    //如果配置了字体，就覆盖默认字体
     CGFloat fontSize = [dict[@"size"] floatValue];
     if (fontSize > 0) {
         CTFontRef fontRef = CTFontCreateWithName((CFStringRef)@"ArialMT", fontSize, NULL);
@@ -183,29 +178,43 @@ static CGFloat widthCallback(void* ref){
         CFRelease(fontRef);
     }
     NSString *content = dict[@"content"];
+    
+    
     return [[NSAttributedString alloc] initWithString:content attributes:attributes];
+    
 }
 
-+ (NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict
-                                                config:(SYCTFrameParserConfig*)config {
-    CTRunDelegateCallbacks callbacks;
-    memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
-    callbacks.version = kCTRunDelegateVersion1;
-    callbacks.getAscent = ascentCallback;
-    callbacks.getDescent = descentCallback;
-    callbacks.getWidth = widthCallback;
-    CTRunDelegateRef delegate = CTRunDelegateCreate(&callbacks, (__bridge void *)(dict));
+/**
+ *  根据config属性 生成配置AttributedString 的字典
+ */
++ (NSDictionary *)attributesWithConfig:(SYCTFrameParserConfig*)config {
     
-    // 使用0xFFFC作为空白的占位符
-    unichar objectReplacementChar = 0xFFFC;
-    NSString * content = [NSString stringWithCharacters:&objectReplacementChar length:1];
-    NSDictionary * attributes = [self attributesWithConfig:config];
-    NSMutableAttributedString * space = [[NSMutableAttributedString alloc] initWithString:content
-                                                                               attributes:attributes];
-    CFAttributedStringSetAttribute((CFMutableAttributedStringRef)space, CFRangeMake(0, 1),
-                                   kCTRunDelegateAttributeName, delegate);
-    CFRelease(delegate);
-    return space;
+    //config 共有四个实例变量 ，这里用了其中三个，分别设置：字体颜色、字体大小 行间距；
+    //没用到的 是 设置 绘制宽度的
+    
+    UIColor *textColor = config.textColor;
+    
+    CGFloat fontSize = config.fontSize;
+    CTFontRef fontRef = CTFontCreateWithName((CFStringRef)@"ArialMT", fontSize, NULL);
+    
+    CGFloat lineSpace = config.lineSpace;
+    const CFIndex kNumberOfSettings = 3;
+    CTParagraphStyleSetting theSettings [kNumberOfSettings] = {
+        {kCTParagraphStyleSpecifierLineSpacingAdjustment, sizeof(CGFloat), &lineSpace},
+        {kCTParagraphStyleSpecifierMaximumLineSpacing, sizeof(CGFloat), &lineSpace},
+        {kCTParagraphStyleSpecifierMinimumLineSpacing, sizeof(CGFloat),&lineSpace}
+    };
+    
+    CTParagraphStyleRef theParagraphRef = CTParagraphStyleCreate(theSettings, kNumberOfSettings);
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:3];
+    
+    dict[(id)kCTForegroundColorAttributeName] = (id)textColor.CGColor;
+    dict[(id)kCTFontNameAttribute] = (__bridge id )(fontRef);
+    dict[(id)kCTParagraphStyleAttributeName] = (__bridge id ) theParagraphRef;
+    
+    CFRelease(theParagraphRef);
+    CFRelease(fontRef);
+    return dict;
 }
 
 + (UIColor *)colorFromTemplate:(NSString *)name {

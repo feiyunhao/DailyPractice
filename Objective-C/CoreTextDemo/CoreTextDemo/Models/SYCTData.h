@@ -2,7 +2,7 @@
 //  SYCTData.h
 //  CoreTextDemo
 //
-//  Created by feiyun on 16/5/25.
+//  Created by feiyun on 16/5/26.
 //  Copyright © 2016年 feiyun. All rights reserved.
 //
 
@@ -10,12 +10,12 @@
 
 @interface SYCTData : NSObject
 
-@property (assign, nonatomic) CTFrameRef ctFrame;
-@property (assign, nonatomic) CGFloat height;
+@property(nonatomic, assign)CTFrameRef ctFrame;
+@property(nonatomic, assign)CGFloat height;
 
-@property (strong, nonatomic) NSAttributedString *content;
+@property(nonatomic, strong)NSAttributedString *content;
 
-@property (strong, nonatomic) NSArray * imageArray;
-@property (strong, nonatomic) NSArray * linkArray;
+@property (strong, nonatomic) NSArray * imageDataArray;
+@property (strong, nonatomic) NSArray * linkDataArray;
 
 @end
