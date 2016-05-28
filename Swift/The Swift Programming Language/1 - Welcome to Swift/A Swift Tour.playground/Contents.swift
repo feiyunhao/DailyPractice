@@ -435,6 +435,8 @@ print(protocolValue.simpleDescription)
 
 
 //泛型
+//在括号里写一个名字来创建一个泛型函数活着类型
+//将类型参数化以达到代码复用提高软件开发工作效率的一种数据类型。
 
 func repeatItem<Item>(item: Item, numberOfTimes: Int) -> [Item] {
     var result = [Item]()
@@ -443,25 +445,27 @@ func repeatItem<Item>(item: Item, numberOfTimes: Int) -> [Item] {
     }
     return result
 }
-repeatItem("knock", numberOfTimes:4)
+repeatItem("knock", numberOfTimes: 4)
 
 enum OptionalValue<Wrapped> {
     case None
     case Some(Wrapped)
 }
-var possibleInteger: OptionalValue<Int> = .None
-possibleInteger = .Some(100)
+var possibileInteger: OptionalValue<Int> = .None
+possibileInteger = .Some(100)
 
-func anyCommonElements <T: SequenceType, U: SequenceType where T.Generator.Element: Equatable, T.Generator.Element == U.Generator.Element> (lhs: T, _ rhs: U) -> Bool {
+//“<T: Equatable>和<T where T: Equatable>是等价的。”
+func anyCommenElements <T: SequenceType, U: SequenceType where T.Generator.Element: Equatable, T.Generator.Element == U.Generator.Element >(lhs: T, _ rhs: U) -> Bool {
     for lhsItem in lhs {
         for rhsItem in rhs {
-            if lhsItem == rhsItem {
+            if rhsItem == lhsItem {
                 return true
             }
         }
     }
     return false
 }
-anyCommonElements([1, 2, 3], [3])
+
+anyCommenElements([1, 2, 3], [3])
 
 
