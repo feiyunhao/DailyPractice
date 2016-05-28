@@ -33,11 +33,7 @@
     NSArray *dataArray = [self getDataArrFromSomeWhere];
     SYCTFrameParserConfig  *config= [[SYCTFrameParserConfig alloc] init];
     SYCTData *ctData = [SYCTFrameParser parseTempateArray:dataArray config:config];
-    
     self.disPlayView.ctData = ctData;
-    
-    
-    
 }
 
 #pragma mark - 处理点击事件
