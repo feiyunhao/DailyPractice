@@ -65,6 +65,7 @@ manager.importer.fileName
 
 
 //除存储属性外,类、结构体和枚举可以定义计算属性。计算属性不直接存储值,而是提供一个 getter 和一个可 选的 setter,来间接获取和设置其他属性或变量的值。
+// 只读 计算属性 的声明可以去掉 关键字和花括号
 
 
 struct Point {
@@ -125,5 +126,54 @@ stepCounter.totalSteps = 200
 stepCounter.totalSteps = 360
 stepCounter.totalSteps = 896
 
+struct SomeStructure {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 1 }
+}
+enum SomeEnumeration {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 6 }
+}
+class SomeClass {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 27 }
+    class var overrideableComputedTypeProperty: Int {
+        return 107
+    } }
+
+//使用关键字 static 来定义类型属性。在为类(class)定义计算型类型属性时,可以使用关键字 class 来支持子 类对父类的实现进行重写。
+SomeClass.storedTypeProperty
+
+struct AudioChannel {
+    static let thresholdLevel = 10
+    static var maxInputLevelForAllChannels = 0
+    var currentLevel: Int = 0 {
+        didSet {
+            if currentLevel > AudioChannel.thresholdLevel {
+                // 将新电平值设置为阀值
+                currentLevel = AudioChannel.thresholdLevel
+            }
+            if currentLevel > AudioChannel.maxInputLevelForAllChannels {
+                // 存储当前电平值作为新的最大输入电平
+                AudioChannel.maxInputLevelForAllChannels = currentLevel
+            }
+        }
+    }
+}
+
+var leftChannel = AudioChannel()
+var rightChannel = AudioChannel()
+
+
+leftChannel.currentLevel = 7
+print(leftChannel.currentLevel)
+print(AudioChannel.maxInputLevelForAllChannels)
+
+rightChannel.currentLevel = 11
+print(rightChannel.currentLevel)
+print(AudioChannel.maxInputLevelForAllChannels)
 
 
