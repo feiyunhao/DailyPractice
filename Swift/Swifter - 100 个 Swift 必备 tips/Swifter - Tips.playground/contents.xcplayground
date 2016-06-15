@@ -2,17 +2,23 @@
 <playground version='6.0' target-platform='ios'>
     <pages>
         <page name='0 General'/>
-        <page name='1.1 柯里化(currying)'/>
-        <page name='1.2 将protocol的方法声明为mutating'/>
-        <page name='1.3 Sequence'/>
-        <page name='1.4 Tuple'/>
-        <page name='1.5 @autoclosure和??'/>
-        <page name='1.6 Optional Chaining'/>
-        <page name='1.7 Operator'/>
-        <page name='1.8 func-params'/>
-        <page name='1.9 literal'/>
+        <page name='1.01 柯里化(currying)'/>
+        <page name='1.02 将protocol的方法声明为mutating'/>
+        <page name='1.03 Sequence'/>
+        <page name='1.04 Tuple'/>
+        <page name='1.05 @autoclosure和??'/>
+        <page name='1.06 Optional Chaining'/>
+        <page name='1.07 Operator'/>
+        <page name='1.08 func-params'/>
+        <page name='1.09 literal'/>
         <page name='1.10 subscript'/>
         <page name='1.11 方法嵌套'/>
         <page name='1.12 命名空间'/>
+        <page name='1.13 any-anyobject'/>
+        <page name='1.14 typealias'/>
+        <page name='1.15 variadic'/>
+        <page name='1.16 init'/>
+        <page name='1.17 init-keyword'/>
+        <page name='1.18 init-nil'/>
     </pages>
 </playground>
