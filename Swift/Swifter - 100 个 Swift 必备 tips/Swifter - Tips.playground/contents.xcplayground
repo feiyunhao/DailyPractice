@@ -20,5 +20,18 @@
         <page name='1.16 init'/>
         <page name='1.17 init-keyword'/>
         <page name='1.18 init-nil'/>
+        <page name='1.19 protocol-composition'/>
+        <page name='1.20 static-class'/>
+        <page name='1.21 multi-collection'/>
+        <page name='1.22 default-param'/>
+        <page name='1.23 regex'/>
+        <page name='1.24 pattern-match'/>
+        <page name='1.25 range'/>
+        <page name='1.26 anyclass-meta-.self'/>
+        <page name='1.27 Self'/>
+        <page name='1.28 multi-method'/>
+        <page name='1.29 property-observer'/>
+        <page name='1.30 final'/>
+        <page name='1.31 lazy'/>
     </pages>
 </playground>
