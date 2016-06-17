@@ -27,5 +27,35 @@ print("Accessing str again")
 obj.str
 
 
+let data1 = 1...3
+let result1 = data1.map {
+    (i: Int) -> Int in
+    print("正在处理 \(i)")
+    return i * 2
+}
+
+print("准备访问结果")
+for i in result1 {
+    print("操作后结果为 \(i)")
+}
+
+print("操作完毕")
+
+
+//对于那些不需要完全运行，可能提前退出的情况，使用lazy来进行性能优化效果会非常有效
+
+let data2 = 1...3
+let result2 = data2.lazy.map {
+    (i: Int) -> Int in
+    print("正在处理 \(i)")
+    return i * 2
+}
+
+print("准备访问结果")
+for i in result2 {
+    print("操作后结果为 \(i)")
+}
+
+print("操作完毕")
 
 

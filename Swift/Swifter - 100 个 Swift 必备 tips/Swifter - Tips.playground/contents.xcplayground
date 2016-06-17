@@ -33,5 +33,12 @@
         <page name='1.29 property-observer'/>
         <page name='1.30 final'/>
         <page name='1.31 lazy'/>
+        <page name='1.32 reflection-mirror'/>
+        <page name='1.33 隐式解析包 Optional'/>
+        <page name='1.34 multiple-optional'/>
+        <page name='1.35 optional-map'/>
+        <page name='1.36 protocol-extension'/>
+        <page name='1.37 where'/>
+        <page name='1.38 indirect-enum'/>
     </pages>
 </playground>
