@@ -40,5 +40,15 @@
         <page name='1.36 protocol-extension'/>
         <page name='1.37 where'/>
         <page name='1.38 indirect-enum'/>
+        <page name='2.39 selector'/>
+        <page name='2.40 func-dispatch'/>
+        <page name='2.41 singleton'/>
+        <page name='2.42 条件编译'/>
+        <page name='2.43 编译标记'/>
+        <page name='2.44 UIApplicationMain'/>
+        <page name='2.45 @objc-dynamic'/>
+        <page name='2.46 objc-protocol'/>
+        <page name='2.47 memory-retain-cycle'/>
+        <page name='2.48 @autoreleasepool'/>
     </pages>
 </playground>
