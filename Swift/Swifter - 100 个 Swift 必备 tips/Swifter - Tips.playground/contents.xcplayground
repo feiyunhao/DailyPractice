@@ -50,5 +50,30 @@
         <page name='2.46 objc-protocol'/>
         <page name='2.47 memory-retain-cycle'/>
         <page name='2.48 @autoreleasepool'/>
+        <page name='2.49 value-reference'/>
+        <page name='2.50 string-nsstring'/>
+        <page name='2.51 unsafepointer'/>
+        <page name='2.52 pointer-memory'/>
+        <page name='2.53 COpaquePointer C convention'/>
+        <page name='2.54 gcd-delay'/>
+        <page name='2.55 instance-type'/>
+        <page name='2.56 introspection'/>
+        <page name='2.57 KVO'/>
+        <page name='2.58 scope'/>
+        <page name='2.59 equal'/>
+        <page name='2.60 hash'/>
+        <page name='2.61 class cluster'/>
+        <page name='2.62 swizzle'/>
+        <page name='2.63 '/>
+        <page name='2.64 output-format'/>
+        <page name='2.65 options'/>
+        <page name='2.66 enumerate'/>
+        <page name='2.67 type-encode'/>
+        <page name='2.68 C  @asmname'/>
+        <page name='2.69 sizeof-sizeofValue'/>
+        <page name='2.70 delegate'/>
+        <page name='2.71 Associated Object'/>
+        <page name='2.72 Lock'/>
+        <page name='2.73 toll-free'/>
     </pages>
 </playground>
