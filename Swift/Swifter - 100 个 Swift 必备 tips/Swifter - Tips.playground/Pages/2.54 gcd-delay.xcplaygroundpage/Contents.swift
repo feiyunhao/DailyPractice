@@ -1,6 +1,9 @@
 //: [Previous](@previous)
 
 import Foundation
+import XCPlayground
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 
 var str = "Hello, playground"
 

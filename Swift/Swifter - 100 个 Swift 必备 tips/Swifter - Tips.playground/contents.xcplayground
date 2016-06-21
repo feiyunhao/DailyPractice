@@ -75,5 +75,11 @@
         <page name='2.71 Associated Object'/>
         <page name='2.72 Lock'/>
         <page name='2.73 toll-free'/>
+        <page name='3.75 random-number'/>
+        <page name='3.76 print-debugprint'/>
+        <page name='3.78 error-handle'/>
+        <page name='3.79 assertion'/>
+        <page name='3.80 fatalError'/>
+        <page name='3.83 playground'/>
     </pages>
 </playground>
