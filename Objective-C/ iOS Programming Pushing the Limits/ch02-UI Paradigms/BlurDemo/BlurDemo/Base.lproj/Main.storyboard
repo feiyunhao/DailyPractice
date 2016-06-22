@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HdY-uZ-Pkn">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="QKn-Dz-gX5">
+            <objects>
+                <navigationController id="HdY-uZ-Pkn" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TMK-iB-fo2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sgS-u1-6di"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fu2-A1-ywa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-857" y="153"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlurDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gfm-u9-8Ae">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gfm-u9-8Ae" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9Jt-ig-bSc"/>
+                            <constraint firstItem="gfm-u9-8Ae" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pz2-ac-Mdb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gfm-u9-8Ae" secondAttribute="bottom" id="oHc-YK-v1v"/>
+                            <constraint firstAttribute="trailing" secondItem="gfm-u9-8Ae" secondAttribute="trailing" id="vgu-eI-7pm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3tX-bl-YbZ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="uNP-mX-jYk">
+                            <connections>
+                                <action selector="buttonAction:" destination="BYZ-38-t0r" id="uGR-WX-Gml"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bgImageView" destination="gfm-u9-8Ae" id="xtA-JQ-Aix"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-372.5" y="121.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image.jpg" width="1200" height="900"/>
+    </resources>
+</document>
