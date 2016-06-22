@@ -10,11 +10,17 @@ import UIKit
 import Accelerate
 
 protocol BlurExtension {
+    
     func applyLightEffect() -> UIImage?
+    
     func applyExtraLightEffect() -> UIImage?
+    
     func applyDarkEffect() -> UIImage?
+    
     func applyTintEffectWithColor(tintColor:UIColor) -> UIImage?
+    
     func applyBlurWithRadius(blurRadius: CGFloat,tintColor: UIColor?, saturationDeltaFactor:CGFloat, maskImage: UIImage? ) -> UIImage?
+    
 }
 extension UIImage: BlurExtension {
     
