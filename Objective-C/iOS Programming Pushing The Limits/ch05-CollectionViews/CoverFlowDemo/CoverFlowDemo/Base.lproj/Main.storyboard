@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoverFlowDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RJd-iK-0aS">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8oe-bE-e6E" customClass="SYCoverFlowLayout" customModule="CoverFlowDemo" customModuleProvider="target">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SYPhotoCell" id="G2u-wL-DX6" customClass="PhotoCell" customModule="CoverFlowDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="290"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="290" height="290"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qJY-NB-6Hy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="290" height="290"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="qJY-NB-6Hy" firstAttribute="leading" secondItem="G2u-wL-DX6" secondAttribute="leading" id="8HP-UU-9at"/>
+                                            <constraint firstItem="qJY-NB-6Hy" firstAttribute="top" secondItem="G2u-wL-DX6" secondAttribute="top" id="RYP-XQ-N7l"/>
+                                            <constraint firstAttribute="trailing" secondItem="qJY-NB-6Hy" secondAttribute="trailing" id="wMv-yW-SIT"/>
+                                            <constraint firstAttribute="bottom" secondItem="qJY-NB-6Hy" secondAttribute="bottom" id="y9I-9D-aes"/>
+                                        </constraints>
+                                        <size key="customSize" width="290" height="290"/>
+                                        <connections>
+                                            <outlet property="photoView" destination="qJY-NB-6Hy" id="ISI-dl-86t"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Oer-WW-K6Y"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9RS-6C-1vF"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RJd-iK-0aS" secondAttribute="trailing" id="EIG-zH-B6M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RJd-iK-0aS" secondAttribute="bottom" id="Nr4-Eg-nXF"/>
+                            <constraint firstItem="RJd-iK-0aS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oew-XK-sWB"/>
+                            <constraint firstItem="RJd-iK-0aS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="y1o-1X-q6L"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="collectionView" destination="RJd-iK-0aS" id="9gU-ht-BjE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70.5" y="-60.5"/>
+        </scene>
+    </scenes>
+</document>

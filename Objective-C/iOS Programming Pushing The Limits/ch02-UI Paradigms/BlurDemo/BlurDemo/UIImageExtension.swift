@@ -102,6 +102,7 @@ extension UIImage: BlurExtension {
                                                              rowBytes:CGBitmapContextGetBytesPerRow(effectOutContext))
             
             if hasBlur {
+                
                 let inputRadius = blurRadius * UIScreen.mainScreen().scale
                 var radius = UInt32(floor(Double(inputRadius) * 3 * sqrt(2 * M_PI) / 4 + 0.5));
                 
@@ -117,6 +118,7 @@ extension UIImage: BlurExtension {
             var effectImageBuffersAreSwapped = false
             
             if hasSaturationChange {
+                
                 let s = saturationDeltaFactor
                 
                 let floatingPointSaturationMatrix:[CGFloat] = [
@@ -141,25 +143,17 @@ extension UIImage: BlurExtension {
                 else {
                     vImageMatrixMultiply_ARGB8888(&effectInBuffer, &effectOutBuffer, saturationMatrix, divisor, nil, nil, UInt32(kvImageNoFlags));
                 }
-                
             }
+            
             if !effectImageBuffersAreSwapped  {
                 effectImage = UIGraphicsGetImageFromCurrentImageContext()
                 UIGraphicsEndImageContext();
             }
             
-                
-            
             if effectImageBuffersAreSwapped {
                 effectImage = UIGraphicsGetImageFromCurrentImageContext();
                 UIGraphicsEndImageContext();
             }
-            
-            
-            
-
-            
-            
         }
         
         // Set up output context.
@@ -172,9 +166,9 @@ extension UIImage: BlurExtension {
         CGContextDrawImage(outputContext, imageRect, self.CGImage);
         
         // Draw effect image.
-        if (hasBlur) {
+        if hasBlur {
             CGContextSaveGState(outputContext);
-            if ((maskImage) != nil) {
+            if maskImage != nil {
                 CGContextClipToMask(outputContext, imageRect, maskImage!.CGImage);
             }
             CGContextDrawImage(outputContext, imageRect, effectImage.CGImage);
@@ -182,7 +176,7 @@ extension UIImage: BlurExtension {
         }
         
         // Add in color tint.
-        if ((tintColor) != nil) {
+        if tintColor != nil {
             CGContextSaveGState(outputContext);
             CGContextSetFillColorWithColor(outputContext, tintColor!.CGColor);
             CGContextFillRect(outputContext, imageRect);
