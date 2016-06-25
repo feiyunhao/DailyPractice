@@ -15,9 +15,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     var photosCache = NSCache()
     let photosDirectory = NSBundle.mainBundle().resourcePath?.stringByAppendingString("/Photos")
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,7 +55,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
 

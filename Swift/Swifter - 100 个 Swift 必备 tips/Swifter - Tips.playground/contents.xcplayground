@@ -81,5 +81,11 @@
         <page name='3.79 assertion'/>
         <page name='3.80 fatalError'/>
         <page name='3.83 playground'/>
+        <page name='3.86 math'/>
+        <page name='3.87 NSNull'/>
+        <page name='3.90 Log'/>
+        <page name='3.91 溢出'/>
+        <page name='3.92 宏定义define'/>
+        <page name='3.100 尾递归'/>
     </pages>
 </playground>

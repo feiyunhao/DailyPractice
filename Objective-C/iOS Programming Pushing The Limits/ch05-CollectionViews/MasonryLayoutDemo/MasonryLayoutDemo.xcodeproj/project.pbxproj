@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2265AC81D1C483800ADA51F /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2265AC71D1C483800ADA51F /* CollectionViewCell.swift */; };
 		F236667A1D1C29CF00A30C69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23666791D1C29CF00A30C69 /* AppDelegate.swift */; };
 		F236667C1D1C29CF00A30C69 /* STCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F236667B1D1C29CF00A30C69 /* STCViewController.swift */; };
 		F236667F1D1C29CF00A30C69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F236667D1D1C29CF00A30C69 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2265AC71D1C483800ADA51F /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F23666761D1C29CF00A30C69 /* MasonryLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasonryLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23666791D1C29CF00A30C69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F236667B1D1C29CF00A30C69 /* STCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STCViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				F23666791D1C29CF00A30C69 /* AppDelegate.swift */,
 				F236667B1D1C29CF00A30C69 /* STCViewController.swift */,
 				F236668B1D1C2B4B00A30C69 /* MKMasonryViewLayout.swift */,
+				F2265AC71D1C483800ADA51F /* CollectionViewCell.swift */,
 				F236667D1D1C29CF00A30C69 /* Main.storyboard */,
 				F23666801D1C29CF00A30C69 /* Assets.xcassets */,
 				F23666821D1C29CF00A30C69 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			files = (
 				F236668C1D1C2B4B00A30C69 /* MKMasonryViewLayout.swift in Sources */,
 				F236667C1D1C29CF00A30C69 /* STCViewController.swift in Sources */,
+				F2265AC81D1C483800ADA51F /* CollectionViewCell.swift in Sources */,
 				F236667A1D1C29CF00A30C69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +297,7 @@
 				F236668A1D1C29CF00A30C69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
