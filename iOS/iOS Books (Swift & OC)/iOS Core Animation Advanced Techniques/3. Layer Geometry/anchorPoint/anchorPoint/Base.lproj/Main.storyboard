@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="anchorPoint" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ClockFace" translatesAutoresizingMaskIntoConstraints="NO" id="UUt-xP-TDd">
+                                <rect key="frame" x="172" y="172" width="256" height="256"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HourHand" translatesAutoresizingMaskIntoConstraints="NO" id="EsT-FQ-Evq">
+                                <rect key="frame" x="285" y="253" width="30" height="94"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MinuteHand" translatesAutoresizingMaskIntoConstraints="NO" id="egH-si-lLb">
+                                <rect key="frame" x="290" y="247" width="20" height="106"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SecondHand" translatesAutoresizingMaskIntoConstraints="NO" id="xyo-cu-d6q">
+                                <rect key="frame" x="296" y="249" width="8" height="102"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="egH-si-lLb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="68E-6m-YTr"/>
+                            <constraint firstItem="UUt-xP-TDd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HOe-fn-kvT"/>
+                            <constraint firstItem="xyo-cu-d6q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cza-UI-t0T"/>
+                            <constraint firstItem="UUt-xP-TDd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eCN-e3-qgc"/>
+                            <constraint firstItem="EsT-FQ-Evq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gnx-ZV-Mt6"/>
+                            <constraint firstItem="EsT-FQ-Evq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tB6-MB-f8a"/>
+                            <constraint firstItem="xyo-cu-d6q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uUP-Aw-pcM"/>
+                            <constraint firstItem="egH-si-lLb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ykI-ax-Bwg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hourHand" destination="EsT-FQ-Evq" id="VkR-Ye-0b6"/>
+                        <outlet property="minuteHand" destination="egH-si-lLb" id="pXC-QP-0LL"/>
+                        <outlet property="secondHand" destination="xyo-cu-d6q" id="UVV-FJ-0cp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="221"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ClockFace" width="256" height="256"/>
+        <image name="HourHand" width="30" height="94"/>
+        <image name="MinuteHand" width="20" height="106"/>
+        <image name="SecondHand" width="8" height="102"/>
+    </resources>
+</document>
