@@ -22,18 +22,13 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" id="hxw-D5-FoR" userLabel="Hour2">
-                                        <rect key="frame" x="50" y="100" width="50" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
                                     <view contentMode="scaleToFill" id="Nei-zY-a07" userLabel="Minute1">
                                         <rect key="frame" x="111" y="100" width="50" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="mRc-au-L81" userLabel="Minute2">
-                                        <rect key="frame" x="159" y="100" width="50" height="100"/>
+                                        <rect key="frame" x="162" y="100" width="50" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -43,24 +38,32 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="7Dl-0j-4Cu" userLabel="Second2">
-                                        <rect key="frame" x="270" y="100" width="50" height="100"/>
+                                        <rect key="frame" x="269" y="100" width="50" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <view contentMode="scaleToFill" id="hxw-D5-FoR" userLabel="Hour2">
+                                        <rect key="frame" x="53" y="100" width="50" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="digitViews" destination="7Dl-0j-4Cu" id="e0v-it-XWC"/>
-                        <outletCollection property="digitViews" destination="7Dl-0j-4Cu" id="FED-wt-psN"/>
+                        <outletCollection property="digitViews" destination="jUA-cL-clG" collectionClass="NSMutableArray" id="keg-BZ-lZb"/>
+                        <outletCollection property="digitViews" destination="hxw-D5-FoR" collectionClass="NSMutableArray" id="RnS-gf-oTs"/>
+                        <outletCollection property="digitViews" destination="Nei-zY-a07" collectionClass="NSMutableArray" id="NCm-29-djg"/>
+                        <outletCollection property="digitViews" destination="mRc-au-L81" collectionClass="NSMutableArray" id="tmA-sE-5Wl"/>
+                        <outletCollection property="digitViews" destination="XvX-yj-Xt3" collectionClass="NSMutableArray" id="MqJ-6J-LYR"/>
+                        <outletCollection property="digitViews" destination="7Dl-0j-4Cu" collectionClass="NSMutableArray" id="gCC-XH-uQv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149.33333333333334" y="291.10000000000002"/>
+            <point key="canvasLocation" x="206" y="67"/>
         </scene>
     </scenes>
 </document>
