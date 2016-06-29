@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Affine Transforms
+//  SolidObjects
 //
-//  Created by feiyun on 16/6/28.
+//  Created by feiyun on 16/6/29.
 //  Copyright © 2016年 feiyun. All rights reserved.
 //
 
@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = ViewController()
+        window?.makeKeyAndVisible()
         return true
     }
 

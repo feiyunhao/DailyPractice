@@ -35,6 +35,8 @@ class ViewController: UIViewController {
 //        //apply transform to layer
 //        self.layerView.layer.setAffineTransform(transform)
 
+        
+        
 //        var transform = CGAffineTransformIdentity
 //        print(transform.a,transform.b,transform.c,transform.d,transform.tx,transform.ty)
 //        transform.c = -0.5
