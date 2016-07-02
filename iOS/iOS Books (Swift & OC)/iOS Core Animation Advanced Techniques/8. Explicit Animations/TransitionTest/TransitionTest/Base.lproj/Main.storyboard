@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TransitionTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="611" translatesAutoresizingMaskIntoConstraints="NO" id="bKA-vt-OIG">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Spaceship.png" translatesAutoresizingMaskIntoConstraints="NO" id="76Q-Rj-oeF">
+                                        <rect key="frame" x="50" y="20" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="8cQ-x9-qUI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlF-t4-qcE">
+                                        <rect key="frame" x="100" y="250" width="99" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Switch Image">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="switchImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ByW-NI-vaw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Njj-AG-sOY"/>
+                                    <constraint firstItem="76Q-Rj-oeF" firstAttribute="top" secondItem="bKA-vt-OIG" secondAttribute="top" constant="20" symbolic="YES" id="Q5Z-2u-pZH"/>
+                                    <constraint firstItem="76Q-Rj-oeF" firstAttribute="leading" secondItem="bKA-vt-OIG" secondAttribute="leading" constant="50" id="XiH-Ht-GLK"/>
+                                    <constraint firstAttribute="bottom" secondItem="FlF-t4-qcE" secondAttribute="bottom" constant="20" symbolic="YES" id="ZQE-nZ-Lnq"/>
+                                    <constraint firstItem="FlF-t4-qcE" firstAttribute="centerX" secondItem="76Q-Rj-oeF" secondAttribute="centerX" id="a7B-ZG-9qB"/>
+                                    <constraint firstAttribute="height" constant="300" id="q3f-Up-3oS"/>
+                                    <constraint firstItem="76Q-Rj-oeF" firstAttribute="centerX" secondItem="bKA-vt-OIG" secondAttribute="centerX" id="vNb-Fm-3fg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bKA-vt-OIG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1D7-7Y-lVa"/>
+                            <constraint firstItem="bKA-vt-OIG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sRF-gf-MJO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="76Q-Rj-oeF" id="Rpc-Fa-g3y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Spaceship.png" width="200" height="200"/>
+    </resources>
+</document>

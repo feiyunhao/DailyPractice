@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F25F432E1D2675AC00758BF0 /* CATransformLayerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F432D1D2675AC00758BF0 /* CATransformLayerTest.swift */; };
 		F28ABDBA1D23BF3F002ED081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28ABDB91D23BF3F002ED081 /* AppDelegate.swift */; };
 		F28ABDBF1D23BF3F002ED081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28ABDBD1D23BF3F002ED081 /* Main.storyboard */; };
 		F28ABDC11D23BF3F002ED081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28ABDC01D23BF3F002ED081 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F25F432D1D2675AC00758BF0 /* CATransformLayerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CATransformLayerTest.swift; path = Controllers/CATransformLayerTest.swift; sourceTree = "<group>"; };
 		F28ABDB61D23BF3F002ED081 /* SpecializedLayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpecializedLayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28ABDB91D23BF3F002ED081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F28ABDBE1D23BF3F002ED081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				F28ABDCC1D23C176002ED081 /* CAShapeLayerTest.swift */,
 				F28ABDD01D23FC6C002ED081 /* CATextLayerTest.swift */,
+				F25F432D1D2675AC00758BF0 /* CATransformLayerTest.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				F28ABDCF1D23C20F002ED081 /* TableViewController.swift in Sources */,
 				F28ABDCD1D23C176002ED081 /* CAShapeLayerTest.swift in Sources */,
 				F28ABDD11D23FC6C002ED081 /* CATextLayerTest.swift in Sources */,
+				F25F432E1D2675AC00758BF0 /* CATransformLayerTest.swift in Sources */,
 				F28ABDBA1D23BF3F002ED081 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +309,7 @@
 				F28ABDCA1D23BF3F002ED081 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
