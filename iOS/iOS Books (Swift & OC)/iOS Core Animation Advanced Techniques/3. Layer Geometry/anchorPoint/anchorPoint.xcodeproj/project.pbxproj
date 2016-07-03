@@ -12,6 +12,10 @@
 		F223CF021D21510B005901B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F223CF001D21510B005901B7 /* Main.storyboard */; };
 		F223CF041D21510B005901B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F223CF031D21510B005901B7 /* Assets.xcassets */; };
 		F223CF071D21510B005901B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F223CF051D21510B005901B7 /* LaunchScreen.storyboard */; };
+		F2B98D761D28DA8100EAA6A9 /* ClockFace@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B98D721D28DA8100EAA6A9 /* ClockFace@2x.png */; };
+		F2B98D771D28DA8100EAA6A9 /* HourHand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B98D731D28DA8100EAA6A9 /* HourHand@2x.png */; };
+		F2B98D781D28DA8100EAA6A9 /* MinuteHand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B98D741D28DA8100EAA6A9 /* MinuteHand@2x.png */; };
+		F2B98D791D28DA8100EAA6A9 /* SecondHand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B98D751D28DA8100EAA6A9 /* SecondHand@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		F223CF031D21510B005901B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F223CF061D21510B005901B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F223CF081D21510B005901B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2B98D721D28DA8100EAA6A9 /* ClockFace@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ClockFace@2x.png"; path = "../../Images/ClockFace@2x.png"; sourceTree = "<group>"; };
+		F2B98D731D28DA8100EAA6A9 /* HourHand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HourHand@2x.png"; path = "../../Images/HourHand@2x.png"; sourceTree = "<group>"; };
+		F2B98D741D28DA8100EAA6A9 /* MinuteHand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MinuteHand@2x.png"; path = "../../Images/MinuteHand@2x.png"; sourceTree = "<group>"; };
+		F2B98D751D28DA8100EAA6A9 /* SecondHand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SecondHand@2x.png"; path = "../../Images/SecondHand@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +46,10 @@
 		F223CEF01D21510B005901B7 = {
 			isa = PBXGroup;
 			children = (
+				F2B98D721D28DA8100EAA6A9 /* ClockFace@2x.png */,
+				F2B98D731D28DA8100EAA6A9 /* HourHand@2x.png */,
+				F2B98D741D28DA8100EAA6A9 /* MinuteHand@2x.png */,
+				F2B98D751D28DA8100EAA6A9 /* SecondHand@2x.png */,
 				F223CEFB1D21510B005901B7 /* anchorPoint */,
 				F223CEFA1D21510B005901B7 /* Products */,
 			);
@@ -123,9 +135,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B98D761D28DA8100EAA6A9 /* ClockFace@2x.png in Resources */,
+				F2B98D791D28DA8100EAA6A9 /* SecondHand@2x.png in Resources */,
+				F2B98D771D28DA8100EAA6A9 /* HourHand@2x.png in Resources */,
 				F223CF071D21510B005901B7 /* LaunchScreen.storyboard in Resources */,
 				F223CF041D21510B005901B7 /* Assets.xcassets in Resources */,
 				F223CF021D21510B005901B7 /* Main.storyboard in Resources */,
+				F2B98D781D28DA8100EAA6A9 /* MinuteHand@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +305,7 @@
 				F223CF0D1D21510B005901B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
