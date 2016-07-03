@@ -15,6 +15,10 @@
 		F28ABDCD1D23C176002ED081 /* CAShapeLayerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28ABDCC1D23C176002ED081 /* CAShapeLayerTest.swift */; };
 		F28ABDCF1D23C20F002ED081 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28ABDCE1D23C20F002ED081 /* TableViewController.swift */; };
 		F28ABDD11D23FC6C002ED081 /* CATextLayerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28ABDD01D23FC6C002ED081 /* CATextLayerTest.swift */; };
+		F2B98DB71D2944C800EAA6A9 /* CAGradientLayerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B98DB61D2944C800EAA6A9 /* CAGradientLayerTest.swift */; };
+		F2B98DB91D2946ED00EAA6A9 /* CAReplicatorLayerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B98DB81D2946ED00EAA6A9 /* CAReplicatorLayerTest.swift */; };
+		F2B98DBB1D294B6700EAA6A9 /* ReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B98DBA1D294B6700EAA6A9 /* ReflectionView.swift */; };
+		F2B98DBD1D2951CF00EAA6A9 /* CAScrollLayerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B98DBC1D2951CF00EAA6A9 /* CAScrollLayerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		F28ABDCC1D23C176002ED081 /* CAShapeLayerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CAShapeLayerTest.swift; path = Controllers/CAShapeLayerTest.swift; sourceTree = "<group>"; };
 		F28ABDCE1D23C20F002ED081 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		F28ABDD01D23FC6C002ED081 /* CATextLayerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CATextLayerTest.swift; path = Controllers/CATextLayerTest.swift; sourceTree = "<group>"; };
+		F2B98DB61D2944C800EAA6A9 /* CAGradientLayerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CAGradientLayerTest.swift; path = Controllers/CAGradientLayerTest.swift; sourceTree = "<group>"; };
+		F2B98DB81D2946ED00EAA6A9 /* CAReplicatorLayerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CAReplicatorLayerTest.swift; path = Controllers/CAReplicatorLayerTest.swift; sourceTree = "<group>"; };
+		F2B98DBA1D294B6700EAA6A9 /* ReflectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReflectionView.swift; sourceTree = "<group>"; };
+		F2B98DBC1D2951CF00EAA6A9 /* CAScrollLayerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CAScrollLayerTest.swift; path = Controllers/CAScrollLayerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			children = (
 				F28ABDB91D23BF3F002ED081 /* AppDelegate.swift */,
 				F28ABDCE1D23C20F002ED081 /* TableViewController.swift */,
+				F2B98DBA1D294B6700EAA6A9 /* ReflectionView.swift */,
 				F28ABDBD1D23BF3F002ED081 /* Main.storyboard */,
 				F28ABDCB1D23C135002ED081 /* Controllers */,
 				F28ABDC01D23BF3F002ED081 /* Assets.xcassets */,
@@ -77,6 +86,9 @@
 				F28ABDCC1D23C176002ED081 /* CAShapeLayerTest.swift */,
 				F28ABDD01D23FC6C002ED081 /* CATextLayerTest.swift */,
 				F25F432D1D2675AC00758BF0 /* CATransformLayerTest.swift */,
+				F2B98DB61D2944C800EAA6A9 /* CAGradientLayerTest.swift */,
+				F2B98DB81D2946ED00EAA6A9 /* CAReplicatorLayerTest.swift */,
+				F2B98DBC1D2951CF00EAA6A9 /* CAScrollLayerTest.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -154,10 +166,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F28ABDCF1D23C20F002ED081 /* TableViewController.swift in Sources */,
+				F2B98DBD1D2951CF00EAA6A9 /* CAScrollLayerTest.swift in Sources */,
 				F28ABDCD1D23C176002ED081 /* CAShapeLayerTest.swift in Sources */,
 				F28ABDD11D23FC6C002ED081 /* CATextLayerTest.swift in Sources */,
+				F2B98DB71D2944C800EAA6A9 /* CAGradientLayerTest.swift in Sources */,
 				F25F432E1D2675AC00758BF0 /* CATransformLayerTest.swift in Sources */,
+				F2B98DBB1D294B6700EAA6A9 /* ReflectionView.swift in Sources */,
 				F28ABDBA1D23BF3F002ED081 /* AppDelegate.swift in Sources */,
+				F2B98DB91D2946ED00EAA6A9 /* CAReplicatorLayerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
