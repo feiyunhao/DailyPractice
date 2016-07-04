@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F25F432E1D2675AC00758BF0 /* CATransformLayerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25F432D1D2675AC00758BF0 /* CATransformLayerTest.swift */; };
+		F27C7A381D29F38D008DB631 /* Anchor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F27C7A371D29F38D008DB631 /* Anchor@2x.png */; };
+		F27C7A3A1D29F477008DB631 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C7A391D29F477008DB631 /* ScrollView.swift */; };
 		F28ABDBA1D23BF3F002ED081 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28ABDB91D23BF3F002ED081 /* AppDelegate.swift */; };
 		F28ABDBF1D23BF3F002ED081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28ABDBD1D23BF3F002ED081 /* Main.storyboard */; };
 		F28ABDC11D23BF3F002ED081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28ABDC01D23BF3F002ED081 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		F25F432D1D2675AC00758BF0 /* CATransformLayerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CATransformLayerTest.swift; path = Controllers/CATransformLayerTest.swift; sourceTree = "<group>"; };
+		F27C7A371D29F38D008DB631 /* Anchor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Anchor@2x.png"; path = "../../Images/Anchor@2x.png"; sourceTree = "<group>"; };
+		F27C7A391D29F477008DB631 /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		F28ABDB61D23BF3F002ED081 /* SpecializedLayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpecializedLayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28ABDB91D23BF3F002ED081 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F28ABDBE1D23BF3F002ED081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,6 +56,7 @@
 		F28ABDAD1D23BF3F002ED081 = {
 			isa = PBXGroup;
 			children = (
+				F27C7A371D29F38D008DB631 /* Anchor@2x.png */,
 				F28ABDB81D23BF3F002ED081 /* SpecializedLayers */,
 				F28ABDB71D23BF3F002ED081 /* Products */,
 			);
@@ -71,6 +76,7 @@
 				F28ABDB91D23BF3F002ED081 /* AppDelegate.swift */,
 				F28ABDCE1D23C20F002ED081 /* TableViewController.swift */,
 				F2B98DBA1D294B6700EAA6A9 /* ReflectionView.swift */,
+				F27C7A391D29F477008DB631 /* ScrollView.swift */,
 				F28ABDBD1D23BF3F002ED081 /* Main.storyboard */,
 				F28ABDCB1D23C135002ED081 /* Controllers */,
 				F28ABDC01D23BF3F002ED081 /* Assets.xcassets */,
@@ -153,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F28ABDC41D23BF3F002ED081 /* LaunchScreen.storyboard in Resources */,
+				F27C7A381D29F38D008DB631 /* Anchor@2x.png in Resources */,
 				F28ABDC11D23BF3F002ED081 /* Assets.xcassets in Resources */,
 				F28ABDBF1D23BF3F002ED081 /* Main.storyboard in Resources */,
 			);
@@ -168,6 +175,7 @@
 				F28ABDCF1D23C20F002ED081 /* TableViewController.swift in Sources */,
 				F2B98DBD1D2951CF00EAA6A9 /* CAScrollLayerTest.swift in Sources */,
 				F28ABDCD1D23C176002ED081 /* CAShapeLayerTest.swift in Sources */,
+				F27C7A3A1D29F477008DB631 /* ScrollView.swift in Sources */,
 				F28ABDD11D23FC6C002ED081 /* CATextLayerTest.swift in Sources */,
 				F2B98DB71D2944C800EAA6A9 /* CAGradientLayerTest.swift in Sources */,
 				F25F432E1D2675AC00758BF0 /* CATransformLayerTest.swift in Sources */,

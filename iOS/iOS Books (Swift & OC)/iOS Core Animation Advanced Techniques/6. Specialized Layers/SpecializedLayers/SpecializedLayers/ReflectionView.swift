@@ -14,14 +14,14 @@ class ReflectionView: UIView {
         return CAReplicatorLayer.self
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.setUp()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        self.setUp()
+//    }
+//    
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     func setUp() -> () {
         let layer: CAReplicatorLayer = (self.layer as! CAReplicatorLayer)
