@@ -18,7 +18,7 @@ class CachingTest: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        self.collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell4")
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -26,7 +26,7 @@ class CachingTest: UIViewController, UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell4", forIndexPath: indexPath)
         var imageView = cell.contentView.subviews.first as? UIImageView
         if imageView == nil {
             imageView = UIImageView.init(frame: cell.contentView.bounds)

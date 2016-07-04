@@ -17,7 +17,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        self.collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell1")
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -25,7 +25,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell1", forIndexPath: indexPath)
         var imageView = cell.viewWithTag(101) as? UIImageView
         if imageView == nil {
             imageView = UIImageView.init(frame: cell.contentView.bounds)
