@@ -22,6 +22,7 @@ protocol BlurExtension {
     func applyBlurWithRadius(blurRadius: CGFloat,tintColor: UIColor?, saturationDeltaFactor:CGFloat, maskImage: UIImage? ) -> UIImage?
     
 }
+
 extension UIImage: BlurExtension {
     
     func applyLightEffect() -> UIImage? {
@@ -58,17 +59,17 @@ extension UIImage: BlurExtension {
     
     func applyBlurWithRadius(blurRadius: CGFloat,tintColor: UIColor?, saturationDeltaFactor:CGFloat, maskImage: UIImage? ) -> UIImage? {
         
-        if (self.size.width < 1 || self.size.height < 1) {
+        if self.size.width < 1 || self.size.height < 1 {
             print("*** error: invalid size: (\(String(format: "%.2f", self.size.width)) x \(String(format:"%.2f", self.size.height))). Both dimensions must be >= 1: \(self)");
             return nil;
         }
         
-        if ((self.CGImage == nil)) {
+        if self.CGImage == nil {
             print("*** error: image must be backed by a CGImage: \(self)")
             return nil;
         }
         
-        if (maskImage != nil && maskImage!.CGImage != nil) {
+        if maskImage != nil && maskImage!.CGImage != nil {
             print("*** error: maskImage must be backed by a CGImage: \(maskImage)")
             return nil;
         }
