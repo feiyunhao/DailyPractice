@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2448E431D2F373000E62660 /* Photos in Resources */ = {isa = PBXBuildFile; fileRef = F2448E421D2F373000E62660 /* Photos */; };
 		F26E276E1D1B87C800302496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E276D1D1B87C800302496 /* AppDelegate.swift */; };
 		F26E27701D1B87C800302496 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E276F1D1B87C800302496 /* ViewController.swift */; };
 		F26E27731D1B87C800302496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26E27711D1B87C800302496 /* Main.storyboard */; };
 		F26E27751D1B87C800302496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26E27741D1B87C800302496 /* Assets.xcassets */; };
 		F26E27781D1B87C800302496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26E27761D1B87C800302496 /* LaunchScreen.storyboard */; };
-		F26E27801D1B88B200302496 /* Photos in Resources */ = {isa = PBXBuildFile; fileRef = F26E277F1D1B88B200302496 /* Photos */; };
 		F26E27861D1B89BE00302496 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E27851D1B89BE00302496 /* CollectionViewController.swift */; };
 		F26E27881D1B89DA00302496 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26E27871D1B89DA00302496 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2448E421D2F373000E62660 /* Photos */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Photos; path = "../../../../../../MyApplication/ios7ptl/ch05-CollectionViews/Photos"; sourceTree = "<group>"; };
 		F26E276A1D1B87C800302496 /* CollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26E276D1D1B87C800302496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F26E276F1D1B87C800302496 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		F26E27741D1B87C800302496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F26E27771D1B87C800302496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F26E27791D1B87C800302496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F26E277F1D1B88B200302496 /* Photos */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Photos; path = "../../../../../MyApplication/ios7ptl/ch05-CollectionViews/Photos"; sourceTree = "<group>"; };
 		F26E27851D1B89BE00302496 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		F26E27871D1B89DA00302496 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,7 +44,7 @@
 		F26E27611D1B87C800302496 = {
 			isa = PBXGroup;
 			children = (
-				F26E277F1D1B88B200302496 /* Photos */,
+				F2448E421D2F373000E62660 /* Photos */,
 				F26E276C1D1B87C800302496 /* CollectionViewDemo */,
 				F26E276B1D1B87C800302496 /* Products */,
 			);
@@ -135,7 +135,7 @@
 				F26E27781D1B87C800302496 /* LaunchScreen.storyboard in Resources */,
 				F26E27751D1B87C800302496 /* Assets.xcassets in Resources */,
 				F26E27731D1B87C800302496 /* Main.storyboard in Resources */,
-				F26E27801D1B88B200302496 /* Photos in Resources */,
+				F2448E431D2F373000E62660 /* Photos in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +303,7 @@
 				F26E277E1D1B87C800302496 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

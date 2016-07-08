@@ -87,7 +87,7 @@ class PTLDownloadManager:NSObject, NSURLSessionTaskDelegate {
         }
     }
     
-    @objc func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
+    func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
        print(#function)
         self.backgroundSession.getTasksWithCompletionHandler { (dataTasks, uploadTasks, downloadTasks) in
             let count = dataTasks.count + uploadTasks.count + dataTasks.count
@@ -102,11 +102,10 @@ class PTLDownloadManager:NSObject, NSURLSessionTaskDelegate {
         
     }
     
-    @objc func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didFinishDownloadingToURL location: NSURL) {
+    func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didFinishDownloadingToURL location: NSURL) {
          print(#function,location)
         self.moveFileFromLocation(location, forDownloadTask: downloadTask)
     }
-    
     
     
 }

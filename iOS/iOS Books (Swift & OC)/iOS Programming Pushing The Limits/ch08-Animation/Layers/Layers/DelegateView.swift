@@ -10,7 +10,7 @@ import UIKit
 import QuartzCore
 class DelegateView: UIView {
 
-        override func drawLayer(layer: CALayer, inContext ctx: CGContext) {
+    override func drawLayer(layer: CALayer, inContext ctx: CGContext) {
         UIGraphicsPushContext(ctx);
         UIColor.whiteColor().set()
         UIRectFill(layer.bounds)
@@ -32,7 +32,6 @@ class DelegateView: UIView {
         super.init(frame: frame)
         self.layer.setNeedsDisplay()
         self.layer.contentsScale = UIScreen.mainScreen().scale
-        layer.drawInContext(<#T##ctx: CGContext##CGContext#>)
     }
     
     required init?(coder aDecoder: NSCoder) {

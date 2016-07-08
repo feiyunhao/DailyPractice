@@ -20,6 +20,7 @@ class MYView: UIView {
     }
     
     func reverseImageForText(text:String) -> UIImage {
+        
         let kImageHeight:CGFloat = 200
         let kImageWidth:CGFloat = 200
         let font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
@@ -30,7 +31,7 @@ class MYView: UIView {
         let textimage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return UIImage(CGImage: textimage.CGImage!, scale: 1.0, orientation: .UpMirrored)
+        return UIImage(CGImage: textimage.CGImage!, scale: 0, orientation: .UpMirrored)
         
     }
 }

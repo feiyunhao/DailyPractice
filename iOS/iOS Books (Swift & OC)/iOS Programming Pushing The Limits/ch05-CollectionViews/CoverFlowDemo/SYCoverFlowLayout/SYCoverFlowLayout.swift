@@ -37,11 +37,11 @@ class SYCoverFlowLayout: UICollectionViewFlowLayout {
                 let normalizedDistance = distance / collectionViewHalfFrame
                 //如果中心在屏幕内
                 if fabs(distance) < collectionViewHalfFrame {
-                    //水冰月，变身...
+                    //水冰月，变身... fabs绝对值
                     let zoom =  1 + ZOOM_FACTOR*(1 - fabs(normalizedDistance))
                     //生成矩阵
                     var rotationAndPerspectiveTransform = CATransform3DIdentity
-                    //透视效果
+                    //透视效果 m34
                     rotationAndPerspectiveTransform.m34 = 1.0 / -500;
                     //延Y轴旋转
                     rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, (normalizedDistance) * CGFloat(M_PI_4), 0.0, 1.0, 0.0)
@@ -49,7 +49,9 @@ class SYCoverFlowLayout: UICollectionViewFlowLayout {
                     let zoomTransform = CATransform3DMakeScale(zoom, zoom, 1.0);
                     //合并 旋转 与 缩放， 赋值
                     attributes.transform3D = CATransform3DConcat(zoomTransform, rotationAndPerspectiveTransform);
+                    //层次
                     attributes.zIndex = Int(fabs(normalizedDistance) * 10.0)
+                    //透明度
                     var alpha = (1 - fabs(normalizedDistance)) + 0.1
                     if alpha > 1.0 {
                         alpha = 1.0
