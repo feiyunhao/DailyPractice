@@ -9,14 +9,6 @@
 import UIKit
 
 
-let WIDTH:CGFloat = 100
-let HEIGHT:CGFloat = 100
-let DEPTH:CGFloat = 10
-
-let SIZE:CGFloat = 100
-let SPACING:CGFloat = 150
-
-let CAMERA_DISTANCE:CGFloat = 500
 
 
 class TableViewController: UITableViewController {
@@ -43,7 +35,9 @@ class TableViewController: UITableViewController {
        
         let vc = controllers[indexPath.row].init()
         vc.view.backgroundColor = UIColor.blackColor()
-        self.navigationController?.pushViewController(vc, animated: true)
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        self.showViewController(vc, sender: nil)
+        self.presentViewController(vc, animated: true, completion: nil)
     }
 
     /*

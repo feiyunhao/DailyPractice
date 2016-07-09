@@ -16,6 +16,16 @@ import UIKit
 
 class FirstController: UIViewController {
 
+    let WIDTH:CGFloat = 10
+    let HEIGHT:CGFloat = 10
+    let DEPTH:CGFloat = 10
+    
+    let SIZE:CGFloat = 100
+    let SPACING:CGFloat = 150
+    
+    let CAMERA_DISTANCE:CGFloat = 500
+
+    
     
     
     override func viewDidLoad() {
