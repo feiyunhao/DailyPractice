@@ -15,7 +15,6 @@ class ViewController: UIViewController {
 
     var animator: UIDynamicAnimator!
     var defaultBehavior: DefaultBehavior?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +40,7 @@ class ViewController: UIViewController {
                                                     (tornView, newPinView) in
                                                     tornView.alpha = 1
                                                     defaultBehavior.addItem(tornView)
+                                                    defaultBehavior.collisionBehavior.addItem(newPinView)
                                                     let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.trash(_:)))
                                                     tap.numberOfTapsRequired = 2
                                                     tornView.addGestureRecognizer(tap)
@@ -64,14 +64,14 @@ class ViewController: UIViewController {
             
             // Create a push animation for each
             let push = UIPushBehavior.init(items: [subview], mode: .Instantaneous)
-            push.pushDirection = (CGVectorMake(CGFloat(rand()/RAND_MAX) - 0.5,
-            CGFloat(rand()/RAND_MAX) - 0.5))
+            push.pushDirection = CGVectorMake(CGFloat(rand())/CGFloat(RAND_MAX) - 0.5,
+            CGFloat(rand())/CGFloat(RAND_MAX) - 0.5)
             trashAnimator.addBehavior(push)
             // Fade out the pieces as they fly around.
             // At the end, remove them. Referencing trashAnimator here
             // also allows ARC to keep it around without an ivar.
             UIView.animateWithDuration(1, animations: { 
-                subview.alpha = 1
+                subview.alpha = 0
                 }, completion: { (completion) in
                     subview.removeFromSuperview()
                     trashAnimator.removeBehavior(push)
@@ -96,7 +96,8 @@ class ViewController: UIViewController {
         
         for row in 0..<rows
         {
-            for column in 0..<columns {
+            for column in 0..<columns
+            {
                 let rect = CGRectMake(
                                   CGFloat(column) * (width / CGFloat(columns)),
                                   CGFloat(row) * (height / CGFloat(rows)),

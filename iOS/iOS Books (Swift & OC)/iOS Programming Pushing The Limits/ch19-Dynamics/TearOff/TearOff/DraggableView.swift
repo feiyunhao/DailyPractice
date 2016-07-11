@@ -36,6 +36,7 @@ class DraggableView: UIView, NSCopying {
             dynamicAnimator.removeBehavior(behavior)
         }
         snapBehavior = UISnapBehavior.init(item: self, snapToPoint: point)
+        print(point)
         snapBehavior?.damping = 0.25
         dynamicAnimator.addBehavior(snapBehavior!)
     }
@@ -52,13 +53,21 @@ class DraggableView: UIView, NSCopying {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func copyWithZone(zone: NSZone) -> AnyObject {
         let newView = DraggableView.init(frame: CGRectZero, animator: self.dynamicAnimator)
         newView.bounds = self.bounds
         newView.center = self.center
         newView.transform = self.transform
         newView.alpha = self.alpha
+//        (newView.layer as! CATextLayer).string = String(num)
+        num += 1
         return newView
     }
+    
+    override class func layerClass() -> AnyClass {
+        return CATextLayer.self
+    }
 }
+
+var num = 1;

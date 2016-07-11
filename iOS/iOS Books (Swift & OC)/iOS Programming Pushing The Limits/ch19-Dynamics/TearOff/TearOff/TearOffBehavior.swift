@@ -19,8 +19,9 @@ class TearOffBehavior: UIDynamicBehavior {
         let distance = min(CGRectGetWidth(view.bounds), CGRectGetHeight(view.bounds))
         self.action = {
 //            [unowned self] in
+            //如果超出范围
             if !self.pointsAreWithinDistance(view.center, p2: anchor, distance: distance) {
-                if self.active {
+                if self.active {//
                     let newView = view.copy()
                     view.superview?.addSubview(newView as! UIView)
                     let newTearOff = TearOffBehavior.init(draggableView: newView as! DraggableView, anchor: anchor, handler: handler)
