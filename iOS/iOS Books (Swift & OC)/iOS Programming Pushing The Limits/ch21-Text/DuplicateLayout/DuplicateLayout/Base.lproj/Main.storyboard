@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DuplicateLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfj-FU-j8P">
+                                <rect key="frame" x="20" y="20" width="276" height="580"/>
+                                <color key="backgroundColor" red="0.0" green="0.626" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3ey-rN-3et" customClass="LayoutView" customModule="DuplicateLayout" customModuleProvider="target">
+                                <rect key="frame" x="304" y="20" width="276" height="580"/>
+                                <color key="backgroundColor" red="0.86225867150000002" green="0.86047210029999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="textView" destination="lfj-FU-j8P" id="VjH-gB-oVY"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3ey-rN-3et" secondAttribute="trailing" id="480-jc-6UI"/>
+                            <constraint firstItem="lfj-FU-j8P" firstAttribute="top" secondItem="3ey-rN-3et" secondAttribute="top" id="4wh-zx-3Op"/>
+                            <constraint firstItem="3ey-rN-3et" firstAttribute="width" secondItem="lfj-FU-j8P" secondAttribute="width" id="Hdb-OW-i0D"/>
+                            <constraint firstItem="3ey-rN-3et" firstAttribute="leading" secondItem="lfj-FU-j8P" secondAttribute="trailing" constant="8" symbolic="YES" id="Nu8-dJ-bD6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3ey-rN-3et" secondAttribute="bottom" id="X5F-we-J21"/>
+                            <constraint firstItem="lfj-FU-j8P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZLH-Hw-urK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lfj-FU-j8P" secondAttribute="bottom" id="dDe-X5-KGZ"/>
+                            <constraint firstItem="3ey-rN-3et" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dNl-j9-BiC"/>
+                            <constraint firstItem="lfj-FU-j8P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iKA-Xy-zur"/>
+                            <constraint firstItem="lfj-FU-j8P" firstAttribute="bottom" secondItem="3ey-rN-3et" secondAttribute="bottom" id="xc9-sG-t4k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="layoutView" destination="3ey-rN-3et" id="Gbs-YW-ndL"/>
+                        <outlet property="textView" destination="lfj-FU-j8P" id="kdi-JQ-6NC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="200"/>
+        </scene>
+    </scenes>
+</document>
