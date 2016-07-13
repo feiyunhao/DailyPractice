@@ -85,54 +85,97 @@ class CurvyTextView: UIView {
         path.stroke()
     }
     
-    // MARK: - text
-    
-    func drawText() {
-        
-    }
-    
     override func drawRect(rect: CGRect) {
         // Drawing code
         self.drawPath()
         self.drawText()
     }
     
-    func pointForOffset(t: CGFloat) -> CGPoint {
-    let x = Bezier(t, P0: points[0].x, P1: points[0].x, P2: points[0].x, P3: points[0].x);
-    let y = Bezier(t, P0: points[0].y, P1: points[0].y, P2: points[0].y, P3: points[0].y);
-    return CGPointMake(x, y);
+    // MARK: - text
+
+    func drawText() {
+        if self.attributedString?.length == 0 {
+            return
+        }
+        
+        let layoutManager = self.layoutManager
+        let context = UIGraphicsGetCurrentContext()
+        var glyphRange = NSRange()
+        let lineRect = layoutManager.lineFragmentRectForGlyphAtIndex(0, effectiveRange: &glyphRange)
+        
+        var offset: CGFloat = 0;
+        var lastGlyphPoint = points[0]
+        var lastX: CGFloat = 0;
+        
+        for glyphIndex in glyphRange.location..<NSMaxRange(glyphRange) {
+            CGContextSaveGState(context);
+            
+            let location = layoutManager.locationForGlyphAtIndex(glyphIndex)
+            let distance = location.x - lastX;  // Assume single line
+            offset = self.offsetAtDistance(distance,
+                fromPoint:lastGlyphPoint,
+                andOffset:offset)
+            let glyphPoint = self.pointForOffset(offset)
+            let angle = self.angleForOffset(offset)
+            
+            lastGlyphPoint = glyphPoint;
+            lastX = location.x;
+            
+            CGContextTranslateCTM(context, glyphPoint.x, glyphPoint.y);
+            CGContextRotateCTM(context, angle);
+            
+            layoutManager.drawGlyphsForGlyphRange(NSMakeRange(glyphIndex, 1),
+                                                  atPoint: CGPointMake(-(lineRect.origin.x + location.x),
+                                                    -(lineRect.origin.y + location.y)))
+             CGContextRestoreGState(context);
+        }
+        
+    }
+    
+    func offsetAtDistance(aDistance: CGFloat,fromPoint aPoint:CGPoint,andOffset anOffset: CGFloat) -> CGFloat {
+        let kStep:CGFloat = 0.001; // 0.0001 - 0.001 work well
+        var newDistance:CGFloat = 0.0;
+        var newOffset:CGFloat = anOffset + kStep;
+        while (newDistance <= aDistance && newOffset < 1.0) {
+            newOffset += kStep;
+            newDistance = Distance(aPoint,
+                                   self.pointForOffset(newOffset));
+        }
+        return newOffset;
+    }
+    
+    private func pointForOffset(t: CGFloat) -> CGPoint {
+        let x = Bezier(t, points[0].x, points[1].x, points[2].x, points[3].x);
+        let y = Bezier(t, points[0].y, points[1].y, points[2].y, points[3].y);
+        return CGPointMake(x, y);
+    }
+    
+    private func angleForOffset( t: CGFloat) -> CGFloat{
+        let dx = BezierPrime(t, points[0].x, points[1].x, points[2].x, points[3].x);
+        let dy = BezierPrime(t, points[0].y, points[1].y, points[2].y, points[3].y);
+        return atan2(dy, dx);
     }
 }
 
-private func Bezier(t: CGFloat, P0: CGFloat,  P1: CGFloat, P2 : CGFloat,
-P3: CGFloat) -> CGFloat {
+private func Bezier(t: CGFloat, _ P0: CGFloat, _ P1: CGFloat, _ P2 : CGFloat, _ P3: CGFloat) -> CGFloat {
     return
-    (1-t)*(1-t)*(1-t)         * P0
+        (1-t)*(1-t)*(1-t)         * P0
         + 3 *       (1-t)*(1-t) *     t * P1
         + 3 *             (1-t) *   t*t * P2
-        +                         t*t*t * P3;
-    }
-    
-
-
-static CGFloat BezierPrime(CGFloat t, CGFloat P0, CGFloat P1,
-CGFloat P2, CGFloat P3) {
-    return
-    -  3 * (1-t)*(1-t) * P0
-        + (3 * (1-t)*(1-t) * P1) - (6 * t * (1-t) * P1)
-        - (3 *         t*t * P2) + (6 * t * (1-t) * P2)
-        +  3 * t*t * P3;
-    }
-    
-    - (CGFloat)angleForOffset:(CGFloat)t {
-        CGFloat dx = BezierPrime(t, _P0.x, _P1.x, _P2.x, _P3.x);
-        CGFloat dy = BezierPrime(t, _P0.y, _P1.y, _P2.y, _P3.y);
-        return atan2(dy, dx);
+        +                         t*t*t * P3
 }
 
-static CGFloat Distance(CGPoint a, CGPoint b) {
-    CGFloat dx = a.x - b.x;
-    CGFloat dy = a.y - b.y;
+private func BezierPrime( t: CGFloat, _ P0: CGFloat, _ P1: CGFloat, _ P2: CGFloat, _ P3: CGFloat) -> CGFloat{
+    return
+        -3 * (1-t)*(1-t) * P0
+        + (3 * (1-t)*(1-t) * P1) - (6 * t * (1-t) * P1)
+        - (3 *         t*t * P2) + (6 * t * (1-t) * P2)
+        +  3 * t*t * P3
+}
+
+private func Distance( a: CGPoint, _ b: CGPoint) -> CGFloat{
+    let dx = a.x - b.x;
+    let dy = a.y - b.y;
     return hypot(dx, dy);
 }
 
