@@ -77,18 +77,18 @@ class CurvyTextView: UIView {
         self.setNeedsDisplay()
     }
     
+        override func drawRect(rect: CGRect) {
+        // Drawing code
+        self.drawPath()
+        self.drawText()
+    }
+    
     func drawPath() {
         let path = UIBezierPath()
         path.moveToPoint(points[0])
         path.addCurveToPoint(points[3], controlPoint1: points[1], controlPoint2: points[2])
         UIColor.blackColor().setStroke()
         path.stroke()
-    }
-    
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-        self.drawPath()
-        self.drawText()
     }
     
     // MARK: - text

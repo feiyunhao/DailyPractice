@@ -7,29 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F223CE771D20D310005901B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F223CE761D20D310005901B7 /* AppDelegate.swift */; };
-		F223CE7C1D20D310005901B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F223CE7A1D20D310005901B7 /* Main.storyboard */; };
-		F223CE7E1D20D310005901B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F223CE7D1D20D310005901B7 /* Assets.xcassets */; };
-		F223CE811D20D310005901B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F223CE7F1D20D310005901B7 /* LaunchScreen.storyboard */; };
-		F223CE891D20D3D6005901B7 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F223CE881D20D3D6005901B7 /* CollectionViewController.swift */; };
-		F223CE8B1D20D3F1005901B7 /* JuliaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F223CE8A1D20D3F1005901B7 /* JuliaCell.swift */; };
-		F223CE8D1D20D75C005901B7 /* JuliaOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F223CE8C1D20D75C005901B7 /* JuliaOperation.swift */; };
+		F290468A1D37239C00386A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29046891D37239C00386A8B /* AppDelegate.swift */; };
+		F290468C1D37239C00386A8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F290468B1D37239C00386A8B /* ViewController.swift */; };
+		F290468F1D37239C00386A8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F290468D1D37239C00386A8B /* Main.storyboard */; };
+		F29046911D37239C00386A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29046901D37239C00386A8B /* Assets.xcassets */; };
+		F29046941D37239C00386A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29046921D37239C00386A8B /* LaunchScreen.storyboard */; };
+		F290469C1D3723B900386A8B /* CoreTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F290469B1D3723B900386A8B /* CoreTextLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F223CE731D20D310005901B7 /* JuliaOp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuliaOp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F223CE761D20D310005901B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F223CE7B1D20D310005901B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F223CE7D1D20D310005901B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F223CE801D20D310005901B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F223CE821D20D310005901B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F223CE881D20D3D6005901B7 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		F223CE8A1D20D3F1005901B7 /* JuliaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JuliaCell.swift; sourceTree = "<group>"; };
-		F223CE8C1D20D75C005901B7 /* JuliaOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JuliaOperation.swift; sourceTree = "<group>"; };
+		F29046861D37239C00386A8B /* SimpleLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F29046891D37239C00386A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F290468B1D37239C00386A8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F290468E1D37239C00386A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F29046901D37239C00386A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F29046931D37239C00386A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F29046951D37239C00386A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F290469B1D3723B900386A8B /* CoreTextLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreTextLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F223CE701D20D310005901B7 /* Frameworks */ = {
+		F29046831D37239C00386A8B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,74 +37,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F223CE6A1D20D310005901B7 = {
+		F290467D1D37239C00386A8B = {
 			isa = PBXGroup;
 			children = (
-				F223CE751D20D310005901B7 /* JuliaOp */,
-				F223CE741D20D310005901B7 /* Products */,
+				F29046881D37239C00386A8B /* SimpleLayout */,
+				F29046871D37239C00386A8B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F223CE741D20D310005901B7 /* Products */ = {
+		F29046871D37239C00386A8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F223CE731D20D310005901B7 /* JuliaOp.app */,
+				F29046861D37239C00386A8B /* SimpleLayout.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F223CE751D20D310005901B7 /* JuliaOp */ = {
+		F29046881D37239C00386A8B /* SimpleLayout */ = {
 			isa = PBXGroup;
 			children = (
-				F223CE761D20D310005901B7 /* AppDelegate.swift */,
-				F223CE7A1D20D310005901B7 /* Main.storyboard */,
-				F223CE8A1D20D3F1005901B7 /* JuliaCell.swift */,
-				F223CE881D20D3D6005901B7 /* CollectionViewController.swift */,
-				F223CE8C1D20D75C005901B7 /* JuliaOperation.swift */,
-				F223CE7D1D20D310005901B7 /* Assets.xcassets */,
-				F223CE7F1D20D310005901B7 /* LaunchScreen.storyboard */,
-				F223CE821D20D310005901B7 /* Info.plist */,
+				F29046891D37239C00386A8B /* AppDelegate.swift */,
+				F290468B1D37239C00386A8B /* ViewController.swift */,
+				F290469B1D3723B900386A8B /* CoreTextLabel.swift */,
+				F290468D1D37239C00386A8B /* Main.storyboard */,
+				F29046901D37239C00386A8B /* Assets.xcassets */,
+				F29046921D37239C00386A8B /* LaunchScreen.storyboard */,
+				F29046951D37239C00386A8B /* Info.plist */,
 			);
-			path = JuliaOp;
+			path = SimpleLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F223CE721D20D310005901B7 /* JuliaOp */ = {
+		F29046851D37239C00386A8B /* SimpleLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F223CE851D20D310005901B7 /* Build configuration list for PBXNativeTarget "JuliaOp" */;
+			buildConfigurationList = F29046981D37239C00386A8B /* Build configuration list for PBXNativeTarget "SimpleLayout" */;
 			buildPhases = (
-				F223CE6F1D20D310005901B7 /* Sources */,
-				F223CE701D20D310005901B7 /* Frameworks */,
-				F223CE711D20D310005901B7 /* Resources */,
+				F29046821D37239C00386A8B /* Sources */,
+				F29046831D37239C00386A8B /* Frameworks */,
+				F29046841D37239C00386A8B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = JuliaOp;
-			productName = JuliaOp;
-			productReference = F223CE731D20D310005901B7 /* JuliaOp.app */;
+			name = SimpleLayout;
+			productName = SimpleLayout;
+			productReference = F29046861D37239C00386A8B /* SimpleLayout.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F223CE6B1D20D310005901B7 /* Project object */ = {
+		F290467E1D37239C00386A8B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = feiyun;
 				TargetAttributes = {
-					F223CE721D20D310005901B7 = {
+					F29046851D37239C00386A8B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = VCY363WARL;
 					};
 				};
 			};
-			buildConfigurationList = F223CE6E1D20D310005901B7 /* Build configuration list for PBXProject "JuliaOp" */;
+			buildConfigurationList = F29046811D37239C00386A8B /* Build configuration list for PBXProject "SimpleLayout" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -114,56 +111,55 @@
 				en,
 				Base,
 			);
-			mainGroup = F223CE6A1D20D310005901B7;
-			productRefGroup = F223CE741D20D310005901B7 /* Products */;
+			mainGroup = F290467D1D37239C00386A8B;
+			productRefGroup = F29046871D37239C00386A8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F223CE721D20D310005901B7 /* JuliaOp */,
+				F29046851D37239C00386A8B /* SimpleLayout */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F223CE711D20D310005901B7 /* Resources */ = {
+		F29046841D37239C00386A8B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F223CE811D20D310005901B7 /* LaunchScreen.storyboard in Resources */,
-				F223CE7E1D20D310005901B7 /* Assets.xcassets in Resources */,
-				F223CE7C1D20D310005901B7 /* Main.storyboard in Resources */,
+				F29046941D37239C00386A8B /* LaunchScreen.storyboard in Resources */,
+				F29046911D37239C00386A8B /* Assets.xcassets in Resources */,
+				F290468F1D37239C00386A8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F223CE6F1D20D310005901B7 /* Sources */ = {
+		F29046821D37239C00386A8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F223CE891D20D3D6005901B7 /* CollectionViewController.swift in Sources */,
-				F223CE8D1D20D75C005901B7 /* JuliaOperation.swift in Sources */,
-				F223CE8B1D20D3F1005901B7 /* JuliaCell.swift in Sources */,
-				F223CE771D20D310005901B7 /* AppDelegate.swift in Sources */,
+				F290469C1D3723B900386A8B /* CoreTextLabel.swift in Sources */,
+				F290468C1D37239C00386A8B /* ViewController.swift in Sources */,
+				F290468A1D37239C00386A8B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F223CE7A1D20D310005901B7 /* Main.storyboard */ = {
+		F290468D1D37239C00386A8B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F223CE7B1D20D310005901B7 /* Base */,
+				F290468E1D37239C00386A8B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F223CE7F1D20D310005901B7 /* LaunchScreen.storyboard */ = {
+		F29046921D37239C00386A8B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F223CE801D20D310005901B7 /* Base */,
+				F29046931D37239C00386A8B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -171,7 +167,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F223CE831D20D310005901B7 /* Debug */ = {
+		F29046961D37239C00386A8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -217,7 +213,7 @@
 			};
 			name = Debug;
 		};
-		F223CE841D20D310005901B7 /* Release */ = {
+		F29046971D37239C00386A8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -256,52 +252,49 @@
 			};
 			name = Release;
 		};
-		F223CE861D20D310005901B7 /* Debug */ = {
+		F29046991D37239C00386A8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = JuliaOp/Info.plist;
+				INFOPLIST_FILE = SimpleLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.JuliaOp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.SimpleLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
-		F223CE871D20D310005901B7 /* Release */ = {
+		F290469A1D37239C00386A8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = JuliaOp/Info.plist;
+				INFOPLIST_FILE = SimpleLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.JuliaOp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.SimpleLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F223CE6E1D20D310005901B7 /* Build configuration list for PBXProject "JuliaOp" */ = {
+		F29046811D37239C00386A8B /* Build configuration list for PBXProject "SimpleLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F223CE831D20D310005901B7 /* Debug */,
-				F223CE841D20D310005901B7 /* Release */,
+				F29046961D37239C00386A8B /* Debug */,
+				F29046971D37239C00386A8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F223CE851D20D310005901B7 /* Build configuration list for PBXNativeTarget "JuliaOp" */ = {
+		F29046981D37239C00386A8B /* Build configuration list for PBXNativeTarget "SimpleLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F223CE861D20D310005901B7 /* Debug */,
-				F223CE871D20D310005901B7 /* Release */,
+				F29046991D37239C00386A8B /* Debug */,
+				F290469A1D37239C00386A8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F223CE6B1D20D310005901B7 /* Project object */;
+	rootObject = F290467E1D37239C00386A8B /* Project object */;
 }
