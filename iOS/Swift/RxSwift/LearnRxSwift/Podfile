@@ -30,3 +30,7 @@ target 'RxWhy' do
     rx_pods
 end
 
+target 'RxTableView' do
+    rx_pods
+    rx_data_pods
+end
