@@ -14,6 +14,10 @@ void RNQueueTag(dispatch_queue_t q) {
     dispatch_queue_set_specific(q, &sQueueTagKey, (__bridge void *)(q), NULL);
 }
 
+dispatch_queue_t RNQueueGetCurrentTagged() {
+    return (__bridge dispatch_queue_t)(dispatch_get_specific(&sQueueTagKey));
+}
+
 dispatch_queue_t RNQueueCreateTagged(const char *label, dispatch_queue_attr_t attr) {
     dispatch_queue_t q = dispatch_queue_create(label, attr);
     RNQueueTag(q);
@@ -22,10 +26,6 @@ dispatch_queue_t RNQueueCreateTagged(const char *label, dispatch_queue_attr_t at
 
 BOOL RNQueueCurrentIsTaggedQueue(dispatch_queue_t q) {
     return (RNQueueGetCurrentTagged() == q);
-}
-
-dispatch_queue_t RNQueueGetCurrentTagged() {
-    return (__bridge dispatch_queue_t)(dispatch_get_specific(&sQueueTagKey));
 }
 
 BOOL RNQueueCurrentIsMainQueue() {

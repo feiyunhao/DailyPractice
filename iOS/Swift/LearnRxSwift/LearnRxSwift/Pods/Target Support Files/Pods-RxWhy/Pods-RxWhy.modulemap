@@ -1,0 +1,6 @@
+framework module Pods_RxWhy {
+  umbrella header "Pods-RxWhy-umbrella.h"
+
+  export *
+  module * { export * }
+}
