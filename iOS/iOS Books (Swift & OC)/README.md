@@ -13,3 +13,14 @@
 ＊ 《iOS Programming Pushing The Limits》 
 ＊ 《Swifter - 100 个 Swift 必备 tips》 
 ＊ 《The Swift Programming Language》 -->
+| 我的iOS书单       								|
+| ------------- 								|
+|《 Effective Objective-C 》  					| 
+|《 Pro Multithreading and Memory Management for iOS and OS X 》|  
+|《 iOS Core Animation Advanced Techniques 》	| 
+|《 iOS Auto Layout Demystified 》				| 
+|《 iOS Progarmming The Big Nerd Ranch Guide 》	| 
+|《 iOS Programming Pushing The Limits 》		| 
+|《 The Swift Programming Language 》			| 
+|《 Swifter - tips 》							|  
+|《 Functional Swift 》							|   
