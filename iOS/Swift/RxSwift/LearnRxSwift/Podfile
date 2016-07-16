@@ -34,3 +34,11 @@ target 'RxTableView' do
     rx_pods
     rx_data_pods
 end
+
+target 'RxNetwork' do
+    rx_pods
+    rx_data_pods
+    net_pods
+    model_pods
+end
+
