@@ -17,7 +17,7 @@
 
 
 | 我的iOS书单       								| 备注| 
-| ------------- 								| | 
+| ------------- 								 |  ------------- |
 |[《 Effective Objective-C 》](https://book.douban.com/subject/25829244/)  				| 码农界的吴彦祖说这本书要看一千遍😒|
 |[《 Pro Multithreading and Memory Management for iOS and OS X 》](https://book.douban.com/subject/24720270/)| 内存 多线程 Block  |
 |[《 iOS Core Animation Advanced Techniques 》]((https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/)|图层、动画、性能优化 |
