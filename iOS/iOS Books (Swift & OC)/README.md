@@ -9,7 +9,7 @@
 ###关于正版
 盗版书、盗版软件，我觉得，有能力买正版就买，没能力，知道用盗版不对就够了，这个事一步一步来，毕竟老板不多见，屌丝还是要过日子的。
 
-不过就程序猿这一行来说，买书是必须的，而且国内的书还是比较便宜的，如果一个程序猿连书都买不起，感觉尽早转行会好点😒
+不过就程序猿这一行来说，买书是必须的，毕竟国内的书还是比较便宜的。
 
 >iOS开发图书推荐：
 >
@@ -23,8 +23,8 @@
 |[《 iOS Core Animation Advanced Techniques 》](https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/)|图层、动画、性能优化 |
 |[《 iOS Auto Layout Demystified 》](https://book.douban.com/subject/26298489/)			| 自动布局 |
 |[《 iOS Progarmming The Big Nerd Ranch Guide 》]()|  |
-|[《 iOS Programming Pushing The Limits 》](https://book.douban.com/subject/25976913/)	| 实战进阶类书|
+|[《 iOS Programming Pushing The Limits 》](https://book.douban.com/subject/25976913/)	| 实战进阶类书，看完这本再说自己会不会iOS|
 |[《 The Swift Programming Language 》](https://github.com/numbbbbb/the-swift-programming-language-in-chinese)		| 苹果官方文档，学Swift必读 |
-|[《 Swifter - tips 》	](http://swifter.tips/buy/)						|  喵生的100个tips |
+|[《 Swifter - Tips 》	](http://swifter.tips/buy/)						|  喵神的100个tips |
 |[《 Functional Swift 》](https://www.objc.io/books/functional-swift)						|  讲函数式编程的|
 |[《 A GUIDE TO iOS ANIMATION 》](http://book.kittenyang.com)				|  动画|

@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F284DD341D3BB8F00075B6EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284DD331D3BB8F00075B6EF /* AppDelegate.swift */; };
+		F284DD361D3BB8F00075B6EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284DD351D3BB8F00075B6EF /* ViewController.swift */; };
+		F284DD381D3BB8F00075B6EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F284DD371D3BB8F00075B6EF /* Assets.xcassets */; };
+		F284DD3B1D3BB8F00075B6EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F284DD391D3BB8F00075B6EF /* Main.storyboard */; };
+		F284DD431D3BB91C0075B6EF /* QuickCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F284DD421D3BB91C0075B6EF /* QuickCheck.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F284DD301D3BB8F00075B6EF /* 06-QuickCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "06-QuickCheck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F284DD331D3BB8F00075B6EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F284DD351D3BB8F00075B6EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F284DD371D3BB8F00075B6EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F284DD3A1D3BB8F00075B6EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F284DD3C1D3BB8F00075B6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F284DD421D3BB91C0075B6EF /* QuickCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickCheck.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F284DD2D1D3BB8F00075B6EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F284DD271D3BB8F00075B6EF = {
+			isa = PBXGroup;
+			children = (
+				F284DD321D3BB8F00075B6EF /* 06-QuickCheck */,
+				F284DD311D3BB8F00075B6EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F284DD311D3BB8F00075B6EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F284DD301D3BB8F00075B6EF /* 06-QuickCheck.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F284DD321D3BB8F00075B6EF /* 06-QuickCheck */ = {
+			isa = PBXGroup;
+			children = (
+				F284DD331D3BB8F00075B6EF /* AppDelegate.swift */,
+				F284DD351D3BB8F00075B6EF /* ViewController.swift */,
+				F284DD421D3BB91C0075B6EF /* QuickCheck.swift */,
+				F284DD371D3BB8F00075B6EF /* Assets.xcassets */,
+				F284DD391D3BB8F00075B6EF /* Main.storyboard */,
+				F284DD3C1D3BB8F00075B6EF /* Info.plist */,
+			);
+			path = "06-QuickCheck";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F284DD2F1D3BB8F00075B6EF /* 06-QuickCheck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F284DD3F1D3BB8F00075B6EF /* Build configuration list for PBXNativeTarget "06-QuickCheck" */;
+			buildPhases = (
+				F284DD2C1D3BB8F00075B6EF /* Sources */,
+				F284DD2D1D3BB8F00075B6EF /* Frameworks */,
+				F284DD2E1D3BB8F00075B6EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "06-QuickCheck";
+			productName = "06-QuickCheck";
+			productReference = F284DD301D3BB8F00075B6EF /* 06-QuickCheck.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F284DD281D3BB8F00075B6EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = feiyun;
+				TargetAttributes = {
+					F284DD2F1D3BB8F00075B6EF = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F284DD2B1D3BB8F00075B6EF /* Build configuration list for PBXProject "06-QuickCheck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F284DD271D3BB8F00075B6EF;
+			productRefGroup = F284DD311D3BB8F00075B6EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F284DD2F1D3BB8F00075B6EF /* 06-QuickCheck */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F284DD2E1D3BB8F00075B6EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F284DD381D3BB8F00075B6EF /* Assets.xcassets in Resources */,
+				F284DD3B1D3BB8F00075B6EF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F284DD2C1D3BB8F00075B6EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F284DD431D3BB91C0075B6EF /* QuickCheck.swift in Sources */,
+				F284DD361D3BB8F00075B6EF /* ViewController.swift in Sources */,
+				F284DD341D3BB8F00075B6EF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F284DD391D3BB8F00075B6EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F284DD3A1D3BB8F00075B6EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F284DD3D1D3BB8F00075B6EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F284DD3E1D3BB8F00075B6EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F284DD401D3BB8F00075B6EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "06-QuickCheck/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feiyun.-6-QuickCheck";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F284DD411D3BB8F00075B6EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "06-QuickCheck/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feiyun.-6-QuickCheck";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F284DD2B1D3BB8F00075B6EF /* Build configuration list for PBXProject "06-QuickCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F284DD3D1D3BB8F00075B6EF /* Debug */,
+				F284DD3E1D3BB8F00075B6EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F284DD3F1D3BB8F00075B6EF /* Build configuration list for PBXNativeTarget "06-QuickCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F284DD401D3BB8F00075B6EF /* Debug */,
+				F284DD411D3BB8F00075B6EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F284DD281D3BB8F00075B6EF /* Project object */;
+}
