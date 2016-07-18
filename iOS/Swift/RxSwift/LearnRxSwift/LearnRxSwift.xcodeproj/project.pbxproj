@@ -102,6 +102,7 @@
 		F284BE381D3A124100C1B3B4 /* Request+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Request+ObjectMapper.swift"; sourceTree = "<group>"; };
 		F284BE391D3A124100C1B3B4 /* Response+ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+ObjectMapper.swift"; sourceTree = "<group>"; };
 		F284BE3A1D3A124100C1B3B4 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F284DD511D3CD7FE0075B6EF /* Rx.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Rx.playground; sourceTree = "<group>"; };
 		FE71D045CE69AEB5E298ADAC /* Pods-RxNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxNetwork/Pods-RxNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +160,7 @@
 		F266E02C1D38DAC000AFF55A = {
 			isa = PBXGroup;
 			children = (
+				F284DD511D3CD7FE0075B6EF /* Rx.playground */,
 				F266E05C1D38DB0300AFF55A /* RxWhy */,
 				F266E0811D38EBBD00AFF55A /* RxTableView */,
 				F284BE191D3A0EEB00C1B3B4 /* RxNetwork */,
@@ -901,7 +903,7 @@
 				F266E0461D38DAC000AFF55A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F266E06A1D38DB0300AFF55A /* Build configuration list for PBXNativeTarget "RxWhy" */ = {
 			isa = XCConfigurationList;
@@ -910,7 +912,7 @@
 				F266E06C1D38DB0300AFF55A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F266E0911D38EBBE00AFF55A /* Build configuration list for PBXNativeTarget "RxTableView" */ = {
 			isa = XCConfigurationList;
@@ -919,7 +921,7 @@
 				F266E0901D38EBBE00AFF55A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F284BE271D3A0EEB00C1B3B4 /* Build configuration list for PBXNativeTarget "RxNetwork" */ = {
 			isa = XCConfigurationList;
@@ -928,7 +930,7 @@
 				F284BE291D3A0EEB00C1B3B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

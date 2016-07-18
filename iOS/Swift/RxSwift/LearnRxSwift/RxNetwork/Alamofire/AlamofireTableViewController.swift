@@ -20,13 +20,32 @@ class AlamofireTableViewController: UITableViewController {
     
     let sections = Variable([AlamofireSectionModel]())
     
-    let tableViewDataSource = RxTableViewSectionedReloadDataSource<AlamofireSectionModel>()
+
     
-    tableViewDataSource.configureCell = { (_, tableView, indexPath, model) in
-    let cell = tableView.de
-    
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tableViewDataSource = RxTableViewSectionedReloadDataSource<AlamofireSectionModel>()
+        
+        tableViewDataSource.configureCell = { (_, tableView, indexPath, model) in
+            let cell = tableView.dequeueReusableCellWithIdentifier("UserCell") as! UserTableViewCell
+            cell.nameLabel.text = model.name
+            cell.ageLabel.text = String(model.age)
+            return cell
+        }
+        
+        sections.asObservable()
+        .bindTo(tableView.rx_itemsAnimatedWithDataSource(tableViewDataSource))
+        .addDisposableTo(disposeBag)
+        
+        let manager = Manager.sharedInstance
+        manager.rx_responseJSON(.GET, host + "/users")
+        .mapObject
+        
+        
+
     }
+    
     
     
 }
