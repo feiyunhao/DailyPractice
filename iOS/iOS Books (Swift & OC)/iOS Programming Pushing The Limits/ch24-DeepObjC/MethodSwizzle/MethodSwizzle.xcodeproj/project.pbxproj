@@ -7,26 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F29CBC891D3E71430061D61B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F29CBC881D3E71430061D61B /* main.m */; };
-		F29CBC941D3E71430061D61B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29CBC931D3E71430061D61B /* Assets.xcassets */; };
-		F2C8050F1D3FA3B100F767AC /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C8050E1D3FA3B100F767AC /* Person.m */; };
-		F2C805121D3FA3D500F767AC /* CacheProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C805111D3FA3D500F767AC /* CacheProxy.m */; };
+		F2C805211D3FA9BA00F767AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C805201D3FA9BA00F767AC /* main.m */; };
+		F2C8052C1D3FA9BA00F767AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C8052B1D3FA9BA00F767AC /* Assets.xcassets */; };
+		F2C8052F1D3FA9BA00F767AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C8052D1D3FA9BA00F767AC /* LaunchScreen.storyboard */; };
+		F2C805381D3FA9D400F767AC /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C805371D3FA9D400F767AC /* NSObject+Swizzle.m */; };
+		F2C8053B1D3FAB1300F767AC /* NSNotificationCenter+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C8053A1D3FAB1300F767AC /* NSNotificationCenter+Swizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F29CBC841D3E71430061D61B /* Person.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Person.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F29CBC881D3E71430061D61B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F29CBC8A1D3E71430061D61B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F29CBC931D3E71430061D61B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F29CBC981D3E71430061D61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2C8050D1D3FA3B100F767AC /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		F2C8050E1D3FA3B100F767AC /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		F2C805101D3FA3D500F767AC /* CacheProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheProxy.h; sourceTree = "<group>"; };
-		F2C805111D3FA3D500F767AC /* CacheProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheProxy.m; sourceTree = "<group>"; };
+		F2C8051C1D3FA9BA00F767AC /* MethodSwizzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MethodSwizzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2C805201D3FA9BA00F767AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2C8052B1D3FA9BA00F767AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2C8052E1D3FA9BA00F767AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2C805301D3FA9BA00F767AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2C805361D3FA9D400F767AC /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		F2C805371D3FA9D400F767AC /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		F2C805391D3FAB1300F767AC /* NSNotificationCenter+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+Swizzle.h"; sourceTree = "<group>"; };
+		F2C8053A1D3FAB1300F767AC /* NSNotificationCenter+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+Swizzle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F29CBC811D3E71430061D61B /* Frameworks */ = {
+		F2C805191D3FA9BA00F767AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,41 +37,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F29CBC7B1D3E71430061D61B = {
+		F2C805131D3FA9BA00F767AC = {
 			isa = PBXGroup;
 			children = (
-				F29CBC861D3E71430061D61B /* Person */,
-				F29CBC851D3E71430061D61B /* Products */,
+				F2C8051E1D3FA9BA00F767AC /* MethodSwizzle */,
+				F2C8051D1D3FA9BA00F767AC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F29CBC851D3E71430061D61B /* Products */ = {
+		F2C8051D1D3FA9BA00F767AC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F29CBC841D3E71430061D61B /* Person.app */,
+				F2C8051C1D3FA9BA00F767AC /* MethodSwizzle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F29CBC861D3E71430061D61B /* Person */ = {
+		F2C8051E1D3FA9BA00F767AC /* MethodSwizzle */ = {
 			isa = PBXGroup;
 			children = (
-				F29CBC8A1D3E71430061D61B /* AppDelegate.h */,
-				F2C8050D1D3FA3B100F767AC /* Person.h */,
-				F2C8050E1D3FA3B100F767AC /* Person.m */,
-				F2C805101D3FA3D500F767AC /* CacheProxy.h */,
-				F2C805111D3FA3D500F767AC /* CacheProxy.m */,
-				F29CBC931D3E71430061D61B /* Assets.xcassets */,
-				F29CBC981D3E71430061D61B /* Info.plist */,
-				F29CBC871D3E71430061D61B /* Supporting Files */,
+				F2C805361D3FA9D400F767AC /* NSObject+Swizzle.h */,
+				F2C805371D3FA9D400F767AC /* NSObject+Swizzle.m */,
+				F2C805391D3FAB1300F767AC /* NSNotificationCenter+Swizzle.h */,
+				F2C8053A1D3FAB1300F767AC /* NSNotificationCenter+Swizzle.m */,
+				F2C8052B1D3FA9BA00F767AC /* Assets.xcassets */,
+				F2C8052D1D3FA9BA00F767AC /* LaunchScreen.storyboard */,
+				F2C805301D3FA9BA00F767AC /* Info.plist */,
+				F2C8051F1D3FA9BA00F767AC /* Supporting Files */,
 			);
-			path = Person;
+			path = MethodSwizzle;
 			sourceTree = "<group>";
 		};
-		F29CBC871D3E71430061D61B /* Supporting Files */ = {
+		F2C8051F1D3FA9BA00F767AC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F29CBC881D3E71430061D61B /* main.m */,
+				F2C805201D3FA9BA00F767AC /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -78,39 +79,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F29CBC831D3E71430061D61B /* Person */ = {
+		F2C8051B1D3FA9BA00F767AC /* MethodSwizzle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F29CBC9B1D3E71430061D61B /* Build configuration list for PBXNativeTarget "Person" */;
+			buildConfigurationList = F2C805331D3FA9BA00F767AC /* Build configuration list for PBXNativeTarget "MethodSwizzle" */;
 			buildPhases = (
-				F29CBC801D3E71430061D61B /* Sources */,
-				F29CBC811D3E71430061D61B /* Frameworks */,
-				F29CBC821D3E71430061D61B /* Resources */,
+				F2C805181D3FA9BA00F767AC /* Sources */,
+				F2C805191D3FA9BA00F767AC /* Frameworks */,
+				F2C8051A1D3FA9BA00F767AC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Person;
-			productName = Person;
-			productReference = F29CBC841D3E71430061D61B /* Person.app */;
+			name = MethodSwizzle;
+			productName = MethodSwizzle;
+			productReference = F2C8051C1D3FA9BA00F767AC /* MethodSwizzle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F29CBC7C1D3E71430061D61B /* Project object */ = {
+		F2C805141D3FA9BA00F767AC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = feiyun;
 				TargetAttributes = {
-					F29CBC831D3E71430061D61B = {
+					F2C8051B1D3FA9BA00F767AC = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = VCY363WARL;
 					};
 				};
 			};
-			buildConfigurationList = F29CBC7F1D3E71430061D61B /* Build configuration list for PBXProject "Person" */;
+			buildConfigurationList = F2C805171D3FA9BA00F767AC /* Build configuration list for PBXProject "MethodSwizzle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -118,42 +119,54 @@
 				en,
 				Base,
 			);
-			mainGroup = F29CBC7B1D3E71430061D61B;
-			productRefGroup = F29CBC851D3E71430061D61B /* Products */;
+			mainGroup = F2C805131D3FA9BA00F767AC;
+			productRefGroup = F2C8051D1D3FA9BA00F767AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F29CBC831D3E71430061D61B /* Person */,
+				F2C8051B1D3FA9BA00F767AC /* MethodSwizzle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F29CBC821D3E71430061D61B /* Resources */ = {
+		F2C8051A1D3FA9BA00F767AC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F29CBC941D3E71430061D61B /* Assets.xcassets in Resources */,
+				F2C8052F1D3FA9BA00F767AC /* LaunchScreen.storyboard in Resources */,
+				F2C8052C1D3FA9BA00F767AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F29CBC801D3E71430061D61B /* Sources */ = {
+		F2C805181D3FA9BA00F767AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2C8050F1D3FA3B100F767AC /* Person.m in Sources */,
-				F29CBC891D3E71430061D61B /* main.m in Sources */,
-				F2C805121D3FA3D500F767AC /* CacheProxy.m in Sources */,
+				F2C805381D3FA9D400F767AC /* NSObject+Swizzle.m in Sources */,
+				F2C805211D3FA9BA00F767AC /* main.m in Sources */,
+				F2C8053B1D3FAB1300F767AC /* NSNotificationCenter+Swizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		F2C8052D1D3FA9BA00F767AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2C8052E1D3FA9BA00F767AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		F29CBC991D3E71430061D61B /* Debug */ = {
+		F2C805311D3FA9BA00F767AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -198,7 +211,7 @@
 			};
 			name = Debug;
 		};
-		F29CBC9A1D3E71430061D61B /* Release */ = {
+		F2C805321D3FA9BA00F767AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -237,24 +250,24 @@
 			};
 			name = Release;
 		};
-		F29CBC9C1D3E71430061D61B /* Debug */ = {
+		F2C805341D3FA9BA00F767AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Person/Info.plist;
+				INFOPLIST_FILE = MethodSwizzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.Person;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.MethodSwizzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		F29CBC9D1D3E71430061D61B /* Release */ = {
+		F2C805351D3FA9BA00F767AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Person/Info.plist;
+				INFOPLIST_FILE = MethodSwizzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.Person;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.MethodSwizzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -262,25 +275,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F29CBC7F1D3E71430061D61B /* Build configuration list for PBXProject "Person" */ = {
+		F2C805171D3FA9BA00F767AC /* Build configuration list for PBXProject "MethodSwizzle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F29CBC991D3E71430061D61B /* Debug */,
-				F29CBC9A1D3E71430061D61B /* Release */,
+				F2C805311D3FA9BA00F767AC /* Debug */,
+				F2C805321D3FA9BA00F767AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F29CBC9B1D3E71430061D61B /* Build configuration list for PBXNativeTarget "Person" */ = {
+		F2C805331D3FA9BA00F767AC /* Build configuration list for PBXNativeTarget "MethodSwizzle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F29CBC9C1D3E71430061D61B /* Debug */,
-				F29CBC9D1D3E71430061D61B /* Release */,
+				F2C805341D3FA9BA00F767AC /* Debug */,
+				F2C805351D3FA9BA00F767AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F29CBC7C1D3E71430061D61B /* Project object */;
+	rootObject = F2C805141D3FA9BA00F767AC /* Project object */;
 }

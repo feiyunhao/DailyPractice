@@ -65,16 +65,12 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="uSS-zx-aFR" id="m11-m2-NWz"/>
-                            <outlet property="delegate" destination="uSS-zx-aFR" id="fBk-ba-SSa"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Moya" id="hyN-YI-xQ0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAa-Tq-2yp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1261" y="219"/>
+            <point key="canvasLocation" x="-1257" y="219"/>
         </scene>
         <!--Moya-->
         <scene sceneID="LzO-ex-zoT">
@@ -97,7 +93,7 @@
         <!--Alamofire-->
         <scene sceneID="pxz-nj-GUf">
             <objects>
-                <tableViewController title="Alamofire" id="ZAf-9P-16d" customClass="AlamofireTableViewController" sceneMemberID="viewController">
+                <tableViewController title="Alamofire" id="ZAf-9P-16d" customClass="AlamofireTableViewController" customModule="RxNetwork" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="naU-bQ-kXw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,10 +131,6 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ZAf-9P-16d" id="Bap-2L-LwF"/>
-                            <outlet property="delegate" destination="ZAf-9P-16d" id="mBU-jI-ltD"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Alamofire" id="nma-ec-eZz"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

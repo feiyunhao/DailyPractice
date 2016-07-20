@@ -25,6 +25,10 @@ class AlamofireTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.dataSource = nil
+        tableView.delegate = nil
+
+        
         let tableViewDataSource = RxTableViewSectionedReloadDataSource<AlamofireSectionModel>()
         
         tableViewDataSource.configureCell = { (_, tableView, indexPath, model) in
@@ -35,12 +39,17 @@ class AlamofireTableViewController: UITableViewController {
         }
         
         sections.asObservable()
-        .bindTo(tableView.rx_itemsAnimatedWithDataSource(tableViewDataSource))
+        .bindTo(tableView.rx_itemsWithDataSource(tableViewDataSource))
         .addDisposableTo(disposeBag)
         
         let manager = Manager.sharedInstance
         manager.rx_responseJSON(.GET, host + "/users")
-        .mapObject
+        .mapObject(UserListModel)
+            .subscribeNext { [unowned self] in
+                self.sections.value.append(AlamofireSectionModel(model:"Users", items: $0.users))
+        }.addDisposableTo(disposeBag)
+        
+        
         
         
 
