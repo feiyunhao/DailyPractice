@@ -22,7 +22,7 @@
 |[《 Pro Multithreading and Memory Management for iOS and OS X 》](https://book.douban.com/subject/24720270/)| 内存 多线程 Block  |
 |[《 iOS Core Animation Advanced Techniques 》](https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/)|图层、动画、性能优化 |
 |[《 iOS Auto Layout Demystified 》](https://book.douban.com/subject/26298489/)			| 自动布局 |
-|[《 iOS Progarmming The Big Nerd Ranch Guide 》]()|  |
+|[《 iOS Progarmming The Big Nerd Ranch Guide 》]()| 入门类的书，老手也能查漏补缺 |
 |[《 iOS Programming Pushing The Limits 》](https://book.douban.com/subject/25976913/)	| 实战进阶类书，看完这本再说自己会不会iOS|
 |[《 The Swift Programming Language 》](https://github.com/numbbbbb/the-swift-programming-language-in-chinese)		| 苹果官方文档，学Swift必读 |
 |[《 Swifter - Tips 》	](http://swifter.tips/buy/)						|  喵神的100个tips |
