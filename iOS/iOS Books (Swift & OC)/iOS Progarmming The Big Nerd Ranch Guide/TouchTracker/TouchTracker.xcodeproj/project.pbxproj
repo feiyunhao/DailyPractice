@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F29F19671D48B0490005FE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F19661D48B0490005FE20 /* AppDelegate.swift */; };
-		F29F19691D48B0490005FE20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F19681D48B0490005FE20 /* ViewController.swift */; };
-		F29F196E1D48B0490005FE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29F196D1D48B0490005FE20 /* Assets.xcassets */; };
-		F29F19711D48B0490005FE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29F196F1D48B0490005FE20 /* LaunchScreen.storyboard */; };
-		F29F19791D48B0BF0005FE20 /* Hypnosister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F19781D48B0BF0005FE20 /* Hypnosister.swift */; };
-		F29F197B1D48B7D40005FE20 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F197A1D48B7D40005FE20 /* ReminderViewController.swift */; };
-		F29F197D1D48B84B0005FE20 /* ReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29F197C1D48B84B0005FE20 /* ReminderViewController.xib */; };
+		F2B7D4C01D4A44FD00F740ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7D4BF1D4A44FD00F740ED /* AppDelegate.swift */; };
+		F2B7D4C21D4A44FD00F740ED /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7D4C11D4A44FD00F740ED /* DrawViewController.swift */; };
+		F2B7D4C51D4A44FD00F740ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B7D4C31D4A44FD00F740ED /* Main.storyboard */; };
+		F2B7D4C71D4A44FD00F740ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B7D4C61D4A44FD00F740ED /* Assets.xcassets */; };
+		F2B7D4CA1D4A44FD00F740ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B7D4C81D4A44FD00F740ED /* LaunchScreen.storyboard */; };
+		F2E2C1651D4A484500A13979 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E2C1641D4A484500A13979 /* Line.swift */; };
+		F2E2C1671D4A48DC00A13979 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E2C1661D4A48DC00A13979 /* DrawView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F29F19631D48B0490005FE20 /* HypnoNerd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypnoNerd.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F29F19661D48B0490005FE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F29F19681D48B0490005FE20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F29F196D1D48B0490005FE20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F29F19701D48B0490005FE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F29F19721D48B0490005FE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F29F19781D48B0BF0005FE20 /* Hypnosister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hypnosister.swift; sourceTree = "<group>"; };
-		F29F197A1D48B7D40005FE20 /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
-		F29F197C1D48B84B0005FE20 /* ReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderViewController.xib; sourceTree = "<group>"; };
+		F2B7D4BC1D4A44FD00F740ED /* TouchTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2B7D4BF1D4A44FD00F740ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2B7D4C11D4A44FD00F740ED /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		F2B7D4C41D4A44FD00F740ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2B7D4C61D4A44FD00F740ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2B7D4C91D4A44FD00F740ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2B7D4CB1D4A44FD00F740ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E2C1641D4A484500A13979 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		F2E2C1661D4A48DC00A13979 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F29F19601D48B0490005FE20 /* Frameworks */ = {
+		F2B7D4B91D4A44FD00F740ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,74 +39,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F29F195A1D48B0490005FE20 = {
+		F2B7D4B31D4A44FD00F740ED = {
 			isa = PBXGroup;
 			children = (
-				F29F19651D48B0490005FE20 /* HypnoNerd */,
-				F29F19641D48B0490005FE20 /* Products */,
+				F2B7D4BE1D4A44FD00F740ED /* TouchTracker */,
+				F2B7D4BD1D4A44FD00F740ED /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F29F19641D48B0490005FE20 /* Products */ = {
+		F2B7D4BD1D4A44FD00F740ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F29F19631D48B0490005FE20 /* HypnoNerd.app */,
+				F2B7D4BC1D4A44FD00F740ED /* TouchTracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F29F19651D48B0490005FE20 /* HypnoNerd */ = {
+		F2B7D4BE1D4A44FD00F740ED /* TouchTracker */ = {
 			isa = PBXGroup;
 			children = (
-				F29F19661D48B0490005FE20 /* AppDelegate.swift */,
-				F29F19681D48B0490005FE20 /* ViewController.swift */,
-				F29F197A1D48B7D40005FE20 /* ReminderViewController.swift */,
-				F29F197C1D48B84B0005FE20 /* ReminderViewController.xib */,
-				F29F19781D48B0BF0005FE20 /* Hypnosister.swift */,
-				F29F196D1D48B0490005FE20 /* Assets.xcassets */,
-				F29F196F1D48B0490005FE20 /* LaunchScreen.storyboard */,
-				F29F19721D48B0490005FE20 /* Info.plist */,
+				F2B7D4BF1D4A44FD00F740ED /* AppDelegate.swift */,
+				F2B7D4C11D4A44FD00F740ED /* DrawViewController.swift */,
+				F2E2C1641D4A484500A13979 /* Line.swift */,
+				F2E2C1661D4A48DC00A13979 /* DrawView.swift */,
+				F2B7D4C31D4A44FD00F740ED /* Main.storyboard */,
+				F2B7D4C61D4A44FD00F740ED /* Assets.xcassets */,
+				F2B7D4C81D4A44FD00F740ED /* LaunchScreen.storyboard */,
+				F2B7D4CB1D4A44FD00F740ED /* Info.plist */,
 			);
-			path = HypnoNerd;
+			path = TouchTracker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F29F19621D48B0490005FE20 /* HypnoNerd */ = {
+		F2B7D4BB1D4A44FD00F740ED /* TouchTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F29F19751D48B0490005FE20 /* Build configuration list for PBXNativeTarget "HypnoNerd" */;
+			buildConfigurationList = F2B7D4CE1D4A44FD00F740ED /* Build configuration list for PBXNativeTarget "TouchTracker" */;
 			buildPhases = (
-				F29F195F1D48B0490005FE20 /* Sources */,
-				F29F19601D48B0490005FE20 /* Frameworks */,
-				F29F19611D48B0490005FE20 /* Resources */,
+				F2B7D4B81D4A44FD00F740ED /* Sources */,
+				F2B7D4B91D4A44FD00F740ED /* Frameworks */,
+				F2B7D4BA1D4A44FD00F740ED /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HypnoNerd;
-			productName = HypnoNerd;
-			productReference = F29F19631D48B0490005FE20 /* HypnoNerd.app */;
+			name = TouchTracker;
+			productName = TouchTracker;
+			productReference = F2B7D4BC1D4A44FD00F740ED /* TouchTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F29F195B1D48B0490005FE20 /* Project object */ = {
+		F2B7D4B41D4A44FD00F740ED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = feiyun;
 				TargetAttributes = {
-					F29F19621D48B0490005FE20 = {
+					F2B7D4BB1D4A44FD00F740ED = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = VCY363WARL;
 					};
 				};
 			};
-			buildConfigurationList = F29F195E1D48B0490005FE20 /* Build configuration list for PBXProject "HypnoNerd" */;
+			buildConfigurationList = F2B7D4B71D4A44FD00F740ED /* Build configuration list for PBXProject "TouchTracker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -114,48 +114,56 @@
 				en,
 				Base,
 			);
-			mainGroup = F29F195A1D48B0490005FE20;
-			productRefGroup = F29F19641D48B0490005FE20 /* Products */;
+			mainGroup = F2B7D4B31D4A44FD00F740ED;
+			productRefGroup = F2B7D4BD1D4A44FD00F740ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F29F19621D48B0490005FE20 /* HypnoNerd */,
+				F2B7D4BB1D4A44FD00F740ED /* TouchTracker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F29F19611D48B0490005FE20 /* Resources */ = {
+		F2B7D4BA1D4A44FD00F740ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F29F19711D48B0490005FE20 /* LaunchScreen.storyboard in Resources */,
-				F29F197D1D48B84B0005FE20 /* ReminderViewController.xib in Resources */,
-				F29F196E1D48B0490005FE20 /* Assets.xcassets in Resources */,
+				F2B7D4CA1D4A44FD00F740ED /* LaunchScreen.storyboard in Resources */,
+				F2B7D4C71D4A44FD00F740ED /* Assets.xcassets in Resources */,
+				F2B7D4C51D4A44FD00F740ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F29F195F1D48B0490005FE20 /* Sources */ = {
+		F2B7D4B81D4A44FD00F740ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F29F197B1D48B7D40005FE20 /* ReminderViewController.swift in Sources */,
-				F29F19691D48B0490005FE20 /* ViewController.swift in Sources */,
-				F29F19791D48B0BF0005FE20 /* Hypnosister.swift in Sources */,
-				F29F19671D48B0490005FE20 /* AppDelegate.swift in Sources */,
+				F2E2C1651D4A484500A13979 /* Line.swift in Sources */,
+				F2B7D4C21D4A44FD00F740ED /* DrawViewController.swift in Sources */,
+				F2E2C1671D4A48DC00A13979 /* DrawView.swift in Sources */,
+				F2B7D4C01D4A44FD00F740ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F29F196F1D48B0490005FE20 /* LaunchScreen.storyboard */ = {
+		F2B7D4C31D4A44FD00F740ED /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F29F19701D48B0490005FE20 /* Base */,
+				F2B7D4C41D4A44FD00F740ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2B7D4C81D4A44FD00F740ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2B7D4C91D4A44FD00F740ED /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -163,7 +171,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F29F19731D48B0490005FE20 /* Debug */ = {
+		F2B7D4CC1D4A44FD00F740ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -209,7 +217,7 @@
 			};
 			name = Debug;
 		};
-		F29F19741D48B0490005FE20 /* Release */ = {
+		F2B7D4CD1D4A44FD00F740ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -248,26 +256,24 @@
 			};
 			name = Release;
 		};
-		F29F19761D48B0490005FE20 /* Debug */ = {
+		F2B7D4CF1D4A44FD00F740ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = HypnoNerd/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = TouchTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.HypnoNerd;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.TouchTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		F29F19771D48B0490005FE20 /* Release */ = {
+		F2B7D4D01D4A44FD00F740ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = HypnoNerd/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = TouchTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.HypnoNerd;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.TouchTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -275,25 +281,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F29F195E1D48B0490005FE20 /* Build configuration list for PBXProject "HypnoNerd" */ = {
+		F2B7D4B71D4A44FD00F740ED /* Build configuration list for PBXProject "TouchTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F29F19731D48B0490005FE20 /* Debug */,
-				F29F19741D48B0490005FE20 /* Release */,
+				F2B7D4CC1D4A44FD00F740ED /* Debug */,
+				F2B7D4CD1D4A44FD00F740ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F29F19751D48B0490005FE20 /* Build configuration list for PBXNativeTarget "HypnoNerd" */ = {
+		F2B7D4CE1D4A44FD00F740ED /* Build configuration list for PBXNativeTarget "TouchTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F29F19761D48B0490005FE20 /* Debug */,
-				F29F19771D48B0490005FE20 /* Release */,
+				F2B7D4CF1D4A44FD00F740ED /* Debug */,
+				F2B7D4D01D4A44FD00F740ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F29F195B1D48B0490005FE20 /* Project object */;
+	rootObject = F2B7D4B41D4A44FD00F740ED /* Project object */;
 }
