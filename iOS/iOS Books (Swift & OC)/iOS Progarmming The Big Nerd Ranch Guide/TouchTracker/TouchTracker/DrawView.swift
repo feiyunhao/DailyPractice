@@ -10,7 +10,7 @@ import UIKit
 
 class DrawView: UIView, UIGestureRecognizerDelegate {
 
-    var finishedLines:[Line] = []
+    var finishedLines: [Line] = []
     var linesInProgress: [NSValue : Line] = [:]
     weak var selectedLine: Line?
     var moveRecognizer: UIPanGestureRecognizer!
