@@ -8,13 +8,15 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate {
 
     var item: Item? {
         didSet {
             self.navigationItem.title = item?.itemName
         }
     }
+    
+    var imagePickerPopover: UIPopoverController?
     
     @IBOutlet weak var nameField: UITextField!
     
@@ -28,10 +30,15 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var toolbar: UIToolbar!
     
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
   
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        let io = UIApplication.sharedApplication().statusBarOrientation
+        self.prepareViewsForOrientation(io)
+        
         
         if let item = self.item {
             nameField.text = item.itemName
@@ -65,6 +72,13 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
 
     @IBAction func takePicture(sender: AnyObject) {
+        
+        if imagePickerPopover != nil && self.imagePickerPopover!.popoverVisible {
+            imagePickerPopover?.dismissPopoverAnimated(true)
+            imagePickerPopover = nil
+            return
+        }
+        
         let imagePicker = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             imagePicker.sourceType = .Camera
@@ -77,7 +91,18 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            imagePickerPopover = UIPopoverController.init(contentViewController: imagePicker)
+            imagePickerPopover!.presentPopoverFromBarButtonItem(sender as! UIBarButtonItem, permittedArrowDirections: .Any, animated: true)
+        } else {
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+
+        }
+    }
+    
+    
+    func popoverControllerDidDismissPopover(popoverController: UIPopoverController) {
+        self.imagePickerPopover = nil
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -94,7 +119,14 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
                 
             }
         }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        if self.imagePickerPopover != nil {
+            self.imagePickerPopover?.dismissPopoverAnimated(true)
+            self.imagePickerPopover = nil
+        } else {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool{
@@ -104,10 +136,38 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func backgroundTapped(sender: AnyObject) {
         self.view.endEditing(true)
+        
     }
 //    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
 //        self.view.endEditing(true)
 //    }
     
+    func prepareViewsForOrientation(orientation:UIInterfaceOrientation) {
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            return
+        }
+        if UIInterfaceOrientationIsLandscape(orientation) {
+            self.imageView.hidden = true
+            self.cameraButton.enabled = false
+        } else {
+            self.imageView.hidden = false
+            self.cameraButton.enabled = true
+        }
+    }
+    
+    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+        self.prepareViewsForOrientation(toInterfaceOrientation)
+    }
+    
+    override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+        
+    }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+    }
     
 }
