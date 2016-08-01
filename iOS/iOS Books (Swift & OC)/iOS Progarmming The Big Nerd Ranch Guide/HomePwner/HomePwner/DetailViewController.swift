@@ -15,6 +15,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             self.navigationItem.title = item?.itemName
         }
     }
+    var dismissBlock: (()->())?
     
     var imagePickerPopover: UIPopoverController?
     
@@ -33,6 +34,30 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var cameraButton: UIBarButtonItem!
   
     
+    init(newItem isNew: Bool){
+        super.init(nibName: nil, bundle: nil)
+        if isNew {
+            let doneItem = UIBarButtonItem.init(barButtonSystemItem: .Done, target: self, action: #selector(self.save(_:)))
+            self.navigationItem.rightBarButtonItem = doneItem
+            
+            let cancleItem = UIBarButtonItem.init(barButtonSystemItem: .Cancel, target: self, action: #selector(self.cancel(_:)))
+            self.navigationItem.leftBarButtonItem = cancleItem
+        }
+    }
+    
+    func save(sender: AnyObject) {
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: dismissBlock)
+    }
+    
+    func cancel(sender: AnyObject) {
+        ItemStore.sharedStore.removeItem(self.item!)
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: dismissBlock)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -49,9 +74,14 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             dateFormatter.timeStyle = .NoStyle
             self.dateLabel.text = dateFormatter.stringFromDate(item.dateCreated)
             
-            let itemKey = item.itemKey
-            let imageToDisplay = ImageStore.sharedStore.imageForKey(itemKey)
-            self.imageView.image = imageToDisplay
+            
+            if let itemKey = item.itemKey {
+                let imageToDisplay = ImageStore.sharedStore.imageForKey(itemKey)
+                self.imageView.image = imageToDisplay
+            } else {
+                self.imageView.image = nil
+            }
+            
         }
     }
     
@@ -96,7 +126,6 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             imagePickerPopover!.presentPopoverFromBarButtonItem(sender as! UIBarButtonItem, permittedArrowDirections: .Any, animated: true)
         } else {
             self.presentViewController(imagePicker, animated: true, completion: nil)
-
         }
     }
     
@@ -116,7 +145,6 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
                 do {
                     try NSFileManager.defaultManager().removeItemAtPath(mediaURL.path!)
                 } catch {}
-                
             }
         }
         

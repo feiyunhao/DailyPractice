@@ -14,20 +14,32 @@ class ItemStore: NSObject {
         return  self.privateItems
     }
     
-    var privateItems: [Item] = []
+    var privateItems: [Item] = (NSKeyedUnarchiver.unarchiveObjectWithFile(ItemStore.itemArchivePath()) as? [Item]) ?? []
     
     static let sharedStore: ItemStore = ItemStore()
     
     func creatItem() -> Item {
-        let item = Item.randomItem()
+        let item = Item()
         self.privateItems.append(item)
         return item
     }
     
+    static func itemArchivePath() -> String {
+        let documentDirectories = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let  documentDirectory = documentDirectories.first
+        return documentDirectory! + "/items.archive"
+    }
+    
+    func saveChanges() -> Bool {
+        let path = ItemStore.itemArchivePath()
+        return NSKeyedArchiver.archiveRootObject(self.privateItems, toFile: path)
+    }
+    
+    
     func removeItem(item: Item) {
         if let index = self.privateItems.indexOf(item) {
             self.privateItems.removeAtIndex(index)
-            ImageStore.sharedStore.deleteImageForkey(item.itemKey)
+            ImageStore.sharedStore.deleteImageForkey(item.itemKey!)
         }
     }
     

@@ -32,7 +32,7 @@ class ItemsViewController: UITableViewController {
     // MARK: - Table
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let detailViewController = DetailViewController()
+        let detailViewController = DetailViewController.init(newItem: false)
         let item = ItemStore.sharedStore.allItmes[indexPath.row]
         detailViewController.item = item
         self.navigationController?.pushViewController(detailViewController, animated: true)
@@ -70,9 +70,17 @@ class ItemsViewController: UITableViewController {
     
     @IBAction func addNewItem(sender: UIButton) {
         let newItem = ItemStore.sharedStore.creatItem()
-        let lastRow = ItemStore.sharedStore.allItmes.indexOf(newItem)!
-        let indexPath = NSIndexPath(forRow: lastRow, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Top)
+        
+        let detailViewController = DetailViewController.init(newItem: true)
+        detailViewController.item = newItem
+        detailViewController.dismissBlock = {
+            self.tableView.reloadData()
+        }
+        
+        let nav = UINavigationController.init(rootViewController: detailViewController)
+        nav.modalPresentationStyle = .FormSheet
+        
+        self.presentViewController(nav, animated: true, completion: nil)
     }
     
     @IBAction func toggleEditingMode(sender: UIButton) {

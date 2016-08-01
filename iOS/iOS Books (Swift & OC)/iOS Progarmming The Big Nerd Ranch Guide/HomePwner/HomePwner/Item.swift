@@ -8,21 +8,46 @@
 
 import UIKit
 
-class Item: NSObject {
+class Item: NSObject, NSCoding {
     
     var itemName: String = "Item"
     var serialNumber: String = ""
     var valueInDollars: Int = 0
-    let dateCreated: NSDate!
-    let itemKey = NSUUID().UUIDString
+    var dateCreated: NSDate = NSDate()
+    var itemKey: String? = NSUUID().UUIDString
     
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(itemName, forKey: "itemName")
+        aCoder.encodeObject(serialNumber, forKey: "serialNumber")
+        aCoder.encodeObject(dateCreated, forKey: "dateCreated")
+        aCoder.encodeObject(itemKey, forKey: "itemKey")
+        aCoder.encodeInt64(Int64(valueInDollars), forKey: "valueInDollars")
+    }
+    
+    override init() {
+        super.init()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init()
+        itemName = aDecoder.decodeObjectForKey("itemName") as! String
+        serialNumber = aDecoder.decodeObjectForKey("serialNumber") as! String
+        dateCreated = aDecoder.decodeObjectForKey("dateCreated") as! NSDate
+        itemKey = aDecoder.decodeObjectForKey("itemKey") as? String
+        valueInDollars = Int(aDecoder.decodeInt64ForKey("valueInDollars"))
+    }
     
     init(itemName name: String, valueInDollars value: Int, serialNumber sNumber: String) {
         self.itemName = name
         self.valueInDollars = value
         self.serialNumber = sNumber
-        self.dateCreated = NSDate()
         super.init()
+    }
+    
+    func itemArchivePath() -> String? {
+        let documentDirectories = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let  documentDirectory = documentDirectories.first
+        return documentDirectory! + "/items.archive"
     }
     
     override var description: String {
@@ -61,8 +86,5 @@ class Item: NSObject {
         
         let newItem = Item(itemName:randomName,valueInDollars:randomValue,serialNumber: randomSerialNumber)
         return newItem
-        
-        
-        
     }
 }

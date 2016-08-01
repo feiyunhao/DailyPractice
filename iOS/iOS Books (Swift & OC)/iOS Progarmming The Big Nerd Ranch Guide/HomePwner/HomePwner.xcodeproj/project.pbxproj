@@ -47,6 +47,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F267FA3B1D4EE5D0005A81A1 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				F2B7D4AB1D49E83500F740ED /* HeaderView.xib */,
+				F29F198E1D48F7720005FE20 /* Main.storyboard */,
+				F29F19911D48F7720005FE20 /* Assets.xcassets */,
+				F29F19931D48F7720005FE20 /* LaunchScreen.storyboard */,
+				F29F19961D48F7720005FE20 /* Info.plist */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
 		F29F197E1D48F7720005FE20 = {
 			isa = PBXGroup;
 			children = (
@@ -71,13 +83,9 @@
 				F2B7D4A91D49A69F00F740ED /* ItemStore.swift */,
 				F2B7D4B11D4A384500F740ED /* ImageStore.swift */,
 				F2B7D4A51D49A62300F740ED /* ItemsViewController.swift */,
-				F2B7D4AB1D49E83500F740ED /* HeaderView.xib */,
 				F2B7D4AD1D4A052B00F740ED /* DetailViewController.swift */,
 				F2B7D4AE1D4A052B00F740ED /* DetailViewController.xib */,
-				F29F198E1D48F7720005FE20 /* Main.storyboard */,
-				F29F19911D48F7720005FE20 /* Assets.xcassets */,
-				F29F19931D48F7720005FE20 /* LaunchScreen.storyboard */,
-				F29F19961D48F7720005FE20 /* Info.plist */,
+				F267FA3B1D4EE5D0005A81A1 /* Others */,
 			);
 			path = HomePwner;
 			sourceTree = "<group>";
@@ -276,6 +284,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = HomePwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.HomePwner;
@@ -287,6 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = HomePwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.HomePwner;
