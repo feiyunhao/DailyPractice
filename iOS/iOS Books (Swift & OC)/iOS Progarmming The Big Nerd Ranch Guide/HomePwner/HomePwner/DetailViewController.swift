@@ -43,6 +43,10 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             let cancleItem = UIBarButtonItem.init(barButtonSystemItem: .Cancel, target: self, action: #selector(self.cancel(_:)))
             self.navigationItem.leftBarButtonItem = cancleItem
         }
+        
+        let defaultCenter = NSNotificationCenter.defaultCenter()
+        defaultCenter.addObserver(self, selector: #selector(self.updateFont), name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        
     }
     
     func save(sender: AnyObject) {
@@ -56,6 +60,17 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func updateFont() {
+        let font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.nameField.font = font;
+        self.serialNumberField.font = font;
+        self.valueField.font = font;
+        self.dateLabel.font = font;
+        self.nameField.font = font;
+        self.serialNumberField.font = font;
+        self.valueField.font = font;
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -81,7 +96,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             } else {
                 self.imageView.image = nil
             }
-            
+            self.updateFont()
         }
     }
     
@@ -138,6 +153,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             ImageStore.sharedStore.setImage(image, forKey: (self.item?.itemKey)!)
             self.imageView.image = image
+            self.item?.setThumbnailFromImage(image)
         }
         if let mediaURL = info[UIImagePickerControllerMediaURL] as? NSURL {
             if UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(mediaURL.path!) {
@@ -198,4 +214,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLayoutSubviews() {
     }
     
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 }

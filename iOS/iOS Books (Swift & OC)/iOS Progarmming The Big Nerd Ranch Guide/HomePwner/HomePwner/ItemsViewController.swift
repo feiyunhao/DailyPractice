@@ -8,25 +8,49 @@
 
 import UIKit
 
-class ItemsViewController: UITableViewController {
+class ItemsViewController: UITableViewController, UIPopoverControllerDelegate {
     
 //    @IBOutlet var headerView: UIView?
+    
+    var imagePopover: UIPopoverController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        NSBundle.mainBundle().loadNibNamed("HeaderView", owner: self, options: [:])
 //        self.tableView.tableHeaderView = headerView!
+        tableView.registerNib(UINib.init(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "ItemCell")
         
         let navItem = self.navigationItem
         navItem.title = "Homepwner"
         let bbi = UIBarButtonItem.init(barButtonSystemItem: .Add, target: self, action: #selector(self.addNewItem(_:)))
         navItem.rightBarButtonItem = bbi
         navItem.leftBarButtonItem = self.editButtonItem()
+        
+        let defaultCenter = NSNotificationCenter.defaultCenter()
+        defaultCenter.addObserver(self, selector: #selector(self.updateTableViewForDynamicTypeSize), name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.reloadData()
+        self.updateTableViewForDynamicTypeSize()
+    }
+    
+    func updateTableViewForDynamicTypeSize() {
+        let dict = [
+            UIContentSizeCategoryExtraSmall : 44,
+            UIContentSizeCategorySmall : 44,
+            UIContentSizeCategoryMedium : 44,
+            UIContentSizeCategoryLarge : 44,
+            UIContentSizeCategoryExtraLarge : 55,
+            UIContentSizeCategoryExtraExtraLarge : 65,
+            UIContentSizeCategoryExtraExtraExtraLarge : 75 ]
+        
+        let userSize = UIApplication.sharedApplication().preferredContentSizeCategory
+        
+        if let cellheight = dict[userSize] {
+            self.tableView.rowHeight = CGFloat(cellheight)
+            self.tableView.reloadData()
+        }
     }
     
     // MARK: - Table
@@ -43,11 +67,29 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! ItemCell
 
         let items = ItemStore.sharedStore.allItmes
         let item = items[indexPath.row]
-        cell.textLabel?.text = item.description
+        
+        cell.nameLabel.text = item.itemName;
+        cell.serialNumberLabel.text = item.serialNumber;
+        cell.valueLabel.text = "$\(item.valueInDollars)"
+        cell.thumbnailView.image = item.thumbnail
+        cell.actionBlock = {
+            [unowned cell] in
+                if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+                guard let img = ImageStore.sharedStore.imageForKey(item.itemKey!) else { return }
+                let rect = self.view.convertRect(cell.thumbnailView.bounds, fromView: cell.thumbnailView)
+                let ivc = ImageViewController()
+                    ivc.image = img
+                    
+                    self.imagePopover = UIPopoverController.init(contentViewController: ivc)
+//                    self.imagePopover?.delegate = self
+                    self.imagePopover?.popoverContentSize = CGSizeMake(600, 600)
+                    self.imagePopover?.presentPopoverFromRect(rect, inView: self.view, permittedArrowDirections: .Any, animated: true)
+            }
+        }
         
         return cell
     }
@@ -92,4 +134,13 @@ class ItemsViewController: UITableViewController {
             self.setEditing(true, animated: true)
         }
     }
+    
+    func popoverControllerDidDismissPopover(popoverController: UIPopoverController) {
+        self.imagePopover = nil
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
 }
