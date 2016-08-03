@@ -87,7 +87,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             let dateFormatter: NSDateFormatter = NSDateFormatter()
             dateFormatter.dateStyle = .MediumStyle
             dateFormatter.timeStyle = .NoStyle
-            self.dateLabel.text = dateFormatter.stringFromDate(item.dateCreated)
+            self.dateLabel.text = dateFormatter.stringFromDate(item.dateCreated!)
             
             
             if let itemKey = item.itemKey {

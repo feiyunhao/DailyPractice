@@ -16,6 +16,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+        
+        let coursesVC = CoursesViewController(style:.Plain)
+        let masterNav = UINavigationController.init(rootViewController: coursesVC)
+        
+        coursesVC.webVC = WebViewController()
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            let detailnav = UINavigationController.init(rootViewController: coursesVC.webVC!)
+            let splitVc = UISplitViewController()
+            splitVc.delegate = coursesVC.webVC!
+            splitVc.viewControllers = [masterNav, detailnav]
+            window?.rootViewController = splitVc
+        } else {
+            window?.rootViewController = masterNav
+        }
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
