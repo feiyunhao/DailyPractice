@@ -57,20 +57,20 @@ class ItemsViewController: UITableViewController, UIPopoverControllerDelegate {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailViewController = DetailViewController.init(newItem: false)
-        let item = ItemStore.sharedStore.allItmes[indexPath.row]
+        let item = ItemStore.sharedStore.allItmes![indexPath.row]
         detailViewController.item = item
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ItemStore.sharedStore.allItmes.count
+        return ItemStore.sharedStore.allItmes!.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! ItemCell
 
         let items = ItemStore.sharedStore.allItmes
-        let item = items[indexPath.row]
+        let item = items![indexPath.row]
         
         cell.nameLabel.text = item.itemName;
         cell.serialNumberLabel.text = item.serialNumber;
@@ -96,7 +96,7 @@ class ItemsViewController: UITableViewController, UIPopoverControllerDelegate {
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            let item = ItemStore.sharedStore.allItmes[indexPath.row]
+            let item = ItemStore.sharedStore.allItmes![indexPath.row]
             ItemStore.sharedStore.removeItem(item)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
