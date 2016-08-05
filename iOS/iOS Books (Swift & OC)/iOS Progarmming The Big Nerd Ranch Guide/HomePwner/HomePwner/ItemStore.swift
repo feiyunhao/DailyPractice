@@ -17,7 +17,7 @@ class ItemStore: NSObject {
     
     var privateItems: [Item]? 
         //= (NSKeyedUnarchiver.unarchiveObjectWithFile(ItemStore.itemArchivePath()) as? [Item]) ?? []
-    
+    var allAssetTypes: [NSManagedObject]?
     
     var context: NSManagedObjectContext?
     
@@ -39,6 +39,29 @@ class ItemStore: NSObject {
         context = NSManagedObjectContext()
         context?.persistentStoreCoordinator = psc
         self.loadAllItems()
+        
+        if allAssetTypes == nil {
+            let request = NSFetchRequest()
+            let e = NSEntityDescription.entityForName("AssetType", inManagedObjectContext: self.context!)
+            request.entity = e
+            allAssetTypes = (try! context!.executeFetchRequest(request) as? [NSManagedObject])
+        }
+        
+        if allAssetTypes!.count == 0 {
+            var type: NSManagedObject?
+            type = NSEntityDescription.insertNewObjectForEntityForName("AssetType", inManagedObjectContext: context!)
+            type?.setValue("Furniture", forKey: "label")
+            allAssetTypes?.append(type!)
+            
+            type = NSEntityDescription.insertNewObjectForEntityForName("AssetType", inManagedObjectContext: context!)
+            type?.setValue("Jewelry", forKey: "label")
+            allAssetTypes?.append(type!)
+            
+            type = NSEntityDescription.insertNewObjectForEntityForName("AssetType", inManagedObjectContext: context!)
+            type?.setValue("Electronics", forKey: "label")
+            allAssetTypes?.append(type!)
+            
+        }
     }
     
     static let sharedStore: ItemStore = ItemStore()
@@ -143,8 +166,6 @@ class ItemStore: NSObject {
         item.orderingValue = newOrderValue;
     }
     
-    func allAssetTypes() -> [NSManagedObject] {
-        return []
-    }
+   
     
 }
