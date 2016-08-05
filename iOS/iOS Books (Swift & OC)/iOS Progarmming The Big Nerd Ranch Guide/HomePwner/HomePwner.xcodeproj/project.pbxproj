@@ -24,6 +24,7 @@
 		F2B7D4AF1D4A052B00F740ED /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7D4AD1D4A052B00F740ED /* DetailViewController.swift */; };
 		F2B7D4B01D4A052B00F740ED /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B7D4AE1D4A052B00F740ED /* DetailViewController.xib */; };
 		F2B7D4B21D4A384500F740ED /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7D4B11D4A384500F740ED /* ImageStore.swift */; };
+		F2C6B6961D54E6BA00B975CA /* AssetTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6B6951D54E6BA00B975CA /* AssetTypeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		F2B7D4AD1D4A052B00F740ED /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F2B7D4AE1D4A052B00F740ED /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		F2B7D4B11D4A384500F740ED /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		F2C6B6951D54E6BA00B975CA /* AssetTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTypeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				F2B7D4A51D49A62300F740ED /* ItemsViewController.swift */,
 				F2B7D4AD1D4A052B00F740ED /* DetailViewController.swift */,
 				F2B7D4AE1D4A052B00F740ED /* DetailViewController.xib */,
+				F2C6B6951D54E6BA00B975CA /* AssetTypeViewController.swift */,
 				F267FA3B1D4EE5D0005A81A1 /* Others */,
 			);
 			path = HomePwner;
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B7D4A61D49A62300F740ED /* ItemsViewController.swift in Sources */,
+				F2C6B6961D54E6BA00B975CA /* AssetTypeViewController.swift in Sources */,
 				F2AABEF41D52269900773DA9 /* ImageTransformer.swift in Sources */,
 				F2AABEF21D52251C00773DA9 /* Homepwner.xcdatamodeld in Sources */,
 				F2B7D4A81D49A68D00F740ED /* Item.swift in Sources */,

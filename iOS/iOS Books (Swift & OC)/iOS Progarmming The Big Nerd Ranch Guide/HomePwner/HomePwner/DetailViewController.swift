@@ -33,6 +33,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var cameraButton: UIBarButtonItem!
   
+    @IBOutlet weak var assetTypeButton: UIBarButtonItem!
     
     init(newItem isNew: Bool){
         super.init(nibName: nil, bundle: nil)
@@ -87,8 +88,9 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             let dateFormatter: NSDateFormatter = NSDateFormatter()
             dateFormatter.dateStyle = .MediumStyle
             dateFormatter.timeStyle = .NoStyle
-            self.dateLabel.text = dateFormatter.stringFromDate(item.dateCreated!)
-            
+            if item.dateCreated != nil {
+                self.dateLabel.text = dateFormatter.stringFromDate(item.dateCreated!)
+            }
             
             if let itemKey = item.itemKey {
                 let imageToDisplay = ImageStore.sharedStore.imageForKey(itemKey)
@@ -96,6 +98,9 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             } else {
                 self.imageView.image = nil
             }
+            
+            let typeLabel: String = self.item?.assetType?.valueForKey("label") as? String ?? "None"
+            self.assetTypeButton.title = "Type:" + typeLabel
             self.updateFont()
         }
     }
@@ -108,6 +113,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         item.itemName = self.nameField.text!;
         item.serialNumber = self.serialNumberField.text!;
         item.valueInDollars = Int(self.valueField.text!)!
+        
     }
     
     override func viewDidLoad() {
@@ -217,4 +223,13 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
+    
+    @IBAction func showAssetTypePicker(sender: UIBarButtonItem) {
+        self.view.endEditing(true)
+        let avc = AssetTypeViewController()
+        avc.item = self.item
+        self.navigationController?.pushViewController(avc, animated: true)
+        
+    }
+    
 }

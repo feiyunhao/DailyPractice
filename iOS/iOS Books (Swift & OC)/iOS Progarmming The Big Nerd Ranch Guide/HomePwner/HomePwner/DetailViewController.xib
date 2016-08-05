@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="HomePwner" customModuleProvider="target">
             <connections>
+                <outlet property="assetTypeButton" destination="ayW-el-PyW" id="egH-a1-x32"/>
                 <outlet property="cameraButton" destination="19S-8h-ZnQ" id="muA-B4-lfR"/>
                 <outlet property="dateLabel" destination="rYc-dd-dm0" id="cIQ-k4-NmA"/>
                 <outlet property="imageView" destination="UMn-2w-7Fy" id="5Vb-S4-b28"/>
@@ -83,6 +84,11 @@
                         <barButtonItem systemItem="camera" id="19S-8h-ZnQ">
                             <connections>
                                 <action selector="takePicture:" destination="-1" id="YwK-Uk-DFy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="assetTypeButton" id="ayW-el-PyW">
+                            <connections>
+                                <action selector="showAssetTypePicker:" destination="-1" id="la3-ng-pMr"/>
                             </connections>
                         </barButtonItem>
                     </items>

@@ -15,26 +15,30 @@ class ItemStore: NSObject {
         return  self.privateItems
     }
     
-    var privateItems: [Item]?
+    var privateItems: [Item]? 
         //= (NSKeyedUnarchiver.unarchiveObjectWithFile(ItemStore.itemArchivePath()) as? [Item]) ?? []
     
     
     var context: NSManagedObjectContext?
     
-    var model: NSManagedObjectModel? = NSManagedObjectModel.mergedModelFromBundles(nil)
+    var  model: NSManagedObjectModel?
     
     override init() {
+        super.init()
+        model = NSManagedObjectModel.mergedModelFromBundles(nil)
         let psc = NSPersistentStoreCoordinator.init(managedObjectModel: model!)
         let path = ItemStore.itemArchivePath()
-        let URL = NSURL(string: path)
-        
+        let URL = NSURL.fileURLWithPath(path)
+        print(path)
         do {
             try psc.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: URL, options: nil)
-        } catch{}
+        } catch{
+            return
+        }
         
         context = NSManagedObjectContext()
         context?.persistentStoreCoordinator = psc
-        
+        self.loadAllItems()
     }
     
     static let sharedStore: ItemStore = ItemStore()
@@ -42,13 +46,12 @@ class ItemStore: NSObject {
     func loadAllItems() {
         if self.privateItems == nil {
             let request = NSFetchRequest()
-            let e = NSEntityDescription.entityForName("orderingValue", inManagedObjectContext: context!)
+            let e = NSEntityDescription.entityForName("Item", inManagedObjectContext: context!)
             request.entity = e
             let sd = NSSortDescriptor.init(key: "orderingValue", ascending: true)
             request.sortDescriptors = [sd];
            
-            guard let result = try? context?.executeRequest(request) else { return }
-                
+            guard let result = try? context?.executeFetchRequest(request) else { return }
             privateItems = (result as! Array)
             
             
@@ -80,12 +83,16 @@ class ItemStore: NSObject {
     }
     
     func saveChanges() -> Bool {
+        
 //        let path = ItemStore.itemArchivePath()
 //        return NSKeyedArchiver.archiveRootObject(self.privateItems, toFile: path)
         
         do {
            try context?.save()
-        } catch { return false }
+        } catch {
+            print(error)
+            return false
+        }
         
         return true
         
@@ -112,6 +119,32 @@ class ItemStore: NSObject {
         let item = self.privateItems![fromIndex]
         self.privateItems!.removeAtIndex(fromIndex)
         self.privateItems!.insert(item, atIndex: toIndex)
+        
+        var lowerBound: Double = 0
+        if toIndex > 0 {
+            lowerBound = (self.privateItems?[toIndex - 1].orderingValue)!
+        } else {
+            lowerBound = (self.privateItems?[1].orderingValue)! - 2
+        }
+        
+         var upperBound: Double = 0
+        
+        if toIndex < (self.privateItems?.count)! - 1 {
+            
+            upperBound = (self.privateItems?[toIndex + 1].orderingValue)!;
+            
+        } else {
+                
+            upperBound = (self.privateItems?[toIndex - 1].orderingValue)! + 2.0;
+        }
+        
+        let newOrderValue = (lowerBound + upperBound) / 2.0;
+        
+        item.orderingValue = newOrderValue;
+    }
+    
+    func allAssetTypes() -> [NSManagedObject] {
+        return []
     }
     
 }

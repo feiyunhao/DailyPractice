@@ -15,7 +15,7 @@
         <relationship name="assetType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AssetType" inverseName="items" inverseEntity="AssetType" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="165"/>
         <element name="AssetType" positionX="-54" positionY="45" width="128" height="75"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="165"/>
     </elements>
 </model>
