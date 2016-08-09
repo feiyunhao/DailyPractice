@@ -17,7 +17,6 @@ class AssetTypeViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,13 +33,13 @@ class AssetTypeViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return ItemStore.sharedStore.allAssetTypes!.count
+        return ItemStore.sharedStore.allAssetTypes.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-        let allAssetTypes = ItemStore.sharedStore.allAssetTypes!
+        let allAssetTypes = ItemStore.sharedStore.allAssetTypes
         let assetType = allAssetTypes[indexPath.row]
         let assetLabel = assetType.valueForKey("label") as! String
         cell.textLabel?.text = assetLabel
@@ -57,7 +56,7 @@ class AssetTypeViewController: UITableViewController {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         cell?.accessoryType = .Checkmark
          let allAssetTypes = ItemStore.sharedStore.allAssetTypes
-          let assetType = allAssetTypes![indexPath.row]
+          let assetType = allAssetTypes[indexPath.row]
         self.item?.assetType = assetType
         self.navigationController?.popViewControllerAnimated(true)
         

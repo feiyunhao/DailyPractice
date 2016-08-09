@@ -41,5 +41,13 @@ class Item: NSManagedObject {
         UIGraphicsEndImageContext()
     }
 
-
+    override func awakeFromInsert() {
+        super.awakeFromInsert()
+        self.dateCreated = NSDate()
+        let uuid = NSUUID()
+        let key = uuid.UUIDString
+        self.itemKey = key
+        
+        
+    }
 }

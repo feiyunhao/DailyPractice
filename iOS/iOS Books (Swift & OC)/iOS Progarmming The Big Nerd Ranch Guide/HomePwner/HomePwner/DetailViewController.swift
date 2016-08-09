@@ -37,6 +37,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     init(newItem isNew: Bool){
         super.init(nibName: nil, bundle: nil)
+        self.restorationClass = DetailViewController.self
+        self.restorationIdentifier = NSStringFromClass(DetailViewController.self)
         if isNew {
             let doneItem = UIBarButtonItem.init(barButtonSystemItem: .Done, target: self, action: #selector(self.save(_:)))
             self.navigationItem.rightBarButtonItem = doneItem

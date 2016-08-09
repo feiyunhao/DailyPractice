@@ -8,16 +8,19 @@
 
 import UIKit
 
-class ItemsViewController: UITableViewController, UIPopoverControllerDelegate {
+class ItemsViewController: UITableViewController, UIPopoverControllerDelegate,UIViewControllerRestoration {
     
-//    @IBOutlet var headerView: UIView?
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.restorationClass = ItemsViewController.self
+    }
+    
     
     var imagePopover: UIPopoverController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        NSBundle.mainBundle().loadNibNamed("HeaderView", owner: self, options: [:])
-//        self.tableView.tableHeaderView = headerView!
         tableView.registerNib(UINib.init(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "ItemCell")
         
         let navItem = self.navigationItem
@@ -120,6 +123,7 @@ class ItemsViewController: UITableViewController, UIPopoverControllerDelegate {
         }
         
         let nav = UINavigationController.init(rootViewController: detailViewController)
+        nav.restorationIdentifier = NSStringFromClass(UINavigationController.self)
         nav.modalPresentationStyle = .FormSheet
         
         self.presentViewController(nav, animated: true, completion: nil)
@@ -141,6 +145,10 @@ class ItemsViewController: UITableViewController, UIPopoverControllerDelegate {
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    static func viewControllerWithRestorationIdentifierPath(identifierComponents: [AnyObject], coder: NSCoder) -> UIViewController? {
+        return ItemsViewController.init(coder:coder)
     }
     
 }
