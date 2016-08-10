@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tpg-Ss-OcI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="L1f-zM-WsV">
+            <objects>
+                <navigationController id="tpg-Ss-OcI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NTr-d8-zbT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JzQ-8u-ETd" kind="relationship" relationship="rootViewController" id="KAI-J1-oFv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcm-PC-xiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-908" y="46"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="8tN-bJ-xSb">
+            <objects>
+                <viewController id="JzQ-8u-ETd" customClass="ViewController" customModule="GooeySlideMenuDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UMI-BX-km5"/>
+                        <viewControllerLayoutGuide type="bottom" id="7a5-tQ-AMB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dvr-3L-DDR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ygz-Z9-oWd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="demoCell" id="DEC-3V-YH3">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DEC-3V-YH3" id="Gd7-zM-XQv">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JzQ-8u-ETd" id="LSH-lx-OHY"/>
+                                    <outlet property="delegate" destination="JzQ-8u-ETd" id="lQX-Pi-vjf"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQe-Xy-co4">
+                                <rect key="frame" x="510" y="550" width="50" height="30"/>
+                                <state key="normal" title="Trigger"/>
+                                <connections>
+                                    <action selector="didButtonTapped:" destination="JzQ-8u-ETd" eventType="touchUpInside" id="GTi-Nv-ZRL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7a5-tQ-AMB" firstAttribute="top" secondItem="GQe-Xy-co4" secondAttribute="bottom" constant="20" id="42U-lv-gwx"/>
+                            <constraint firstItem="Ygz-Z9-oWd" firstAttribute="top" secondItem="UMI-BX-km5" secondAttribute="bottom" id="4aC-Xb-wRL"/>
+                            <constraint firstItem="7a5-tQ-AMB" firstAttribute="top" secondItem="Ygz-Z9-oWd" secondAttribute="bottom" id="HFd-op-n5e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GQe-Xy-co4" secondAttribute="trailing" constant="20" id="Lnr-re-YZl"/>
+                            <constraint firstItem="Ygz-Z9-oWd" firstAttribute="top" secondItem="UMI-BX-km5" secondAttribute="bottom" id="OuY-ck-e10"/>
+                            <constraint firstItem="Ygz-Z9-oWd" firstAttribute="top" secondItem="UMI-BX-km5" secondAttribute="bottom" id="Su8-mk-xSm"/>
+                            <constraint firstItem="Ygz-Z9-oWd" firstAttribute="top" secondItem="UMI-BX-km5" secondAttribute="bottom" id="TvE-3P-0s0"/>
+                            <constraint firstItem="Ygz-Z9-oWd" firstAttribute="top" secondItem="dvr-3L-DDR" secondAttribute="top" id="hQQ-jF-QsX"/>
+                            <constraint firstItem="Ygz-Z9-oWd" firstAttribute="leading" secondItem="dvr-3L-DDR" secondAttribute="leading" id="pUI-Uc-zoi"/>
+                            <constraint firstItem="Ygz-Z9-oWd" firstAttribute="top" secondItem="UMI-BX-km5" secondAttribute="bottom" id="q1b-yC-90x"/>
+                            <constraint firstAttribute="trailing" secondItem="Ygz-Z9-oWd" secondAttribute="trailing" id="t5b-fd-Y0k"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4aC-Xb-wRL"/>
+                                <exclude reference="OuY-ck-e10"/>
+                                <exclude reference="Su8-mk-xSm"/>
+                                <exclude reference="TvE-3P-0s0"/>
+                                <exclude reference="q1b-yC-90x"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="首页" id="0gn-jJ-Qvz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L3N-KT-Usj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="-282"/>
+        </scene>
+    </scenes>
+</document>
