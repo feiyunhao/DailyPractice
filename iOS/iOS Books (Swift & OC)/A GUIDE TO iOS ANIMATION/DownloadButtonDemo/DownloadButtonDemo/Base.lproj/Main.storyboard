@@ -24,6 +24,11 @@
                                     <constraint firstAttribute="width" constant="100" id="cPo-Fj-5hW"/>
                                     <constraint firstAttribute="height" constant="100" id="yNm-je-oA3"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.86225867150000002" green="0.86047210029999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
