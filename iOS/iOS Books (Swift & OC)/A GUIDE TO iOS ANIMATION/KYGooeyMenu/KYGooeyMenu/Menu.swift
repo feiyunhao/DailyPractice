@@ -45,17 +45,20 @@ class Menu: UIView {
     
      private func openAnimation() {
         
-        let openAnimation_1 = SpringLayerAnimation.sharedAnimation.createBasicAnimation("xAxisPercent", duration: 0.3, fromValue: 0.0, toValue: 1.0)
-        let openAnimation_2 = SpringLayerAnimation.sharedAnimation.createBasicAnimation("xAxisPercent", duration: 0.3, fromValue: 0.0, toValue: 1.0)
+        let openAnimation_1 = SpringLayerAnimation.sharedAnimation.createBasicAnimation("xAxisPercent", duration: 0.1, fromValue: 0.0, toValue: 1.0)
+        let openAnimation_2 = SpringLayerAnimation.sharedAnimation.createBasicAnimation("xAxisPercent", duration: 0.1, fromValue: 0.0, toValue: 1.0)
+        let openAnimation_3 = SpringLayerAnimation.sharedAnimation.createSpringAnima("xAxisPercent", duration: 0.3, usingSpringWithDamping: 0.5, initialSpringVelocity: 3.0, fromValue: 0.0, toValue: 1.0)
         
         openAnimation_1.delegate = self
         openAnimation_2.delegate = self
+        openAnimation_3.delegate = self
         
         animationQueue.append(openAnimation_1)
         animationQueue.append(openAnimation_2)
+        animationQueue.append(openAnimation_3)
         
         menuLayer.addAnimation(openAnimation_1, forKey: "openAnimation_1")
-//        userInteractionEnabled = false
+        userInteractionEnabled = false
         menuLayer.animationState = .State1
 
     }
@@ -73,12 +76,11 @@ extension Menu {
                 menuLayer.removeAllAnimations()
                 menuLayer.addAnimation(animationQueue[2], forKey: "openAnimation_3")
                 menuLayer.animationState = .State3
+            } else if anim == menuLayer.animationForKey("openAnimation_3") {
+                menuLayer.xAxisPercent = 1.0
+                menuLayer.removeAllAnimations()
+                userInteractionEnabled = true
             }
-//else if anim == menuLayer.animationForKey("openAnimation_3") {
-//                menuLayer.xAxisPercent = 1.0
-//                menuLayer.removeAllAnimations()
-//                userInteractionEnabled = true
-//            }
         }
     }
     

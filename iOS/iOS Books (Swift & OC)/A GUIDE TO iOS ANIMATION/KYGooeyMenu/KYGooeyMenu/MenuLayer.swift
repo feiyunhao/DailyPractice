@@ -22,7 +22,12 @@ let OFF: CGFloat = 30.0
 class MenuLayer: CALayer {
 
     var showDebug: Bool = false
-    var animationState: State = .State1
+    var animationState: State = .State1 {
+        didSet {
+            print(oldValue)
+            print(animationState)
+        }
+    }
     var xAxisPercent: CGFloat = 0.0
     
     override init() {
@@ -50,8 +55,7 @@ class MenuLayer: CALayer {
     }
 
     override func drawInContext(ctx: CGContext) {
-        print("acting",  i)
-        i++
+        
         let real_rect = CGRectInset(self.frame, OFF,OFF)
         let offset = real_rect.size.width / 3.6
         let center = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
